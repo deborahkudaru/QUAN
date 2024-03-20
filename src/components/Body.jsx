@@ -7,7 +7,7 @@ const Body = () => {
   return (
     <div className=" bg-no-repeat bg-sza bg-contain md:bg-cover md:bg-center bg-fixed bg-black bg-opacity-70 bg-blend-overlay background">
       <Header />
-      <img className="md:w-96 md:m-auto md:py-48  w-44 m-auto pt-44 pb-10 " src={logo} alt="Quan Imagery" />
+      <img className="md:w-96 md:m-auto md:py-48  w-40 m-auto pt-32 pb-10 " src={logo} alt="Quan Imagery" />
      
     </div>
   );

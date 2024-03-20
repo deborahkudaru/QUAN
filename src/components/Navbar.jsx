@@ -46,11 +46,11 @@ const Navbar = () => {
         </div>
       </nav>
       {isOpen && (
-        <ul className="flex gap-8 nav flex-col items-center basis-full">
+        <ul className="flex gap-1 nav flex-col items-end basis-full">
           <li>
             <Link
               to="/finder"
-              className="text-white hover:underline-offset-4 transition duration-300 font-bold "
+              className="text-white   transition text-sm duration-300 font-semibold "
             >
               ALBUM
             </Link>
@@ -58,7 +58,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/employer"
-              className="text-white hover:underline-offset-4 transition duration-300 font-bold "
+              className="text-white transition text-sm duration-300 font-semibold "
             >
               CONTACT
             </Link>
