@@ -8,7 +8,7 @@ import photo9 from "../images/photo9.jpg";
 const Gallery = () => {
   return (
     <div>
-      <h3 className="text-center pt-10 pb-3 font-bold text-2xl font-mateSC">
+      <h3 className=" fixed text-center pt-10 pb-3 font-bold text-2xl font-mateSC">
         GALLERY
       </h3>
       <div className="flex flex-col gap-2">
