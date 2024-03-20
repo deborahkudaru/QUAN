@@ -1,9 +1,9 @@
 import React from "react";
-import photo1 from "../images/photo1.jpg";
+import photo7 from "../images/photo7.jpg";
 import photo3 from "../images/photo3.jpg";
 import photo4 from "../images/photo4.jpg";
-import photo5 from "../images/photo5.jpg";
-import photo6 from "../images/photo6.jpg";
+import photo10 from "../images/photo10.jpg";
+import photo9 from "../images/photo9.jpg";
 
 const Gallery = () => {
   return (
@@ -12,11 +12,11 @@ const Gallery = () => {
         GALLERY
       </h3>
       <div className="flex flex-col gap-2">
-        <img src={photo1} alt="" />
+        <img src={photo7} alt="" />
         <img src={photo3} alt="" />
         <img src={photo4} alt="" />
-        <img src={photo5} alt="" />
-        <img src={photo6} alt="" />
+        <img src={photo10} alt="" />
+        <img src={photo9} alt="" />
         <img src="" alt="" />
         <img src="" alt="" />
         <img src="" alt="" />
