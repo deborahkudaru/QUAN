@@ -9,7 +9,7 @@ const NavLinks = () => {
     <ul className="flex space-x-5 nav pr-20">
       <li>
         <Link
-          to="/finder"
+          to="/album"
           className="text-white hover:underline-offset-4 transition duration-300 font-bold "
         >
           ALBUM
@@ -17,7 +17,7 @@ const NavLinks = () => {
       </li>
       <li>
         <Link
-          to="/employer"
+          to="/contact"
           className="text-white hover:underline-offset-4 transition duration-300 font-bold "
         >
           CONTACT
@@ -49,7 +49,7 @@ const Navbar = () => {
         <ul className="flex gap-1 nav flex-col items-end basis-full">
           <li>
             <Link
-              to="/finder"
+              to="/album"
               className="text-white   transition text-sm duration-300 font-semibold "
             >
               ALBUM
@@ -57,7 +57,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="/employer"
+              to="/contact"
               className="text-white transition text-sm duration-300 font-semibold "
             >
               CONTACT

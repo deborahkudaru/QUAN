@@ -1,9 +1,10 @@
-/* .background{
-  background-image: url(../../images/photo2.JPG);
+.background{
+  background-image: url("../images/photo2.JPG");
+  background-attachment: fixed;
   animation: change 20s infinite ease-in-out;
 }
 
-@keyframes change{
+/* @keyframes change{
   0%
   {
     background-image: url(../../images/photo1.jpg);
@@ -28,6 +29,6 @@
   {
     background-image: url(../../images/photo2.JPG);
   }
-} */
+}  */
 
 
