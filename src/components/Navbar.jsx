@@ -23,7 +23,6 @@ const NavLinks = () => {
           CONTACT
         </Link>
       </li>
-  
     </ul>
   );
 };
@@ -42,14 +41,29 @@ const Navbar = () => {
         </div>
         <div className="md:hidden">
           <button onClick={toggleNavbar} className="object-right text-white">
-            {isOpen ? <X /> : <CiMenuFries  className="text-4xl"/>}
+            {isOpen ? <X /> : <CiMenuFries className="text-4xl" />}
           </button>
         </div>
       </nav>
       {isOpen && (
-        <div className="flex flex-col items-center basis-full">
-          <NavLinks />
-        </div>
+        <ul className="flex gap-8 nav flex-col items-center basis-full">
+          <li>
+            <Link
+              to="/finder"
+              className="text-white hover:underline-offset-4 transition duration-300 font-bold "
+            >
+              ALBUM
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/employer"
+              className="text-white hover:underline-offset-4 transition duration-300 font-bold "
+            >
+              CONTACT
+            </Link>
+          </li>
+        </ul>
       )}
       <Routes>
         <Route path="/album" render={() => <div>Album Page</div>} />
