@@ -10,7 +10,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/finder"
-          className="text-white hover:text-slate-300 transition duration-300 font-bold"
+          className="text-white hover:underline-offset-4 transition duration-300 font-bold "
         >
           ALBUM
         </Link>
@@ -18,7 +18,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/employer"
-          className="text-white hover:text-slate-300 transition duration-300 font-bold"
+          className="text-white hover:underline-offset-4 transition duration-300 font-bold "
         >
           CONTACT
         </Link>
