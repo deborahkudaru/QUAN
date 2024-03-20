@@ -21,10 +21,10 @@ const About = () => {
         and authenticity of the human experience.
       </p>
       <Router>
-        <div className="ml-44"> 
+        <div className="ml-32"> 
           <Link className="text-black  font-mateSC font-semibold text-sm">
             BOOK A SESSION{" "}
-            <GoArrowRight className="relative left-28 bottom-6 text-2xl" />
+            <GoArrowRight className="relative left-32 bottom-5 text-2xl" />
           </Link>
         </div>
 
