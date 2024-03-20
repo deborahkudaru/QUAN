@@ -1,0 +1,31 @@
+.background{
+  background-image: url(../../images/photo2.JPG);
+  animation: change 10s infinite ease-in-out;
+}
+
+@keyframes change{
+  0%
+  {
+    background-image: url(../../images/photo1.jpg);
+  }
+  20%
+  {
+    background-image: url(../../images/photo5.jpg);
+  }
+  40%
+  {
+    background-image: url(../../images/photo4.jpg);
+  }
+  60%
+  {
+    background-image: url(../../images/photo2.JPG);
+  }
+  8%
+  {
+    background-image: url(../../images/photo4.jpg);
+  }
+  100%
+  {
+    background-image: url(../../images/photo1.jpg);
+  }
+}
