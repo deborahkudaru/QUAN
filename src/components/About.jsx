@@ -8,7 +8,7 @@ const About = () => {
       <h3 className="text-center pt-10 pb-3 font-bold text-2xl font-mateSC">
         ABOUT
       </h3>
-      <p className="text-justify justify-center text-zinc-900 font-semibold font-CrimsonText pb-5">
+      <p className="text-justify justify-center text-zinc-900 font-medium font-CrimsonText pb-5">
         Welcome to <i className="font-bold">Quan Imagery</i>, where moments
         become timeless treasures. In a world filled with fleeting moments, we
         believe in the enduring power of photography and videography to capture

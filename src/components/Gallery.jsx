@@ -11,7 +11,7 @@ const Gallery = () => {
       <h3 className=" text-center pt-16 pb-3 font-bold text-2xl font-mateSC">
         GALLERY
       </h3>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-5 px-4">
         <img src={photo7} alt="" />
         <img src={photo3} alt="" />
         <img src={photo4} alt="" />
