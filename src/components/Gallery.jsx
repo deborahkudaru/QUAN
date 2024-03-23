@@ -4,6 +4,7 @@ import photo3 from "../images/photo3.jpg";
 import photo4 from "../images/photo4.jpg";
 import photo10 from "../images/photo10.jpg";
 import photo5 from "../images/photo5.jpg";
+import photo7 from "../images/photo7.jpg"
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -22,7 +23,7 @@ const Gallery = () => {
         <img data-aos="fade-up" src={photo4} alt="" />
         <img data-aos="fade-up" src={photo10} alt="" />
         <img data-aos="fade-up" src={photo5} alt="" />
-        <img src="" alt="" />
+        <img data-aos="fade-up" src={photo7} alt="" />
         <img src="" alt="" />
         <img src="" alt="" />
         <img src="" alt="" />
