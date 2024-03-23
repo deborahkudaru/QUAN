@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { BiMenuAltRight } from "react-icons/bi";
 import { CiMenuFries } from "react-icons/ci";
-import { Menu, X } from "lucide-react";
+import { X } from "lucide-react";
+import Album from "./Album";
 
 const NavLinks = () => {
   return (
@@ -46,7 +46,7 @@ const Navbar = () => {
         </div>
       </nav>
       {isOpen && (
-        <ul className="flex gap-1 nav flex-col items-end basis-full">
+        <ul className="flex gap-5 nav relative z-10 flex-col items-end  basis-full">
           <li>
             <Link
               to="/album"
@@ -66,7 +66,7 @@ const Navbar = () => {
         </ul>
       )}
       <Routes>
-        <Route path="/album" render={() => <div>Album Page</div>} />
+        <Route path="/album" element={<Album />} />
         <Route path="/contact" render={() => <div>Contact Page</div>} />
       </Routes>
     </Router>

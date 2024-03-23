@@ -5,9 +5,9 @@ import "../styles/styles.css"
 
 const Body = () => {
   return (
-    <div className=" bg-no-repeat  bg-contain md:bg-cover md:bg-center bg-black bg-opacity-70 bg-blend-overlay background">
+    <div className=" bg-no-repeat  bg-contain md:bg-cover md:bg-center bg-black bg-opacity-50 bg-blend-overlay background">
       <Header />
-      <img className="md:w-96 md:m-auto md:py-48  w-40 m-auto pt-32 pb-10 " src={logo} alt="Quan Imagery" />
+      <img className="md:w-96 md:m-auto md:py-48  w-40 m-auto pt-72 pb-5 " src={logo} alt="Quan Imagery" />
      
     </div>
   );

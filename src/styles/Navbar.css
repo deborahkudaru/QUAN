@@ -1,0 +1,7 @@
+.navbar{
+  transition: background-color 0.5s ease-in-out;
+}
+
+.navbar.active{
+  background-color: white;
+}
