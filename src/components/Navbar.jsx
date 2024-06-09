@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { CiMenuFries } from "react-icons/ci";
 import { X } from "lucide-react";
-import Album from "./Album";
 
 const NavLinks = () => {
   return (
@@ -34,7 +33,7 @@ const Navbar = () => {
     setisOpen(!isOpen);
   };
   return (
-    <Router>
+    <>
       <nav>
         <div className="w-full justify-between hidden  md:flex">
           <NavLinks />
@@ -65,11 +64,7 @@ const Navbar = () => {
           </li>
         </ul>
       )}
-      <Routes>
-        <Route path="/album" element={<Album />} />
-        <Route path="/contact" render={() => <div>Contact Page</div>} />
-      </Routes>
-    </Router>
+    </>
   );
 };
 

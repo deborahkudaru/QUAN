@@ -4,7 +4,7 @@ import photo3 from "../images/photo3.jpg";
 import photo4 from "../images/photo4.jpg";
 import photo10 from "../images/photo10.jpg";
 import photo5 from "../images/photo5.jpg";
-import photo7 from "../images/photo7.jpg"
+import photo7 from "../images/photo7.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -13,7 +13,7 @@ const Gallery = () => {
     Aos.init({ duration: 3000 });
   }, []);
   return (
-    <div>
+    <div className="bg-white">
       <h3 className=" text-center pt-16 pb-3 font-bold text-2xl font-mateSC">
         GALLERY
       </h3>
