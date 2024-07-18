@@ -4,31 +4,31 @@
   animation: change 20s infinite ease-in-out;
 }
 
-/* @keyframes change{
+@keyframes change{
   0%
   {
-    background-image: url(../../images/photo1.jpg);
+    background-image: url(../images/photo1.jpg);
   }
   20%
   {
-    background-image: url(../../images/photo2.JPG);
+    background-image: url(../images/photo2.JPG);
   }
   40%
   {
-    background-image: url(../../images/photo4.jpg);
+    background-image: url(../images/photo4.jpg);
   }
   60%
   {
-    background-image: url(../../images/photo2.JPG);
+    background-image: url(../images/photo2.JPG);
   }
   8%
   {
-    background-image: url(../../images/photo1.jpg);
+    background-image: url(../images/photo1.jpg);
   }
   100%
   {
-    background-image: url(../../images/photo2.JPG);
+    background-image: url(../images/photo2.JPG);
   }
-}  */
+} 
 
 

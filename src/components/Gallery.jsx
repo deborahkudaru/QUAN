@@ -14,21 +14,21 @@ const Gallery = () => {
   }, []);
   return (
     <div className="bg-white">
-      <h3 className=" text-center pt-16 pb-3 font-bold text-2xl font-mateSC">
+      <h3 className=" text-center pt-20 pb-10 font-bold text-2xl lg:text-3xl font-mateSC">
         GALLERY
       </h3>
-      <div className="flex flex-col gap-5 px-4">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 px-4 gap-5">
         {/* <img data-aos="fade-up" src={photo1} alt="" /> */}
         <img data-aos="fade-up" src={photo3} alt="" />
         <img data-aos="fade-up" src={photo4} alt="" />
         <img data-aos="fade-up" src={photo10} alt="" />
         <img data-aos="fade-up" src={photo5} alt="" />
         <img data-aos="fade-up" src={photo7} alt="" />
+        {/* <img src="" alt="" />
         <img src="" alt="" />
         <img src="" alt="" />
         <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
+        <img src="" alt="" /> */}
       </div>
     </div>
   );
