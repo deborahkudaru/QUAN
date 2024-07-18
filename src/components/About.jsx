@@ -23,13 +23,15 @@ const About = () => {
           experience.
         </p>
 
-        <Link
-          to="/book"
-          className="text-black  font-mateSC font-semibold lg:text-xl text-sm relative text-end"
-        >
-          BOOK A SESSION{" "}
-          <GoArrowRight className="relative left-32 lg:left-44 lg:bottom-6 bottom-5 text-2xl" />
-        </Link>
+        <div className="flex gap-2 justify-end">
+          <Link
+            to="/book"
+            className="text-black  font-mateSC font-semibold lg:text-xl text-sm relative text-end"
+          >
+            BOOK A SESSION{" "}
+          </Link>
+          <GoArrowRight className="text-2xl" />
+        </div>
       </div>
     </div>
   );

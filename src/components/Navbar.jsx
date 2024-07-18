@@ -9,7 +9,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/album"
-          className="text-white hover:underline-offset-4 transition duration-300 font-bold"
+          className="text-white hover:underline-offset-4 transition duration-300 font-bold text-xl font-mateSC"
         >
           ALBUM
         </Link>
@@ -17,7 +17,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/contact"
-          className="text-white hover:underline-offset-4 transition duration-300 font-bold"
+          className="text-white hover:underline-offset-4 transition duration-300 font-bold text-xl font-mateSC"
         >
           CONTACT
         </Link>
@@ -38,18 +38,18 @@ const Navbar = () => {
         <div className="w-full justify-between hidden lg:flex">
           <NavLinks />
         </div>
-        <div className="lg:hidden">
-          <button onClick={toggleNavbar} className="object-right text-white">
+        <div className="lg:hidden text-white">
+          <button onClick={toggleNavbar} className="object-right">
             {isOpen ? <X /> : <CiMenuFries className="text-4xl" />}
           </button>
         </div>
       </nav>
       {isOpen && (
-        <ul className="flex gap-5 nav relative z-10 flex-col items-end  basis-full">
+        <ul className="flex gap-5 relative flex-col items-end  basis-full">
           <li>
             <Link
               to="/album"
-              className="text-white   transition text-sm duration-300 font-semibold "
+              className="text-white   transition  text-sm duration-300 font-semibold "
             >
               ALBUM
             </Link>

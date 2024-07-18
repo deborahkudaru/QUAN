@@ -6,18 +6,18 @@ import { FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className=" w-40 m-auto mt-10">
-      <div className="flex gap-6 text-neutral-700 text-2xl">
-        <a className="hover:text-yellow-600" href="">
+    <div className=" w-40 m-auto mt-10 lg:mt-28">
+      <div className="flex gap-6 text-neutral-800 text-2xl lg:text-3xl">
+        <a className="hover:text-blue-400" href="">
           <FaInstagram />
         </a>
-        <a className="hover:text-yellow-600" href="">
+        <a className="hover:text-blue-400" href="">
           <FaWhatsapp />
         </a>
-        <a className="hover:text-yellow-600" href="">
+        <a className="hover:text-blue-400" href="">
           <FaTwitter />
         </a>
-        <a className="hover:text-yellow-600" href="mailto:">
+        <a className="hover:text-blue-400" href="mailto:">
           <FaEnvelope />
         </a>
       </div>

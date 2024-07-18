@@ -4,31 +4,69 @@
   animation: change 20s infinite ease-in-out;
 }
 
-@keyframes change{
+@media (max-width:600px){
+  .background{
+    background-image: url("../images/photo4.jpg");
+    background-attachment: fixed;
+  }
+}
+
+/* @keyframes change{
   0%
   {
     background-image: url(../images/photo1.jpg);
   }
   20%
   {
-    background-image: url(../images/photo2.JPG);
+    background-image: url(../images/photo10.jpg);
   }
   40%
   {
-    background-image: url(../images/photo4.jpg);
+    background-image: url(../images/photo3.jpg);
   }
   60%
   {
-    background-image: url(../images/photo2.JPG);
+    background-image: url(../images/photo4.jpg);
   }
   8%
   {
-    background-image: url(../images/photo1.jpg);
+    background-image: url(../images/photo5.jpg);
   }
   100%
   {
-    background-image: url(../images/photo2.JPG);
+    background-image: url(../images/photo6.jpg);
   }
 } 
 
 
+@media (max-width: 600px){
+  @keyframes change{
+    0%
+    {
+      background-image: url(../images/photo2.JPG);
+    }
+    20%
+    {
+      background-image: url(../images/photo10.jpg);
+    }
+    40%
+    {
+      background-image: url(../images/photo3.jpg);
+    }
+    60%
+    {
+      background-image: url(../images/photo4.jpg);
+    }
+    8%
+    {
+      background-image: url(../images/photo5.jpg);
+    }
+    100%
+    {
+      background-image: url(../images/photo6.jpg);
+    }
+  } 
+  
+}
+
+ */
