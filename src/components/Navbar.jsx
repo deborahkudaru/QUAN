@@ -9,17 +9,17 @@ const NavLinks = () => {
       <li>
         <Link
           to="/album"
-          className="text-white hover:underline-offset-4 transition duration-300 font-bold text-xl font-mateSC"
+          className="text-white hover:underline-offset-4 transition duration-300 font-bold text-xl font-mateSC hover:underline"
         >
           ALBUM
         </Link>
       </li>
       <li>
         <Link
-          to="/contact"
-          className="text-white hover:underline-offset-4 transition duration-300 font-bold text-xl font-mateSC"
+          to="/book"
+          className="text-white hover:underline-offset-4 transition duration-300 font-bold text-xl font-mateSC hover:underline"
         >
-          CONTACT
+          BOOK
         </Link>
       </li>
     </ul>
@@ -56,10 +56,10 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="/contact"
+              to="/book"
               className="text-white transition text-sm duration-300 font-semibold "
             >
-              CONTACT
+              BOOK
             </Link>
           </li>
         </ul>

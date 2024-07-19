@@ -6,6 +6,7 @@ const About = () => {
   return (
     <div className="bg-white">
       <div className="w-2/3  m-auto">
+      
         <h3 className="text-center pt-10 pb-3 font-bold text-2xl lg:text-3xl font-mateSC">
           ABOUT
         </h3>
@@ -26,11 +27,11 @@ const About = () => {
         <div className="flex gap-2 justify-end">
           <Link
             to="/book"
-            className="text-black  font-mateSC font-semibold lg:text-xl text-sm relative text-end"
+            className="text-black  font-mateSC font-semibold lg:text-xl text-sm relative text-end hover:underline"
           >
             BOOK A SESSION{" "}
           </Link>
-          <GoArrowRight className="text-2xl" />
+          <GoArrowRight className="text-2xl animate-pulse" />
         </div>
       </div>
     </div>
