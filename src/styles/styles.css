@@ -1,4 +1,4 @@
-.background{
+/* .background{
   background-image: url("../images/photo2.JPG");
   background-attachment: fixed;
   animation: change 20s infinite ease-in-out;
@@ -9,7 +9,7 @@
     background-image: url("../images/photo4.jpg");
     background-attachment: fixed;
   }
-}
+} */
 
 /* @keyframes change{
   0%

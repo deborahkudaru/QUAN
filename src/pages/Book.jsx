@@ -8,7 +8,7 @@ const Book = () => {
     <>
       <div className="flex lg:px-32 px-16 pt-10 lg:gap-10 gap-5">
         <Link to="/">
-          <BsArrowLeft className="lg:text-3xl text-lg relative top-1 lg:top-0" />
+          <BsArrowLeft className="lg:text-3xl text-2xl relative top-1 lg:top-0" />
         </Link>
 
         <h2 className="font-mateSC lg:text-3xl text-lg">BOOK A SESSION</h2>
