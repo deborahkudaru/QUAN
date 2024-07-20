@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 const Book = () => {
   return (
     <>
-      <div className="flex lg:px-32 pt-10 gap-10">
+      <div className="flex lg:px-32 px-16 pt-10 lg:gap-10 gap-5">
         <Link to="/">
-          <BsArrowLeft className="text-3xl " />
+          <BsArrowLeft className="lg:text-3xl text-lg relative top-1 lg:top-0" />
         </Link>
 
-        <h2 className="font-mateSC text-3xl">BOOK A SESSION</h2>
+        <h2 className="font-mateSC lg:text-3xl text-lg">BOOK A SESSION</h2>
       </div>
 
       <div className="lg:px-32 px-16  pt-10 flex gap-10 flex-col-reverse lg:flex-row font-mateSC">
@@ -94,7 +94,7 @@ const Book = () => {
             </div>
           </div>
 
-          <button className="bg-neutral-900 text-white px-10 py-2 mt-12 relative lg:left-36 lg:ml-2  hover:bg-gray-800">
+          <button className="bg-neutral-900 text-white px-10 py-2 lg:mt-12 mt-5 relative lg:left-36 lg:ml-2  hover:bg-gray-800">
             Book
           </button>
         </form>
