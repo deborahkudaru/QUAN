@@ -24,7 +24,7 @@ const Body = () => {
 
   return (
     <div
-      className=" bg-no-repeat bg-contain md:bg-cover md:bg-center bg-black bg-opacity-50 bg-blend-overlay background transition-all duration-1000"
+      className=" bg-no-repeat bg-contain md:bg-cover md:bg-center bg-black bg-opacity-50 bg-blend-overlay transition-all duration-1000"
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
     >
       <Header />
