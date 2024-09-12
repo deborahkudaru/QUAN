@@ -8,26 +8,31 @@ import photo23 from "../images/photo23.jpg";
 
 const albums = [
   {
+    id: 1,
     bgImage: photo17,
     albumName: "Fasion",
     albumURL: "/no-page",
   },
   {
+    id: 2,
     bgImage: photo6,
     albumName: "Birthdays",
     albumURL: "/no-page",
   },
   {
+    id: 3,
     bgImage: photo21,
     albumName: "Weddings",
     albumURL: "/no-page",
   },
   {
+    id: 4,
     bgImage: photo23,
     albumName: "Shorts",
     albumURL: "/no-page",
   },
   {
+    id: 5,
     bgImage: photo22,
     albumName: "Music Videos",
     albumURL: "/no-page",
@@ -42,7 +47,8 @@ const Album = () => {
       </h3>
       <div className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 gap-6 ">
         {albums.map((alb) => (
-          <Link to={alb.albumURL}>
+          <div key={alb.id}>
+            <Link to={alb.albumURL}>
             <div
               className="bg-cover bg-no-repeat bg-black bg-opacity-50 bg-blend-overlay text-white font-mateSC pt-72"
               style={{ backgroundImage: `url(${alb.bgImage})` }}
@@ -50,6 +56,7 @@ const Album = () => {
               <p className="text-xl ml-5 pb-5">{alb.albumName}</p>
             </div>
           </Link>
+          </div>
         ))}
       </div>
     </div>
