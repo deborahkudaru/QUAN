@@ -1,16 +1,17 @@
 import React from "react";
 import image1 from "../images/IMG_5886.png";
 import { BsArrowLeft } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Book = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="flex lg:px-32 px-16 pt-10 lg:gap-10 gap-5">
-        <Link to="/">
+        <button onClick={() => navigate(-1)}>
           <BsArrowLeft className="lg:text-3xl text-2xl relative top-1 lg:top-0" />
-        </Link>
-
+        </button>
         <h2 className="font-mateSC lg:text-3xl text-lg">BOOK A SESSION</h2>
       </div>
 
@@ -32,7 +33,7 @@ const Book = () => {
             </label>
             <input
               type="text"
-              className="border outline-0 lg:ml-2 ml-0 border-gray-500 px-5 py-2"
+              className="border outline-0 ml-0 border-gray-500 px-5 py-2"
             />
           </div>
 
@@ -52,7 +53,7 @@ const Book = () => {
             </label>
             <input
               type="address"
-              className="border outline-0 lg:ml-2 ml-0 border-gray-500 px-5 py-2"
+              className="border outline-0 ml-0 border-gray-500 px-5 py-2"
             />
           </div>
 
@@ -65,12 +66,12 @@ const Book = () => {
               id=""
               className="border outline-0  border-gray-500 px-5 py-2"
             >
-              <option value=""></option>
-              <option value="">Birthday</option>
-              <option value="">Wedding</option>
-              <option value="">Model</option>
-              <option value="">Casual</option>
-              <option value="">Fashion</option>
+              <option value="">Choose a Shoot</option>
+              <option value="">Birthday Shoot</option>
+              <option value="">Wedding Shoot</option>
+              <option value="">Modelling Shoot</option>
+              <option value="">Casual Shoot</option>
+              <option value="">Fashion Shoot</option>
               <option value="" className="hover:bg-black">
                 Music Video
               </option>
@@ -93,7 +94,6 @@ const Book = () => {
               />
             </div>
           </div>
-
           <button className="bg-neutral-900 text-white px-10 py-2 lg:mt-12 mt-5 relative lg:left-36 lg:ml-2  hover:bg-gray-800">
             Book
           </button>

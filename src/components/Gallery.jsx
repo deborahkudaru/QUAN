@@ -22,21 +22,21 @@ const Gallery = () => {
         GALLERY
       </h3>
       <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 px-4 gap-5">
-        <img data-aos="fade-up" className="w-full" src={photo9} alt="" />
+        <img className="w-full" src={photo9} alt="" />
 
-        <img data-aos="fade-up" className="w-full" src={photo13} alt="" />
+        <img className="w-full" src={photo13} alt="" />
 
-        <img data-aos="fade-up" className="w-full" src={photo19} alt="" />
+        <img className="w-full" src={photo19} alt="" />
 
-        <img data-aos="fade-up" className="w-full" src={photo12} alt="" />
+        <img className="w-full" src={photo12} alt="" />
 
-        <img data-aos="fade-up" className="w-full" src={photo11} alt="" />
+        <img className="w-full" src={photo11} alt="" />
 
-        <img data-aos="fade-up" className="w-full" src={photo6} alt="" />
+        <img className="w-full" src={photo6} alt="" />
 
-        <img data-aos="fade-up" className="w-full" src={photo8} alt="" />
+        <img className="w-full" src={photo8} alt="" />
 
-        <img data-aos="fade-up" className="w-full" src={photo15} alt="" />
+        <img className="w-full" src={photo15} alt="" />
         
       </div>
       <div className="flex justify-end mt-5 px-5 gap-2">

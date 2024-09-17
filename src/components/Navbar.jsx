@@ -19,7 +19,7 @@ const NavLinks = () => {
           to="/book"
           className="text-white hover:underline-offset-4 transition duration-300 font-bold text-xl font-mateSC hover:underline"
         >
-          BOOK
+          BOOK A SESSION
         </Link>
       </li>
     </ul>
