@@ -3,6 +3,13 @@ import fashion from "../constants/fashion";
 import { BsArrowLeft } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/free-mode";
+
+import { FreeMode, Pagination } from "swiper/modules";
 
 const Fashion = () => {
   const navigate = useNavigate();
@@ -14,12 +21,37 @@ const Fashion = () => {
         </button>
         <h2 className="font-mateSC lg:text-3xl text-lg">FASHION</h2>
       </div>
-      <div className="lg:grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
-        {fashion.map((fash) => (
-          <div key={fash.id}>
-            <img src={fash.image} alt={fash.alt} />
-          </div>
-        ))}
+
+      <div className="flex">
+        <Swiper
+          breakpoints={{
+            600: {
+              slidesPerView: 1,
+              spaceBetween: 15,
+            },
+            900: {
+              slidesPerView: 2,
+              spaceBetween: 15,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 15,
+            },
+          }}
+          freeMode={true}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[FreeMode, Pagination]}
+        >
+          {fashion.map((fash) => (
+            <SwiperSlide key={fash.id}>
+              <div className="mb-10 flex">
+                <img src={fash.image} alt={fash.alt} className=""/>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );

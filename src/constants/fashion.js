@@ -6,7 +6,6 @@ import photo5 from "../images/KWP_4421.jpg";
 import photo6 from "../images/KWP_4431.jpg";
 import photo7 from "../images/KWP_4518.jpg";
 import photo8 from "../images/KWP_9750w.jpg";
-import photo9 from "../images/KWP_9750w.jpg";
 import photo10 from "../images/KWP_9773.jpg";
 import photo11 from "../images/KWP_9785.jpg";
 
@@ -51,11 +50,11 @@ const fashion = [
     image: photo8,
     alt: 'photo-one'
   },
-  {
-    id: 9,
-    image: photo9,
-    alt: 'photo-one'
-  },
+  // {
+  //   id: 9,
+  //   image: photo9,
+  //   alt: 'photo-one'
+  // },
   {
     id: 10,
     image: photo10,

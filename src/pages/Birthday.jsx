@@ -3,6 +3,13 @@ import birthdays from "../constants/birthday";
 import { BsArrowLeft } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/free-mode";
+
+import { FreeMode, Pagination } from "swiper/modules";
 
 const Birthday = () => {
   const navigate = useNavigate();
@@ -14,12 +21,33 @@ const Birthday = () => {
         </button>
         <h2 className="font-mateSC lg:text-3xl text-lg">BIRTHDAY</h2>
       </div>
+
       <div className="lg:grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
-        {birthdays.map((birthday) => (
-          <div key={birthday.id}>
-            <img src={birthday.image} alt={birthday.alt} />
-          </div>
-        ))}
+        <Swiper
+          breakpoints={{
+            340: {
+              slidesPerView: 1,
+              spaceBetween: 15,
+            },
+            700: {
+              slidesPerView: 3,
+              spaceBetween: 15,
+            },
+          }}
+          freeMode={true}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[FreeMode, Pagination]}
+        >
+          {birthdays.map((birthday) => (
+            <SwiperSlide key={birthday.id}>
+              <div className="mb-10">
+                <img src={birthday.image} alt={birthday.alt} />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );
