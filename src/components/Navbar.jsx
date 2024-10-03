@@ -22,6 +22,22 @@ const NavLinks = () => {
           BOOK A SESSION
         </Link>
       </li>
+      <li>
+        <Link
+          to="/login"
+          className="text-white hover:underline-offset-4 transition duration-300 font-bold text-xl font-mateSC hover:underline"
+        >
+          LOGIN
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="/sign-up"
+          className="text-white hover:underline-offset-4 transition duration-300 font-bold text-xl font-mateSC hover:underline"
+        >
+          SIGNUP
+        </Link>
+      </li>
     </ul>
   );
 };

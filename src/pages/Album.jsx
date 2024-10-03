@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import photo17 from "../images/photo17.jpg";
-import photo6 from "../images/photo6.jpg";
+import photo6 from "../images/KWP_2772.jpg"
 import photo21 from "../images/photo21.jpg";
 import photo22 from "../images/photo22.jpg";
 import photo23 from "../images/photo23.jpg";
@@ -13,7 +13,7 @@ const albums = [
   {
     id: 1,
     bgImage: photo17,
-    albumName: "Fasion",
+    albumName: "Fashion",
     albumURL: "/fashion",
   },
   {

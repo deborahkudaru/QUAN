@@ -8,6 +8,8 @@ import Fashion from "./pages/Fashion";
 import Birthday from "./pages/Birthday"
 import Wedding from "./pages/Wedding"
 import NoPage from "./pages/NoPage";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 
 const App = () => {
   return (
@@ -21,6 +23,8 @@ const App = () => {
         <Route path="/birthday" element={<Birthday />} />
         <Route path="/weddings" element={<Wedding />} />
         <Route path="/no-page" element={<NoPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/sign-up" element={<SignUp />} />
       </Routes>
       <Footer />
     </div>

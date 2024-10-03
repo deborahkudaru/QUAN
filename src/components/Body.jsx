@@ -8,7 +8,7 @@ import { TfiAngleDoubleDown } from "react-icons/tfi";
 import photo20 from "../images/photo20.jpg";
 import photo18 from "../images/photo18.jpg";
 import photo14 from "../images/photo14.jpg";
-import photo4 from "../images/photo4.jpg"
+import photo4 from "../images/photo4.jpg";
 
 const Body = () => {
   const images = [photo20, photo18, photo14, photo4];

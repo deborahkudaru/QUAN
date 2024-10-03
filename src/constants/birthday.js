@@ -1,8 +1,9 @@
-import photo1 from "../images/KWP_2772.jpg";
-import photo2 from "../images/KWP_2837.jpg"
-import photo3 from "../images/KWP_5995.jpg"
-import photo4 from "../images/KWP_5971.jpg"
-import photo5 from "../images/KWP_5163.jpg"
+import photo1 from "../images/photo6.jpg";
+import photo2 from "../images/KWP_2837.jpg";
+import photo3 from "../images/KWP_5995.jpg";
+import photo4 from "../images/KWP_5971.jpg";
+import photo5 from "../images/KWP_5163.jpg";
+
 
 
 const birthdays = [
