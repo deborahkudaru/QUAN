@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { CiMenuFries } from "react-icons/ci";
+import { FiMenu } from "react-icons/fi";
+// import { CiMenuFries } from "react-icons/ci";
 import { X } from "lucide-react";
 
 const NavLinks = () => {
@@ -24,18 +25,18 @@ const NavLinks = () => {
       </li>
       <li>
         <Link
-          to="/login"
+          to="/no-page"
           className="text-white hover:underline-offset-4 transition duration-300 font-bold text-xl font-mateSC hover:underline"
         >
-          LOGIN
+          PORTFOLIO
         </Link>
       </li>
       <li>
         <Link
-          to="/sign-up"
+          to="/no-page"
           className="text-white hover:underline-offset-4 transition duration-300 font-bold text-xl font-mateSC hover:underline"
         >
-          SIGNUP
+          BLOG 
         </Link>
       </li>
     </ul>
@@ -56,12 +57,12 @@ const Navbar = () => {
         </div>
         <div className="lg:hidden text-white">
           <button onClick={toggleNavbar} className="object-right">
-            {isOpen ? <X /> : <CiMenuFries className="text-4xl" />}
+            {isOpen ? <X /> : <FiMenu className="text-4xl" />}
           </button>
         </div>
       </nav>
       {isOpen && (
-        <ul className="flex gap-5 relative flex-col items-end  basis-full">
+        <ul className="flex gap-5 flex-col items-end  basis-full absolute right-5 top-20">
           <li>
             <Link
               to="/album"
@@ -76,6 +77,22 @@ const Navbar = () => {
               className="text-white transition text-sm duration-300 font-semibold "
             >
               BOOK
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/no-page"
+              className="text-white transition text-sm duration-300 font-semibold "
+            >
+              PORTFOLIO
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/no-page"
+              className="text-white transition text-sm duration-300 font-semibold "
+            >
+              BLOG
             </Link>
           </li>
         </ul>

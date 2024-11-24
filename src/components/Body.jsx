@@ -7,11 +7,12 @@ import Gallery from "./Gallery";
 import { TfiAngleDoubleDown } from "react-icons/tfi";
 import photo20 from "../images/photo20.jpg";
 import photo18 from "../images/photo18.jpg";
-import photo14 from "../images/photo14.jpg";
+import photo24 from "../images/photo24.jpg";
 import photo4 from "../images/photo4.jpg";
+import photo26 from "../images/KWP_0568.jpg"
 
 const Body = () => {
-  const images = [photo20, photo18, photo14, photo4];
+  const images = [photo20, photo18, photo24, photo4, photo26];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -29,11 +30,11 @@ const Body = () => {
     >
       <Header />
       <img
-        className="md:w-96 md:m-auto md:py-48  w-40 m-auto pt-52 pb-5 lg:pt-20 lg:pb-40"
+        className="md:w-96 md:m-auto md:py-48  w-60 m-auto pt-52 pb-20 lg:pt-20 lg:pb-40"
         src={logo}
         alt="Quan Imagery"
       />
-      <TfiAngleDoubleDown className="text-white animate-bounce text-center w-full m-auto relative lg:bottom-5  md:bottom-5 md:text-3xl lg:text-4xl" />
+      <TfiAngleDoubleDown className="text-white animate-bounce text-center w-full m-auto relative lg:bottom-5  md:bottom-5 text-3xl lg:text-4xl" />
       <About />
       <Gallery />
     </div>
