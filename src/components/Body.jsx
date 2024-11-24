@@ -30,7 +30,7 @@ const Body = () => {
     >
       <Header />
       <img
-        className="md:w-96 md:m-auto md:py-48  w-60 m-auto pt-52 pb-20 lg:pt-20 lg:pb-40"
+        className="md:w-96 md:m-auto md:py-48  w-60 m-auto pt-52 pb-2 lg:pt-20 lg:pb-40"
         src={logo}
         alt="Quan Imagery"
       />
