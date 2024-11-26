@@ -25,7 +25,7 @@ const NavLinks = () => {
       </li>
       <li>
         <Link
-          to="/no-page"
+          to="/portfolio"
           className="text-white hover:underline-offset-4 transition duration-300 font-bold text-xl font-mateSC hover:underline"
         >
           PORTFOLIO
@@ -81,7 +81,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="/no-page"
+              to="/portfolio"
               className="text-white transition text-sm duration-300 font-semibold "
             >
               PORTFOLIO

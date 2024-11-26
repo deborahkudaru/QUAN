@@ -1,10 +1,27 @@
-import React from "react";
+import React, {useState} from "react";
 import image1 from "../images/IMG_5886.png";
 import { BsArrowLeft } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
 const Book = () => {
   const navigate = useNavigate();
+  const [bookingData, setBookingData] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    address: "",
+    sessionType: "",
+    date: "",
+    time: ""
+  })
+
+  const handleChange = (e) => {
+    setBookingData({
+      ...bookingData,
+      [e.target.name]: e.target.value,
+    });
+  };
+ 
 
   return (
     <>
@@ -19,11 +36,15 @@ const Book = () => {
         <form action="">
           <div className="flex lg:flex-row flex-col lg:gap-24 gap-2 mb-10">
             <label htmlFor="name">
-              Name<sup className="text-red-600">*</sup>
+              Name<sup className="text-red-600" required>*</sup>
             </label>
             <input
               type="text"
               className="border outline-0 border-gray-500 px-5 py-2"
+              value={bookingData.name}
+              name ="name"
+              onChange={handleChange}
+              required
             />
           </div>
 
@@ -33,7 +54,11 @@ const Book = () => {
             </label>
             <input
               type="text"
+              onChange={handleChange}
+              value={bookingData.email}
+              name ="email"
               className="border outline-0 ml-0 border-gray-500 px-5 py-2"
+              required
             />
           </div>
 
@@ -43,7 +68,11 @@ const Book = () => {
             </label>
             <input
               type="number"
+              onChange = {handleChange}
+              name="phoneNumber"
+              value={bookingData.phoneNumber}
               className="border outline-0  border-gray-500 px-5 py-2"
+              required
             />
           </div>
 
@@ -53,7 +82,11 @@ const Book = () => {
             </label>
             <input
               type="address"
+              name="address"
+              value={bookingData.address}
+              onchange = {handleChange}
               className="border outline-0 ml-0 border-gray-500 px-5 py-2"
+              required
             />
           </div>
 
@@ -62,9 +95,12 @@ const Book = () => {
               Session Type<sup className="text-red-600">*</sup>
             </label>
             <select
-              name=""
+              name="sessionType"
               id=""
+              onChange={handleChange}
+              value = {bookingData.sessionType}
               className="border outline-0  border-gray-500 px-5 py-2"
+              required
             >
               <option value="">Choose a Shoot</option>
               <option value="">Birthday Shoot</option>
@@ -86,7 +122,11 @@ const Book = () => {
             <div className="flex gap-8">
               <input
                 type="date"
+                value = {bookingData.data}
+                name = "date"
+                onChange = {handleChange}
                 className="border outline-0  border-gray-500 px-5 py-2"
+                required
               />
               <input
                 type="time"

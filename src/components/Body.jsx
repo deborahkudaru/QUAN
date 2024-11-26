@@ -25,12 +25,12 @@ const Body = () => {
 
   return (
     <div
-      className=" bg-no-repeat bg-contain md:bg-cover md:bg-center bg-black bg-opacity-50 bg-blend-overlay transition-all duration-1000"
+      className=" bg-no-repeat bg-contain md:bg-cover md:bg-center bg-black bg-opacity-50 bg-blend-overlay transition-all duration-1000 pb-10"
       style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
     >
       <Header />
       <img
-        className="md:w-96 md:m-auto md:py-48  w-60 m-auto pt-52 pb-2 lg:pt-20 lg:pb-40"
+        className="md:w-96 md:m-auto md:py-48  w-60 m-auto pt-40 pb-2 lg:pt-20 lg:pb-40"
         src={logo}
         alt="Quan Imagery"
       />

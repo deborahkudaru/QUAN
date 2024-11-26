@@ -1,8 +1,13 @@
 import React from "react";
 import { GoArrowRight } from "react-icons/go";
 import { Link } from "react-router-dom";
+// import Aos from "aos";
+// import "aos/dist/aos.css";
 
 const About = () => {
+  // useEffect(() => {
+  //   Aos.init({ duration: 1000 });
+  // }, []);
   return (
     <div className="bg-white">
       <div className="w-2/3  m-auto">
