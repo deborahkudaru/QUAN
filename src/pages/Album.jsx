@@ -46,7 +46,7 @@ const Album = () => {
   const navigate = useNavigate();
   return (
     <div className="px-4 pt-7">
-      <div className="flex pt-10 pb-5 lg:gap-10 gap-5">
+      <div className="flex py-5 lg:gap-10 gap-5">
         <button onClick={() => navigate(-1)}>
           <BsArrowLeft className="lg:text-3xl text-2xl relative top-1 lg:top-0" />
         </button>
@@ -54,7 +54,7 @@ const Album = () => {
       </div>
       <div className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 gap-6 ">
         {albums.map((alb) => (
-          <div key={alb.id}>
+          <div key={alb.id} className="">
             <Link to={alb.albumURL}>
               <div
                 className="bg-cover bg-no-repeat bg-black bg-opacity-50 bg-blend-overlay text-white font-mateSC pt-72"

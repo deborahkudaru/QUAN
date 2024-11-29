@@ -15,7 +15,7 @@ const Wedding = () => {
   const navigate = useNavigate();
   return (
     <div className="px-4 pt-7">
-      <div className="flex pt-10 pb-5 lg:gap-10 gap-5">
+      <div className="flex py-5 lg:gap-10 gap-5">
         <button onClick={() => navigate(-1)}>
           <BsArrowLeft className="lg:text-3xl text-2xl relative top-1 lg:top-0" />
         </button>
@@ -43,7 +43,7 @@ const Wedding = () => {
           {weddings.map((wedding) => (
             <SwiperSlide key={wedding.id}>
               <div className="mb-10">
-                <img src={wedding.image} alt={wedding.alt} />
+                <img src={wedding.image} alt={wedding.alt} className="shadow-xl"/>
               </div>
             </SwiperSlide>
           ))}

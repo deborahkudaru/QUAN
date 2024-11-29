@@ -15,7 +15,7 @@ const Birthday = () => {
   const navigate = useNavigate();
   return (
     <div className="px-4 pt-7">
-      <div className="flex pt-10 pb-5 lg:gap-10 gap-5">
+      <div className="flex py-5 lg:gap-10 gap-5">
         <button onClick={() => navigate(-1)}>
           <BsArrowLeft className="lg:text-3xl text-2xl relative top-1 lg:top-0" />
         </button>
@@ -43,7 +43,7 @@ const Birthday = () => {
           {birthdays.map((birthday) => (
             <SwiperSlide key={birthday.id}>
               <div className="mb-10">
-                <img src={birthday.image} alt={birthday.alt} />
+                <img src={birthday.image} alt={birthday.alt} className="shadow-xl"/>
               </div>
             </SwiperSlide>
           ))}

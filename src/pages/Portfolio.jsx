@@ -18,8 +18,8 @@ const Portfolio = () => {
   }, []);
   return (
     <div className="bg-white">
-      <h3 className=" text-center pt-20 pb-10 font-bold text-2xl lg:text-3xl font-mateSC">
-      PORTFOLIO
+      <h3 className=" text-center py-7 font-bold text-xl lg:text-3xl font-mateSC">
+      QUAN IMAGERY PORTFOLIO
       </h3>
 
       <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 px-4 gap-5">
@@ -48,7 +48,7 @@ const Portfolio = () => {
             {niche.map((image) => (
               <SwiperSlide key={image.id}>
                 <div className="pb-4">
-                  <p className="text-xl mb-5">{image.niche}</p>
+                  <p className="text-lg mb-5">{image.niche}</p>
                   <Link>
                     <div className="pr-14">
                       <img src={image.img} alt="" className="shadow-xl" />
