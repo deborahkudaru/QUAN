@@ -6,7 +6,7 @@ import { FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className=" w-40 m-auto mt-10 lg:mt-28">
+    <div className=" w-40 m-auto pt-10 lg:mt-28">
       <div className="flex gap-6 text-neutral-800 text-2xl lg:text-3xl">
         <a className=" hover:text-gray-800" href="">
           <FaInstagram />
@@ -16,7 +16,7 @@ const Footer = () => {
         </a>
         <a className=" hover:text-gray-800" href="">
           <FaTwitter />
-        </a>
+        </a> 
         <a className=" hover:text-gray-800" href="mailto:">
           <FaEnvelope />
         </a>

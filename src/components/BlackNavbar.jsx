@@ -10,7 +10,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/album"
-          className="text-white hover:underline-offset-4 transition duration-300 font-bold text-xl font-mateSC hover:underline"
+          className="text-black hover:underline-offset-4 transition duration-300 font-bold xl:text-xl lg:text-lg font-mateSC hover:underline"
         >
           ALBUM
         </Link>
@@ -18,7 +18,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/book"
-          className="text-white hover:underline-offset-4 transition duration-300 font-bold text-xl font-mateSC hover:underline"
+          className="text-black hover:underline-offset-4 transition duration-300 font-bold xl:text-xl lg:text-lg font-mateSC hover:underline"
         >
           BOOK A SESSION
         </Link>
@@ -26,7 +26,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/portfolio"
-          className="text-white hover:underline-offset-4 transition duration-300 font-bold text-xl font-mateSC hover:underline"
+          className="text-black hover:underline-offset-4 transition duration-300 font-bold xl:text-xl lg:text-lg font-mateSC hover:underline"
         >
           PORTFOLIO
         </Link>
@@ -34,7 +34,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/no-page"
-          className="text-white hover:underline-offset-4 transition duration-300 font-bold text-xl font-mateSC hover:underline"
+          className="text-black hover:underline-offset-4 transition duration-300 font-bold xl:text-xl lg:text-lg font-mateSC hover:underline"
         >
           BLOG 
         </Link>
@@ -43,7 +43,7 @@ const NavLinks = () => {
   );
 };
 
-const Navbar = () => {
+const BlackNavbBar = () => {
   const [isOpen, setisOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -55,9 +55,9 @@ const Navbar = () => {
         <div className="w-full justify-between hidden lg:flex">
           <NavLinks />
         </div>
-        <div className="lg:hidden text-white">
-          <button onClick={toggleNavbar} className="object-right">
-            {isOpen ? <X  className="text-4xl"/> : <FiMenu className="text-4xl" />}
+        <div className="lg:hidden text-black">
+          <button onClick={toggleNavbar} className="object-right text-4xl">
+            {isOpen ? <X  className="text-6xl"/> : <FiMenu className="text-4xl" />}
           </button>
         </div>
       </nav>
@@ -101,4 +101,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default BlackNavbBar;
