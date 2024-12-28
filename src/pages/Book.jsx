@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import image1 from "../images/IMG_5886.png";
 import { BsArrowLeft } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+import BlackHeader from "../components/BlackHeader";
 
 const Book = () => {
   const navigate = useNavigate();
@@ -25,11 +26,12 @@ const Book = () => {
 
   return (
     <>
-      <div className="flex lg:px-32 px-16 pt-10 lg:gap-10 gap-5">
+    <BlackHeader />
+      <div className="flex lg:px-32 px-16 pt-28 lg:gap-10 gap-5">
         <button onClick={() => navigate(-1)}>
           <BsArrowLeft className="lg:text-3xl text-2xl relative top-1 lg:top-0" />
         </button>
-        <h2 className="font-mateSC lg:text-3xl text-lg">BOOK A SESSION</h2>
+        <h2 className="font-mateSC lg:text-2xl text-lg">BOOK A SESSION</h2>
       </div>
 
       <div className="lg:px-32 px-16  pt-10 flex gap-10 flex-col-reverse lg:flex-row font-mateSC">

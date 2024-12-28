@@ -16,7 +16,7 @@ const Gallery = () => {
         GALLERY
       </h3>
 
-      <div>
+      <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-5">
         {galleryPictures.map((gal) => (
           <div key={gal.id} className="px-4 pt-10">
             <Link to={gal.imgLink}>

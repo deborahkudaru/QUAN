@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 const Header = () => {
   return (
     <nav>
-      <div className="bg-transparent mx-auto flex w-full justify-between flex-wrap  px-5 pt-10">
+      <div className="bg-transparent mx-auto flex w-full justify-between flex-wrap  px-5 py-5">
         <Logo />
         <Navbar />
       </div>

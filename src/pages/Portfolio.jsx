@@ -17,14 +17,14 @@ const Gallery = () => {
       </h3>
       <div className="px-4 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-10">
         {niche.map((image) => (
-          <div className="" key={image.id}  data-aos="fade-up">
+          <div className="" key={image.id}>
             <Link>
-              <div className="">
+              <div className="" data-aos="fade-up">
                 <img src={image.img} alt="" className="shadow-xl" />
               </div>
-              <div className="pt-4 leading-8 pb-2">
-                <p>{image.topic}</p>
-                <p>{image.date}</p>
+              <div className="pt-4 leading-8 pb-2" data-aos="fade-up">
+                <p className="text-blue-800">{image.date}</p>
+                <p className="text-lg">{image.topic}</p>
               </div>
             </Link>
             {/* <p className="text-lg text-blue-800">{image.niche}</p> */}

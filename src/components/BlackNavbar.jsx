@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 // import { CiMenuFries } from "react-icons/ci";
-import { X } from "lucide-react";
+// import { X } from "lucide-react";
+import { TiDelete } from "react-icons/ti";
 
 const NavLinks = () => {
   return (
@@ -57,7 +58,7 @@ const BlackNavbBar = () => {
         </div>
         <div className="lg:hidden text-black">
           <button onClick={toggleNavbar} className="object-right text-4xl">
-            {isOpen ? <X  className="text-6xl"/> : <FiMenu className="text-4xl" />}
+            {isOpen ? <TiDelete  className=""/> : <FiMenu className="" />}
           </button>
         </div>
       </nav>
