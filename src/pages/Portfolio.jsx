@@ -25,9 +25,9 @@ const Gallery = () => {
               <div className="pt-4 leading-8 pb-2" data-aos="fade-up">
                 <p className="text-blue-800">{image.date}</p>
                 <p className="text-lg">{image.topic}</p>
+                <p className="text-lg">Niche: {image.niche}</p>
               </div>
             </Link>
-            {/* <p className="text-lg text-blue-800">{image.niche}</p> */}
           </div>
         ))}
       </div>
