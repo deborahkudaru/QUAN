@@ -11,8 +11,8 @@ const About = () => {
   return (
     <div className="bg-white">
       <div className="w-2/3  m-auto">
-        <h3 className="text-center pt-10 pb-3 font-bold text-2xl lg:text-3xl font-mateSC">
-          Welcome
+        <h3 className="text-center pt-10 pb-3 font-bold text-2xl lg:text-3xl font-NotoSerif text-gray-900 underline decoration-wavy decoration-teal-900 underline-offset-4">
+          WELCOME
         </h3>
         <p className="text-justify justify-center text-zinc-900 font-medium font-CrimsonText pb-5 lg:text-2xl md:text-xl text-base">
           Welcome to <i className="font-bold">Quan Imagery</i>, where moments
