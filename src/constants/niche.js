@@ -1,7 +1,7 @@
 import photo1 from "../images/KWP_0308.jpg";
 import photo2 from "../images/photo12.jpg";
 import photo3 from "../images/KWP_0435.jpg";
-import photo4 from "../images/KWP_0563.jpg"
+// import photo4 from "../images/KWP_0563.jpg"
 import photo5 from "../images/KWP_4109.jpg"
 import photo6 from "../images/KWP_9707.jpg"
 import photo7 from "../images/Siza alpha .jpg"
@@ -10,6 +10,7 @@ import photo9 from "../images/KWP_4584.jpg"
 import photo10 from "../images/KWP_5980.jpg"
 import photo11 from "../images/KWP_6639.jpg"
 import photo12 from "../images/KWP_7078.jpg"
+import photo4 from "../images/KWP_4421.jpg"
 
 const niche = [
   {
@@ -22,10 +23,10 @@ const niche = [
   },
   {
     id: 2,
-    img: photo2,
-    topic: "Ritmwa for Jos Photo magazine 2024",
+    img: photo11,
+    topic: "Byenchit fashion and runway model for Onazi clothings",
     niche: "Fashion | Styling | Color",
-    date: "July, 2024",
+    date: "September 2024",
     link: "",
   },
   {
@@ -78,10 +79,10 @@ const niche = [
   },
   {
     id: 9,
-    img: photo11,
-    topic: "Byenchit fashion and runway model for Onazi clothings",
+    img: photo2,
+    topic: "Ritmwa for Jos Photo magazine 2024",
     niche: "Fashion | Styling | Color",
-    date: "September 2024",
+    date: "July, 2024",
     link: "",
   },
   {
