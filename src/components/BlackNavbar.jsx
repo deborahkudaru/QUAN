@@ -10,6 +10,14 @@ const NavLinks = () => {
     <ul className="flex space-x-5 nav">
       <li>
         <Link
+          to="/"
+          className="text-black hover:underline-offset-4 transition duration-300 font-bold xl:text-xl lg:text-lg font-mateSC hover:underline"
+        >
+          HOME
+        </Link>
+      </li>
+      <li>
+        <Link
           to="/album"
           className="text-black hover:underline-offset-4 transition duration-300 font-bold xl:text-xl lg:text-lg font-mateSC hover:underline"
         >
@@ -66,8 +74,16 @@ const BlackNavbBar = () => {
         <ul className="flex gap-7 flex-col items-end  basis-full absolute right-1 top-20 bg-white w-full pb-12 pr-4 ">
           <li>
             <Link
+              to="/"
+              className="text-black hover:text-red-800 transition  text-sm duration-300 font-semibold "
+            >
+              HOME
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/album"
-              className="text-black hover:text-teal-700 transition  text-sm duration-300 font-semibold "
+              className="text-black hover:text-red-800 transition  text-sm duration-300 font-semibold "
             >
               ALBUM
             </Link>
@@ -75,7 +91,7 @@ const BlackNavbBar = () => {
           <li>
             <Link
               to="/book"
-              className="text-black hover:text-teal-700 transition text-sm duration-300 font-semibold "
+              className="text-black hover:text-red-800 transition text-sm duration-300 font-semibold "
             >
               BOOK
             </Link>
@@ -83,7 +99,7 @@ const BlackNavbBar = () => {
           <li>
             <Link
               to="/portfolio"
-              className="text-black hover:text-teal-700 transition text-sm duration-300 font-semibold "
+              className="text-black hover:text-red-800 transition text-sm duration-300 font-semibold "
             >
               PORTFOLIO
             </Link>
@@ -91,7 +107,7 @@ const BlackNavbBar = () => {
           <li>
             <Link
               to="/no-page"
-              className="text-black hover:text-teal-700 transition text-sm duration-300 font-semibold "
+              className="text-black hover:text-red-800 transition text-sm duration-300 font-semibold "
             >
               BLOG
             </Link>

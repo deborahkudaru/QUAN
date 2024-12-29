@@ -11,6 +11,14 @@ const NavLinks = () => {
     <ul className="flex space-x-5 nav">
       <li>
         <Link
+          to="/"
+          className="text-white hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
+        >
+          HOME
+        </Link>
+      </li>
+      <li>
+        <Link
           to="/album"
           className="text-white hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
         >
@@ -65,6 +73,14 @@ const Navbar = () => {
       </nav>
       {isOpen && (
         <ul className="flex gap-5 flex-col text-right absolute right-5 top-20 ">
+          <li>
+            <Link
+              to="/"
+              className="text-white   transition  text-sm duration-300 font-semibold font-playFair "
+            >
+              HOME
+            </Link>
+          </li>
           <li>
             <Link
               to="/album"
