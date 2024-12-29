@@ -23,9 +23,9 @@ const Gallery = () => {
                 <img src={image.img} alt="" className="shadow-xl" />
               </div>
               <div className="pt-4 leading-8 pb-2" data-aos="fade-up">
-                <p className="text-lg font-bold font-playFair text-red-950">{image.topic}</p>
-                <p className="text-red-950 font-semibold font-NotoSerif">Niche: <span className="text-gray-700 font-normal">{image.niche}</span></p>
-                <p className="text-red-950 font-semibold font-NotoSerif">Date: <span className="text-gray-700 font-normal">{image.date}</span></p>
+                <p className="text-lg font-bold font-playFair text-red-800">{image.topic}</p>
+                <p className="text-red-800 font-semibold font-lato">Niche: <span className="text-gray-700 font-normal">{image.niche}</span></p>
+                <p className="text-red-800 font-semibold font-lato">Date: <span className="text-gray-700 font-normal">{image.date}</span></p>
               </div>
             </Link>
           </div>
