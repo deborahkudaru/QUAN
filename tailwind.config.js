@@ -4,9 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mateSC: ["Mate SC", "serif"],
-        CrimsonText: ["Crimson Text", "serif"],
-        NotoSerif: ["Noto Serif Display", "serif"],
+        playFair: ["Playfair", "serif"]
       },
     },
   },
