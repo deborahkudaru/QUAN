@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import image1 from "../images/IMG_5886.png";
 import { BsArrowLeft } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
@@ -13,8 +13,8 @@ const Book = () => {
     address: "",
     sessionType: "",
     date: "",
-    time: ""
-  })
+    time: "",
+  });
 
   const handleChange = (e) => {
     setBookingData({
@@ -22,29 +22,33 @@ const Book = () => {
       [e.target.name]: e.target.value,
     });
   };
- 
 
   return (
     <>
-    <BlackHeader />
-      <div className="flex lg:px-32 px-16 pt-28 lg:gap-10 gap-5">
+      <BlackHeader />
+      <div className="flex lg:px-32 px-10 pt-28 lg:gap-10 gap-5">
         <button onClick={() => navigate(-1)}>
-          <BsArrowLeft className="lg:text-3xl text-2xl relative top-1 lg:top-0" />
+          <BsArrowLeft className="lg:text-2xl text-lg" />
         </button>
-        <h2 className="font-mateSC lg:text-2xl text-lg">BOOK A SESSION</h2>
+        <h2 className="font-playFair font-semibold text-red-800 lg:text-2xl text-lg">
+          BOOK A SESSION
+        </h2>
       </div>
 
-      <div className="lg:px-32 px-16  pt-10 flex gap-10 flex-col-reverse lg:flex-row font-mateSC">
+      <div className="lg:px-32 px-5  pt-10 flex gap-10 flex-col-reverse lg:flex-row font-lato">
         <form action="">
           <div className="flex lg:flex-row flex-col lg:gap-24 gap-2 mb-10">
             <label htmlFor="name">
-              Name<sup className="text-red-600" required>*</sup>
+              Name
+              <sup className="text-red-600" required>
+                *
+              </sup>
             </label>
             <input
               type="text"
               className="border outline-0 border-gray-500 px-5 py-2"
               value={bookingData.name}
-              name ="name"
+              name="name"
               onChange={handleChange}
               required
             />
@@ -58,7 +62,7 @@ const Book = () => {
               type="text"
               onChange={handleChange}
               value={bookingData.email}
-              name ="email"
+              name="email"
               className="border outline-0 ml-0 border-gray-500 px-5 py-2"
               required
             />
@@ -70,7 +74,7 @@ const Book = () => {
             </label>
             <input
               type="number"
-              onChange = {handleChange}
+              onChange={handleChange}
               name="phoneNumber"
               value={bookingData.phoneNumber}
               className="border outline-0  border-gray-500 px-5 py-2"
@@ -86,7 +90,7 @@ const Book = () => {
               type="address"
               name="address"
               value={bookingData.address}
-              onchange = {handleChange}
+              onchange={handleChange}
               className="border outline-0 ml-0 border-gray-500 px-5 py-2"
               required
             />
@@ -100,7 +104,7 @@ const Book = () => {
               name="sessionType"
               id=""
               onChange={handleChange}
-              value = {bookingData.sessionType}
+              value={bookingData.sessionType}
               className="border outline-0  border-gray-500 px-5 py-2"
               required
             >
@@ -121,12 +125,12 @@ const Book = () => {
             <label htmlFor="">
               Date and Time<sup className="text-red-600">*</sup>
             </label>
-            <div className="flex gap-8">
+            <div className="grid grid-cols-2 gap-3">
               <input
                 type="date"
-                value = {bookingData.data}
-                name = "date"
-                onChange = {handleChange}
+                value={bookingData.data}
+                name="date"
+                onChange={handleChange}
                 className="border outline-0  border-gray-500 px-5 py-2"
                 required
               />
@@ -136,9 +140,11 @@ const Book = () => {
               />
             </div>
           </div>
-          <button className="bg-neutral-900 text-white px-10 py-2 lg:mt-12 mt-5 relative lg:left-36 lg:ml-2  hover:bg-gray-800">
-            Book
-          </button>
+          <div className="flex justify-center">
+            <button className="bg-neutral-900 text-white px-10 py-2 lg:mt-12 mt-8 relative lg:left-36 lg:ml-2  hover:bg-gray-800">
+              Book
+            </button>
+          </div>
         </form>
         <img src={image1} alt="" className="lg:w-1/2 lg:h-1/2 " />
       </div>
