@@ -16,7 +16,7 @@ const niche = [
   {
     id: 1,
     img: photo1,
-    topic: "Hilda for Jos Photo magazine 2024",
+    topic: "HILDA FOR JOS PHOTO MAGAZINE 2024",
     niche: "Fashion | Styling | Color",
     date: "July, 2024",
     link: "",
@@ -24,7 +24,7 @@ const niche = [
   {
     id: 2,
     img: photo11,
-    topic: "Byenchit fashion and runway model for Onazi clothings",
+    topic: "BYENCHIT FASHION AND RUNWAY MODEL FOR ONAZI CLOTHINGS",
     niche: "Fashion | Styling | Color",
     date: "September 2024",
     link: "",
@@ -32,7 +32,7 @@ const niche = [
   {
     id: 3,
     img: photo3,
-    topic: "Nate for ZZ Luxury 2024",
+    topic: "NATE FOR ZZ LUXURY 2024",
     niche: "Fashion | Styling | Color",
     date: "September 2024",
     link: "",
@@ -40,7 +40,7 @@ const niche = [
   {
     id: 4,
     img: photo4,
-    topic: "Mike wills For Quan Imagery",
+    topic: "MIKE WILLS FOR QUAN IMAGERY",
     niche: "Fashion | Styling | Color",
     date: "February 2024",
     link: "",
@@ -48,7 +48,7 @@ const niche = [
   {
     id: 5,
     img: photo5,
-    topic: "Siza Alpha fashion influencer in denim",
+    topic: "SIZA ALPHA FASHION INFLUENCER IN DENIM",
     niche: "Fashion | Styling | Color",
     date: "April 2024",
     link: "",
@@ -56,7 +56,7 @@ const niche = [
   {
     id: 6,
     img: photo8,
-    topic: "Nate fashion influencer",
+    topic: "NATE FASHION INFLUENCER",
     niche: "Fashion | Styling | Color",
     date: "February 2024",
     link: "",
@@ -64,7 +64,7 @@ const niche = [
   {
     id: 7,
     img: photo9,
-    topic: "Siza Alpha fashion influencer",
+    topic: "SIZA ALPHA FASHION INFLUENCER",
     niche: "Fashion | Styling | Color",
     date: "March 2024",
     link: "",
@@ -72,7 +72,7 @@ const niche = [
   {
     id: 8,
     img: photo10,
-    topic: "Hope fashion and runway model for RJ's collection",
+    topic: "HOPE FASHION AND RUNWAY MODEL FOR RJ'S COLLECTION",
     niche: "Fashion | Styling | Color",
     date: "October 2024",
     link: "",
@@ -80,7 +80,7 @@ const niche = [
   {
     id: 9,
     img: photo2,
-    topic: "Ritmwa for Jos Photo magazine 2024",
+    topic: "RITMWA FOR JOS PHOTO MAGAZINE 2024",
     niche: "Fashion | Styling | Color",
     date: "July, 2024",
     link: "",
@@ -88,7 +88,7 @@ const niche = [
   {
     id: 10,
     img: photo12,
-    topic: "Ebuka for onazi clothing",
+    topic: "EBUKA FOR ONAZI CLOTHING",
     niche: "Fashion | Styling | Color",
     date: "September 2024",
     link: "",
@@ -96,15 +96,15 @@ const niche = [
   {
     id: 11,
     img: photo6,
-    topic: "Ritmwa fashion model",
+    topic: "RITMWA FASHION MODEL",
     niche: "Fashion | Styling | Color",
     date: "July 2024",
     link: "",
   },
   {
     id: 12,
-    img:  photo7,
-    topic: "Siza Alpha fashion influencer in denim",
+    img: photo7,
+    topic: "SIZA ALPHA FASHION INFLUENCER IN DENIM",
     niche: "Fashion | Styling | Color",
     date: "April 2024",
     link: "",

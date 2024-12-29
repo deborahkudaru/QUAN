@@ -63,11 +63,11 @@ const BlackNavbBar = () => {
         </div>
       </nav>
       {isOpen && (
-        <ul className="flex gap-7 flex-col items-end  basis-full absolute right-1 top-20 bg-white w-full pb-20 pr-4">
+        <ul className="flex gap-7 flex-col items-end  basis-full absolute right-1 top-20 bg-white w-full pb-12 pr-4 ">
           <li>
             <Link
               to="/album"
-              className="text-black hover:text-blue-800 transition  text-sm duration-300 font-semibold "
+              className="text-black hover:text-teal-700 transition  text-sm duration-300 font-semibold "
             >
               ALBUM
             </Link>
@@ -75,7 +75,7 @@ const BlackNavbBar = () => {
           <li>
             <Link
               to="/book"
-              className="text-black hover:text-blue-800 transition text-sm duration-300 font-semibold "
+              className="text-black hover:text-teal-700 transition text-sm duration-300 font-semibold "
             >
               BOOK
             </Link>
@@ -83,7 +83,7 @@ const BlackNavbBar = () => {
           <li>
             <Link
               to="/portfolio"
-              className="text-black hover:text-blue-800 transition text-sm duration-300 font-semibold "
+              className="text-black hover:text-teal-700 transition text-sm duration-300 font-semibold "
             >
               PORTFOLIO
             </Link>
@@ -91,7 +91,7 @@ const BlackNavbBar = () => {
           <li>
             <Link
               to="/no-page"
-              className="text-black hover:text-blue-800 transition text-sm duration-300 font-semibold "
+              className="text-black hover:text-teal-700 transition text-sm duration-300 font-semibold "
             >
               BLOG
             </Link>
