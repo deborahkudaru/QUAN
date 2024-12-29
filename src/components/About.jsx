@@ -11,17 +11,17 @@ const About = () => {
   return (
     <div className="bg-white">
       <div className="w-2/3  m-auto">
-        <h3 className="text-center pt-10 pb-3 font-bold text-2xl lg:text-3xl font-NotoSerif text-gray-900">
+        <h3 className="text-center pt-10 pb-3 font-bold text-2xl lg:text-3xl font-playFair text-gray-900">
           WELCOME
         </h3>
-        <p className="text-justify justify-center text-zinc-900 font-medium font-CrimsonText pb-5 lg:text-2xl md:text-xl text-base">
-          Welcome to <i className="font-bold">Quan Imagery</i>, where moments
+        <p className="text-justify justify-center text-zinc-900 font-medium font-CrimsonText pb-5 lg:text-2xl md:text-xl text-base font-lato">
+          Welcome to <i className="font-bold text-red-800">Quan Imagery</i>, where moments
           become timeless treasures. In a world filled with fleeting moments, we
           believe in the enduring power of photography and videography to
           capture the essence of life's most precious occasions. Founded with a
           passion for storytelling through imagery, Quan Imagery is the
           culmination of a lifelong love affair with the art of photography and
-          videography. Led by <span className="font-bold">Kwoopnan Anpe, </span>{" "}
+          videography. Led by <i className="font-bold text-red-800">Kwoopnan Anpe, </i>{" "}
           our team is driven by a shared commitment to craftsmanship,
           creativity, and connection. With each click of the shutter, we strive
           to encapsulate the beauty, emotion, and authenticity of the human
@@ -31,7 +31,7 @@ const About = () => {
         <div className="flex gap-2 justify-end">
           <Link
             to="/book"
-            className="text-black  font-mateSC font-semibold lg:text-xl text-sm relative text-end hover:underline"
+            className="text-gray-900  font-lato font-semibold lg:text-xl text-sm relative text-end hover:underline hover:text-red-800"
           >
             BOOK A SESSION{" "}
           </Link>

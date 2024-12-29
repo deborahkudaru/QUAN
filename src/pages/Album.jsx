@@ -48,14 +48,14 @@ const Album = () => {
   return (
     <>
       <BlackHeader />
-      <div className="px-4 pt-10">
+      <div className="px-4 pt-20">
         <div className="flex py-5 lg:gap-10 gap-5">
           <button onClick={() => navigate(-1)}>
-            <BsArrowLeft className="lg:text-3xl text-2xl relative top-1 lg:top-0" />
+            <BsArrowLeft className="lg:text-2xl text-lg" />
           </button>
-          <h2 className="font-mateSC lg:text-3xl text-lg">ALBUM</h2>
+          <h2 className="font-playFair lg:text-3xl text-red-800 text-lg font-semibold">ALBUM</h2>
         </div>
-        <div className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 gap-6 ">
+        <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 ">
           {albums.map((alb) => (
             <div key={alb.id} className="">
               <Link to={alb.albumURL}>
@@ -63,7 +63,7 @@ const Album = () => {
                   className="bg-cover bg-no-repeat bg-black bg-opacity-50 bg-blend-overlay text-white font-mateSC pt-72"
                   style={{ backgroundImage: `url(${alb.bgImage})` }}
                 >
-                  <p className="text-xl ml-5 pb-5">{alb.albumName}</p>
+                  <p className="text-xl font-lato font-semibold ml-5 pb-5">{alb.albumName}</p>
                 </div>
               </Link>
             </div>

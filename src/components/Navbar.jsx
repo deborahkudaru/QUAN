@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 // import { CiMenuFries } from "react-icons/ci";
-import { TiDelete } from "react-icons/ti";
+// import { TiDelete } from "react-icons/ti";
 // import { X } from "lucide-react";
+import { IoIosClose } from "react-icons/io";
 
 const NavLinks = () => {
   return (
@@ -11,7 +12,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/album"
-          className="text-white hover:underline-offset-4 transition duration-300 font-bold text-xl font-mateSC hover:underline"
+          className="text-white hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
         >
           ALBUM
         </Link>
@@ -19,7 +20,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/book"
-          className="text-white hover:underline-offset-4 transition duration-300 font-bold text-xl font-mateSC hover:underline"
+          className="text-white hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
         >
           BOOK A SESSION
         </Link>
@@ -27,7 +28,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/portfolio"
-          className="text-white hover:underline-offset-4 transition duration-300 font-bold text-xl font-mateSC hover:underline"
+          className="text-white hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
         >
           PORTFOLIO
         </Link>
@@ -35,7 +36,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/no-page"
-          className="text-white hover:underline-offset-4 transition duration-300 font-bold text-xl font-mateSC hover:underline"
+          className="text-white hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
         >
           BLOG 
         </Link>
@@ -58,7 +59,7 @@ const Navbar = () => {
         </div>
         <div className="lg:hidden text-white">
           <button onClick={toggleNavbar} className="object-right text-4xl">
-            {isOpen ? <TiDelete  className=""/> : <FiMenu className="" />}
+            {isOpen ? <IoIosClose  className=""/> : <FiMenu className="" />}
           </button>
         </div>
       </nav>
@@ -67,7 +68,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/album"
-              className="text-black   transition  text-sm duration-300 font-semibold "
+              className="text-white   transition  text-sm duration-300 font-semibold font-playFair "
             >
               ALBUM
             </Link>
@@ -75,7 +76,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/book"
-              className="text-black transition text-sm duration-300 font-semibold "
+              className="text-white transition text-sm duration-300 font-semibold font-playFair "
             >
               BOOK
             </Link>
@@ -83,7 +84,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/portfolio"
-              className="text-black transition text-sm duration-300 font-semibold "
+              className="text-white transition text-sm duration-300 font-semibold font-playFair "
             >
               PORTFOLIO
             </Link>
@@ -91,7 +92,7 @@ const Navbar = () => {
           <li>
             <Link
               to="/no-page"
-              className="text-black transition text-sm duration-300 font-semibold "
+              className="text-white transition text-sm duration-300 font-semibold font-playFair "
             >
               BLOG
             </Link>

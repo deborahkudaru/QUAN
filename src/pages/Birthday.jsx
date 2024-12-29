@@ -17,12 +17,12 @@ const Birthday = () => {
   return (
     <>
       <BlackHeader />
-      <div className="px-4 pt-10">
+      <div className="px-4 pt-20">
         <div className="flex py-5 lg:gap-10 gap-5">
           <button onClick={() => navigate(-1)}>
-            <BsArrowLeft className="lg:text-3xl text-2xl relative top-1 lg:top-0" />
+            <BsArrowLeft className="lg:text-2xl text-lg" />
           </button>
-          <h2 className="font-mateSC lg:text-3xl text-lg">BIRTHDAY</h2>
+          <h2 className="font-playFair font-semibold text-red-800 lg:text-3xl text-lg">BIRTHDAY</h2>
         </div>
 
         <div className="lg:grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">

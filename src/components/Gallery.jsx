@@ -8,20 +8,24 @@ import { Link } from "react-router-dom";
 
 const Gallery = () => {
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 2000 });
   }, []);
   return (
     <div className="bg-white">
-      <h3 className=" text-center pt-20 pb-10 font-bold text-2xl lg:text-3xl font-mateSC">
+      <h3 className=" text-center pt-20 pb- font-bold text-2xl lg:text-3xl font-playFair">
         GALLERY
       </h3>
 
       <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-5">
         {galleryPictures.map((gal) => (
-          <div key={gal.id} className="px-4 pt-10">
-            <Link to={gal.imgLink}>
-              <img src={gal.img} alt="" className="shadow-xl hover:bg-black hover:opacity-80" />
-              <p className="text-xl font-semi-bold mt-4">{gal.imgNiche}</p>
+          <div key={gal.id} className="px-4 pt-10 ">
+            <Link to={gal.imgLink}  data-aos="zoom-in">
+              <p className="text-xl font-semi-bold mb-2 text-red-800 font-lato">{gal.imgNiche}</p>
+              <img
+                src={gal.img}
+                alt=""
+                className="shadow-xl hover:bg-black hover:opacity-80"
+              />
             </Link>
           </div>
         ))}
