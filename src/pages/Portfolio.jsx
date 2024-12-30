@@ -13,7 +13,7 @@ const Gallery = () => {
     <div className="bg-white">
       <BlackHeader />
       <h3 className=" text-center pt-32 pb-10 font-bold text-2xl lg:text-3xl font-playFair text-gray-900 ">
-        PORTFOLIO
+        SOME OF MY WORK
       </h3>
       <div className="px-4 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-10">
         {niche.map((image) => (

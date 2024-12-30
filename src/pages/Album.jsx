@@ -38,7 +38,7 @@ const albums = [
   {
     id: 5,
     bgImage: photo22,
-    albumName: "Music Videos",
+    albumName: "Videos",
     albumURL: "/no-page",
   },
 ];

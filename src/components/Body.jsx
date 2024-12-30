@@ -35,7 +35,7 @@ const Body = () => {
           src={logo}
           alt="Quan Imagery"
         />
-        <TfiAngleDoubleDown className="text-white animate-bounce text-center w-full m-auto relative lg:bottom-5  md:bottom-5 text-3xl lg:text-4xl" />
+        <TfiAngleDoubleDown className="text-white animate-bounce text-center w-full m-auto relative top-8 text-3xl lg:text-4xl" />
       </div>
       <About />
       <Gallery />

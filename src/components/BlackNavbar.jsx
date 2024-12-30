@@ -11,7 +11,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/"
-          className="text-black hover:underline-offset-4 transition duration-300 font-bold xl:text-xl lg:text-lg font-mateSC hover:underline"
+          className="text-black hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
         >
           HOME
         </Link>
@@ -19,7 +19,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/album"
-          className="text-black hover:underline-offset-4 transition duration-300 font-bold xl:text-xl lg:text-lg font-mateSC hover:underline"
+          className="text-black hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
         >
           ALBUM
         </Link>
@@ -27,7 +27,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/book"
-          className="text-black hover:underline-offset-4 transition duration-300 font-bold xl:text-xl lg:text-lg font-mateSC hover:underline"
+          className="text-black hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
         >
           BOOK A SESSION
         </Link>
@@ -35,7 +35,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/portfolio"
-          className="text-black hover:underline-offset-4 transition duration-300 font-bold xl:text-xl lg:text-lg font-mateSC hover:underline"
+          className="text-black hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
         >
           PORTFOLIO
         </Link>
@@ -43,7 +43,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/no-page"
-          className="text-black hover:underline-offset-4 transition duration-300 font-bold xl:text-xl lg:text-lg font-mateSC hover:underline"
+          className="text-black hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
         >
           BLOG 
         </Link>

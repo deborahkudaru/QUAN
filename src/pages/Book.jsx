@@ -3,10 +3,11 @@ import image1 from "../images/IMG_5886.png";
 import { BsArrowLeft } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import BlackHeader from "../components/BlackHeader";
+import { FaCircleCheck } from "react-icons/fa6";
 
 const Book = () => {
   const navigate = useNavigate();
-  const [bookingData, setBookingData] = useState({
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     phoneNumber: "",
@@ -17,10 +18,44 @@ const Book = () => {
   });
 
   const handleChange = (e) => {
-    setBookingData({
-      ...bookingData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const [responseMessage, setResponseMessage] = useState("");
+
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch(
+        "https://k-backend-hk86.vercel.app/api/user/book",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to submit booking.");
+      }
+
+      const data = await response.json();
+      setResponseMessage("Booking successful");
+      window.location.href = "/";
+      console.log("successful", data);
+    } catch (error) {
+      setResponseMessage("Booking Unsuccessful");
+      console.log("failed", error.message);
+    }
   };
 
   return (
@@ -36,7 +71,7 @@ const Book = () => {
       </div>
 
       <div className="lg:px-32 px-5  pt-10 flex gap-10 flex-col-reverse lg:flex-row font-lato">
-        <form action="">
+        <form onSubmit={handleSubmit}>
           <div className="flex lg:flex-row flex-col lg:gap-24 gap-2 mb-10">
             <label htmlFor="name">
               Name
@@ -47,7 +82,7 @@ const Book = () => {
             <input
               type="text"
               className="border outline-0 border-gray-500 px-5 py-2"
-              value={bookingData.name}
+              value={formData.name}
               name="name"
               onChange={handleChange}
               required
@@ -59,9 +94,9 @@ const Book = () => {
               Email<sup className="text-red-600">*</sup>
             </label>
             <input
-              type="text"
+              type="email"
               onChange={handleChange}
-              value={bookingData.email}
+              value={formData.email}
               name="email"
               className="border outline-0 ml-0 border-gray-500 px-5 py-2"
               required
@@ -76,7 +111,7 @@ const Book = () => {
               type="number"
               onChange={handleChange}
               name="phoneNumber"
-              value={bookingData.phoneNumber}
+              value={formData.phoneNumber}
               className="border outline-0  border-gray-500 px-5 py-2"
               required
             />
@@ -87,10 +122,10 @@ const Book = () => {
               Address<sup className="text-red-600">*</sup>
             </label>
             <input
-              type="address"
+              type="text"
               name="address"
-              value={bookingData.address}
-              onchange={handleChange}
+              value={formData.address}
+              onChange={handleChange}
               className="border outline-0 ml-0 border-gray-500 px-5 py-2"
               required
             />
@@ -102,21 +137,19 @@ const Book = () => {
             </label>
             <select
               name="sessionType"
-              id=""
+              type="text"
               onChange={handleChange}
-              value={bookingData.sessionType}
+              value={formData.sessionType}
               className="border outline-0  border-gray-500 px-5 py-2"
               required
             >
               <option value="">Choose a Shoot</option>
-              <option value="">Birthday Shoot</option>
-              <option value="">Wedding Shoot</option>
-              <option value="">Modelling Shoot</option>
-              <option value="">Casual Shoot</option>
-              <option value="">Fashion Shoot</option>
-              <option value="" className="hover:bg-black">
-                Music Video
-              </option>
+              <option value="Birthday Shoot">Birthday Shoot</option>
+              <option value="Wedding Shoot">Wedding Shoot</option>
+              <option value="Modelling Shoot">Modelling Shoot</option>
+              <option value="Casual Shoot">Casual Shoot</option>
+              <option value="Fashin Shoot">Fashion Shoot</option>
+              <option value="Music Video">Music Video</option>
               <option value="">Other</option>
             </select>
           </div>
@@ -128,7 +161,7 @@ const Book = () => {
             <div className="grid grid-cols-2 gap-3">
               <input
                 type="date"
-                value={bookingData.data}
+                value={formData.data}
                 name="date"
                 onChange={handleChange}
                 className="border outline-0  border-gray-500 px-5 py-2"
@@ -136,16 +169,65 @@ const Book = () => {
               />
               <input
                 type="time"
+                value={formData.time}
+                name="time"
+                onChange={handleChange}
                 className="border outline-0  border-gray-500 px-5 py-2"
+                required
               />
             </div>
           </div>
           <div className="flex justify-center">
-            <button className="bg-neutral-900 text-white px-10 py-2 lg:mt-12 mt-8 relative lg:left-36 lg:ml-2  hover:bg-gray-800">
+            <button
+              className="bg-neutral-900 text-white px-10 py-2 lg:mt-12 mt-8 relative lg:left-36 lg:ml-2  hover:bg-gray-800"
+              onClick={openModal}
+            >
               Book
             </button>
           </div>
+
+          {/* pop up modal */}
+          {isOpen && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+              <div className="bg-white shadow-lg w-96 p-6">
+                <h2 className="text-xl font-semibold mb-4 font-lato">
+                  Confirm booking?
+                </h2>
+                <div className="flex justify-end space-x-3">
+                  <button
+                    type="submit"
+                    className="bg-gray-500 text-white px-4 py-2 hover:bg-red-800 font-lato"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    onClick={closeModal}
+                    className="bg-blue-500 text-white px-4 py-2 hover:bg-blue-600 font-lato"
+                  >
+                    Confirm
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
         </form>
+        {responseMessage && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="bg-white shadow-lg w-96 p-5">
+              <p className="text-green-500 text-2xl mb-2">
+                {responseMessage}
+                <FaCircleCheck className="inline ml-2 text-lg" />
+              </p>
+              <p>You will receieve a call or an email as soon as possible.</p>
+              {/* <button
+                onClick={closeModal}
+                className="bg-blue-500 text-white px-4 py-2 hover:bg-blue-600 font-lato"
+              >
+                Okay
+              </button> */}
+            </div>
+          </div>
+        )}
         <img src={image1} alt="" className="lg:w-1/2 lg:h-1/2 " />
       </div>
     </>
