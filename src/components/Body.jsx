@@ -10,6 +10,7 @@ import photo18 from "../images/photo18.jpg";
 import photo24 from "../images/photo24.jpg";
 import photo4 from "../images/photo4.jpg";
 import photo26 from "../images/KWP_0568.jpg";
+import Album from "../pages/Album";
 
 const Body = () => {
   const images = [photo20, photo18, photo24, photo4, photo26];
@@ -38,7 +39,8 @@ const Body = () => {
         <TfiAngleDoubleDown className="text-white animate-bounce text-center w-full m-auto relative top-8 text-3xl lg:text-4xl" />
       </div>
       <About />
-      <Gallery />
+      {/* <Gallery /> */}
+      <Album />
     </div>
   );
 };

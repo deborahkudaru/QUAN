@@ -49,9 +49,13 @@ const Book = () => {
       }
 
       const data = await response.json();
-      setResponseMessage("Booking successful");
-      window.location.href = "/";
-      console.log("successful", data);
+      console.log("successful", data , formData);
+      setTimeout(() => {
+        setResponseMessage("Booking successful");
+      }, 5000);
+      
+      // window.location.href = "/";
+     
     } catch (error) {
       setResponseMessage("Booking Unsuccessful");
       console.log("failed", error.message);

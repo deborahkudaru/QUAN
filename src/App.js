@@ -1,7 +1,7 @@
 import React from "react";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
-import Album from "./pages/Album";
+// import Album from "./pages/Album";
 import Book from "./pages/Book";
 import { Routes, Route } from "react-router-dom";
 import Fashion from "./pages/Fashion";
@@ -16,7 +16,7 @@ const App = () => {
       {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Body />} />
-        <Route path="/album" element={<Album />} />
+        {/* <Route path="/album" element={<Album />} /> */}
         <Route path="/book" element={<Book />} />
         <Route path="/fashion" element={<Fashion />} />
         <Route path="/birthday" element={<Birthday />} />

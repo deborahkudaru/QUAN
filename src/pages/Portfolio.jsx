@@ -12,15 +12,15 @@ const Gallery = () => {
   return (
     <div className="bg-white">
       <BlackHeader />
-      <h3 className=" text-center pt-32 pb-10 font-bold text-2xl lg:text-3xl font-playFair text-gray-900 ">
-        SOME OF MY WORK
+      <h3 className=" text-center pt-32 pb-6 font-bold text-2xl lg:text-3xl font-playFair text-gray-900 ">
+        SCROLL THROUGH
       </h3>
       <div className="px-4 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-10">
         {niche.map((image) => (
           <div className="" key={image.id}>
             <Link>
               <div className="" data-aos="fade-up">
-                <img src={image.img} alt="" className="shadow-xl" />
+                <img src={image.img} alt="" className="shadow-xl rounded-xl" />
               </div>
               <div className="pt-4 leading-8 pb-2" data-aos="fade-up">
                 <p className="text-lg font-bold font-playFair text-red-800">{image.topic}</p>

@@ -6,8 +6,8 @@ import photo21 from "../images/photo21.jpg";
 import photo22 from "../images/photo22.jpg";
 import photo23 from "../images/photo23.jpg";
 import { GoArrowRight } from "react-icons/go";
-import { BsArrowLeft } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
+// import { BsArrowLeft } from "react-icons/bs";
+// import { useNavigate } from "react-router-dom";
 import BlackHeader from "../components/BlackHeader";
 
 const albums = [
@@ -44,23 +44,28 @@ const albums = [
 ];
 
 const Album = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   return (
     <>
       <BlackHeader />
       <div className="px-4 pt-20">
-        <div className="flex py-5 lg:gap-10 gap-5">
-          <button onClick={() => navigate(-1)}>
+        {/* <div className="flex py-5 lg:gap-10 gap-5">
+          <button
+           onClick={() => navigate(-1)}
+           >
             <BsArrowLeft className="lg:text-2xl text-lg" />
           </button>
           <h2 className="font-playFair lg:text-3xl text-red-800 text-lg font-semibold">ALBUM</h2>
-        </div>
+        </div> */}
+         <h3 className=" text-center pb-6 font-bold text-2xl lg:text-3xl font-playFair text-gray-900 ">
+        ALBUM
+      </h3>
         <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 ">
           {albums.map((alb) => (
             <div key={alb.id} className="">
               <Link to={alb.albumURL}>
                 <div
-                  className="bg-cover bg-no-repeat bg-black bg-opacity-50 bg-blend-overlay text-white font-mateSC pt-72"
+                  className="bg-cover bg-no-repeat bg-black bg-opacity-50 bg-blend-overlay text-white font-mateSC pt-72 rounded-xl"
                   style={{ backgroundImage: `url(${alb.bgImage})` }}
                 >
                   <p className="text-xl font-lato font-semibold ml-5 pb-5">{alb.albumName}</p>
