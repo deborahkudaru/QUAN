@@ -192,9 +192,10 @@ const Book = () => {
           {isOpen && (
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
               <div className="bg-white shadow-lg w-96 p-6">
-                <h2 className="text-xl font-semibold mb-4 font-lato">
+                <h2 className="text-xl font-semibold mb-2 font-lato">
                   Confirm booking?
                 </h2>
+                <p className="font-lato mb-4">After booking, you will be re-directed back to the home page.</p>
                 <div className="flex justify-end space-x-3">
                   <button
                     type="submit"

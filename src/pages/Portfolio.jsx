@@ -4,16 +4,20 @@ import "aos/dist/aos.css";
 import niche from "../constants/niche";
 import { Link } from "react-router-dom";
 import BlackHeader from "../components/BlackHeader";
+import Typewriter from "../components/Typewriter";
+import { IoIosArrowRoundDown } from "react-icons/io";
 
 const Gallery = () => {
+
   useEffect(() => {
     Aos.init({ duration: 500 });
   }, []);
   return (
     <div className="bg-white">
       <BlackHeader />
-      <h3 className=" text-center pt-32 pb-6 font-bold text-2xl lg:text-3xl font-playFair text-gray-900 ">
-        SCROLL THROUGH
+      <h3 className=" text-center pt-32 pb-6 font-bold text-2xl lg:text-3xl font-playFair text-gray-700 ">
+      <Typewriter text="  A SCROLL THROUGH" delay={300} infinite /> <IoIosArrowRoundDown className="inline ml-2 animate-bounce teext-lg"/>
+
       </h3>
       <div className="px-4 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-10">
         {niche.map((image) => (
