@@ -16,7 +16,7 @@ const Gallery = () => {
     <div className="bg-white">
       <BlackHeader />
       <h3 className=" text-center pt-32 pb-6 font-bold text-2xl lg:text-3xl font-playFair text-gray-700 ">
-      <Typewriter text="SCROLL THROUGH" delay={300} infinite /> <IoIosArrowRoundDown className="inline ml-2 animate-bounce teext-lg"/>
+      <Typewriter text="SCROLL THROUGH" delay={200} infinite /> <IoIosArrowRoundDown className="inline ml-2 animate-bounce teext-lg"/>
 
       </h3>
       <div className="px-4 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-10">

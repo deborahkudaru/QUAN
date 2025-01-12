@@ -58,7 +58,7 @@ const Album = () => {
           <h2 className="font-playFair lg:text-3xl text-red-800 text-lg font-semibold">ALBUM</h2>
         </div> */}
          <h3 className=" text-center pb-6 font-bold text-2xl lg:text-3xl font-playFair text-gray-900 ">
-        ALBUM
+        GALLERY
       </h3>
         <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 ">
           {albums.map((alb) => (
