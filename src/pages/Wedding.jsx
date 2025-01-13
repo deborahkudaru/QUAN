@@ -17,7 +17,7 @@ const Wedding = () => {
   return (
     <>
       <BlackHeader />
-      <div className="px-4 pt-10">
+      <div className="px-4 pt-32">
         <div className="flex py-5 lg:gap-10 gap-5">
           <button onClick={() => navigate(-1)}>
             <BsArrowLeft className="lg:text-3xl text-2xl relative top-1 lg:top-0" />

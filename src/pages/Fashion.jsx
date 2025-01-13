@@ -25,7 +25,7 @@ const Fashion = () => {
           <h2 className="font-playFair text-red-800 font-semibold lg:text-3xl text-lg">FASHION</h2>
         </div>
 
-        <div className="flex">
+        <div className="lg:grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
           <Swiper
             breakpoints={{
               600: {
