@@ -3,6 +3,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import galleryPictures from "../constants/gallery";
 import { Link } from "react-router-dom";
+import { Suspense } from "react";
 
 const Gallery = () => {
   useEffect(() => {
@@ -17,14 +18,18 @@ const Gallery = () => {
       <div className="grid xl:grid-cols-6 lg:grid-cols-6 md:grid-cols-2 gap-5">
         {galleryPictures.map((gal) => (
           <div key={gal.id} className="px-4 pt-10 ">
-            <Link to={gal.imgLink}  data-aos="zoom-in">
-              <p className="text-xl font-semi-bold mb-2 text-red-800 font-lato">{gal.imgNiche}</p>
-              <img
-                src={gal.img}
-                alt=""
-                className="shadow-xl hover:bg-black hover:opacity-80"
-                loading="lazy"
-              />
+            <Link to={gal.imgLink} data-aos="zoom-in">
+              <p className="text-xl font-semi-bold mb-2 text-red-800 font-lato">
+                {gal.imgNiche}
+              </p>
+              <Suspense fallback={<div>Loading...</div>}>
+                <img
+                  src={gal.img}
+                  alt=""
+                  className="shadow-xl hover:bg-black hover:opacity-80"
+                  loading="lazy"
+                />
+              </Suspense>
             </Link>
           </div>
         ))}

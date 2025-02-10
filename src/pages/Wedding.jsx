@@ -11,6 +11,7 @@ import "swiper/css/free-mode";
 
 import { FreeMode, Pagination } from "swiper/modules";
 import BlackHeader from "../components/BlackHeader";
+import { Suspense } from "react";
 
 const Wedding = () => {
   const navigate = useNavigate();
@@ -22,7 +23,9 @@ const Wedding = () => {
           <button onClick={() => navigate(-1)}>
             <BsArrowLeft className="lg:text-3xl text-2xl relative top-1 lg:top-0" />
           </button>
-          <h2 className="font-playFair text-red-800 font-semibold lg:text-3xl text-lg">WEDDINGS</h2>
+          <h2 className="font-playFair text-red-800 font-semibold lg:text-3xl text-lg">
+            WEDDINGS
+          </h2>
         </div>
 
         <div className="lg:grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
@@ -46,12 +49,14 @@ const Wedding = () => {
             {weddings.map((wedding) => (
               <SwiperSlide key={wedding.id}>
                 <div className="mb-10">
-                  <img
-                    src={wedding.image}
-                    alt={wedding.alt}
-                    className="shadow-xl"
-                    loading="lazy"
-                  />
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <img
+                      src={wedding.image}
+                      alt={wedding.alt}
+                      className="shadow-xl"
+                      loading="lazy"
+                    />
+                  </Suspense>
                 </div>
               </SwiperSlide>
             ))}

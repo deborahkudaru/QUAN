@@ -4,6 +4,7 @@ import { BsArrowLeft } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import BlackHeader from "../components/BlackHeader";
 import { FaCircleCheck } from "react-icons/fa6";
+import { Suspense } from "react";
 
 const Book = () => {
   const navigate = useNavigate();
@@ -225,7 +226,9 @@ const Book = () => {
             </div>
           </div>
         )}
+        <Suspense fallback={<div>Loading...</div>}>
         <img src={image1} alt="" className="lg:w-1/2 lg:h-1/2" loading="lazy" />
+        </Suspense>
       </div>
     </>
   );

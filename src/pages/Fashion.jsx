@@ -11,6 +11,7 @@ import "swiper/css/free-mode";
 
 import { FreeMode, Pagination } from "swiper/modules";
 import BlackHeader from "../components/BlackHeader";
+import { Suspense } from "react";
 
 const Fashion = () => {
   const navigate = useNavigate();
@@ -50,7 +51,9 @@ const Fashion = () => {
             {fashion.map((fash) => (
               <SwiperSlide key={fash.id}>
                 <div className="mb-10 flex ">
+                  <Suspense fallback={<div>Loading...</div>}>
                   <img src={fash.image} alt={fash.alt} className="shadow-xl" loading="lazy"/>
+                  </Suspense>
                 </div>
               </SwiperSlide>
             ))}

@@ -11,6 +11,7 @@ import "swiper/css/free-mode";
 
 import { FreeMode, Pagination } from "swiper/modules";
 import BlackHeader from "../components/BlackHeader";
+import { Suspense } from "react";
 
 const Birthday = () => {
   const navigate = useNavigate();
@@ -46,12 +47,14 @@ const Birthday = () => {
             {birthdays.map((birthday) => (
               <SwiperSlide key={birthday.id}>
                 <div className="mb-10">
+                  <Suspense fallback={<div>Loading...</div>}>
                   <img
                     src={birthday.image}
                     alt={birthday.alt}
                     className="shadow-xl"
                     loading="lazy"
                   />
+                  </Suspense>
                 </div>
               </SwiperSlide>
             ))}
