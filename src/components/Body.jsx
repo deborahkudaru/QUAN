@@ -3,7 +3,6 @@ import logo from "../images/logo.png";
 import Header from "./Header";
 import "../styles/styles.css";
 import About from "./About";
-import Gallery from "./Gallery";
 import { TfiAngleDoubleDown } from "react-icons/tfi";
 import photo20 from "../images/photo20.jpg";
 import photo18 from "../images/photo18.jpg";
@@ -35,11 +34,11 @@ const Body = () => {
           className="md:w-96 md:m-auto md:py-48  w-60 m-auto pt-40 pb-2 lg:pt-20 lg:pb-40"
           src={logo}
           alt="Quan Imagery"
+          loading="lazy"
         />
-        <TfiAngleDoubleDown className="text-white animate-bounce text-center w-full m-auto relative top-8 text-3xl lg:text-4xl" />
+        <TfiAngleDoubleDown className="text-white animate-bounce text-center w-full m-auto relative lg:top-0 top-8 text-3xl lg:text-4xl" />
       </div>
       <About />
-      {/* <Gallery /> */}
       <Album />
     </div>
   );

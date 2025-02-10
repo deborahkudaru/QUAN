@@ -16,14 +16,6 @@ const NavLinks = () => {
           HOME
         </Link>
       </li>
-      {/* <li>
-        <Link
-          to="/album"
-          className="text-black hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
-        >
-          ALBUM
-        </Link>
-      </li> */}
       <li>
         <Link
           to="/book"
@@ -80,14 +72,6 @@ const BlackNavbBar = () => {
               HOME
             </Link>
           </li>
-          {/* <li>
-            <Link
-              to="/album"
-              className="text-black hover:text-red-800 transition  text-sm duration-300 font-semibold "
-            >
-              ALBUM
-            </Link>
-          </li> */}
           <li>
             <Link
               to="/book"

@@ -50,6 +50,7 @@ const Birthday = () => {
                     src={birthday.image}
                     alt={birthday.alt}
                     className="shadow-xl"
+                    loading="lazy"
                   />
                 </div>
               </SwiperSlide>

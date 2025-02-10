@@ -8,16 +8,22 @@ const Footer = () => {
   return (
     <div className=" w-40 m-auto pt-10 lg:mt-28">
       <div className="flex gap-6 text-neutral-800 text-2xl lg:text-3xl">
-        <a className=" hover:text-gray-800" href="">
+        <a
+          className=" hover:text-gray-800"
+          href="https://www.instagram.com/quanimagery?igsh=MXVkNmJscjVmNjAyMQ%3D%3D&utm_source=qr"
+        >
           <FaInstagram />
         </a>
-        <a className=" hover:text-gray-800" href="">
+        <a className=" hover:text-gray-800" href="http://wa.me/2348146506320">
           <FaWhatsapp />
         </a>
-        <a className=" hover:text-gray-800" href="">
+        <a
+          className=" hover:text-gray-800"
+          href="https://x.com/directorquan?s=11&t=VMwDqoM43re5-MwjAGxCOg"
+        >
           <FaTwitter />
-        </a> 
-        <a className=" hover:text-gray-800" href="mailto:">
+        </a>
+        <a className=" hover:text-gray-800" href="mailto:quanimagery@gmail.com">
           <FaEnvelope />
         </a>
       </div>

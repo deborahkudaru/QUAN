@@ -24,7 +24,7 @@ const Gallery = () => {
           <div className="" key={image.id}>
             <Link>
               <div className="" data-aos="fade-up">
-                <img src={image.img} alt="" className="shadow-xl rounded-xl" />
+                <img src={image.img} alt="" className="shadow-xl rounded-xl" loading="lazy" />
               </div>
               <div className="pt-4 leading-8 pb-2" data-aos="fade-up">
                 <p className="text-lg font-bold font-playFair text-red-800">{image.topic}</p>

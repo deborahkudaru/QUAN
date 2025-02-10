@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
-// import { CiMenuFries } from "react-icons/ci";
-// import { TiDelete } from "react-icons/ti";
-// import { X } from "lucide-react";
 import { IoIosClose } from "react-icons/io";
 
 const NavLinks = () => {
@@ -17,14 +14,6 @@ const NavLinks = () => {
           HOME
         </Link>
       </li>
-      {/* <li>
-        <Link
-          to="/album"
-          className="text-white hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
-        >
-          ALBUM
-        </Link>
-      </li> */}
       <li>
         <Link
           to="/book"
@@ -81,14 +70,6 @@ const Navbar = () => {
               HOME
             </Link>
           </li>
-          {/* <li>
-            <Link
-              to="/album"
-              className="text-white   transition  text-sm duration-300 font-semibold font-playFair "
-            >
-              ALBUM
-            </Link>
-          </li> */}
           <li>
             <Link
               to="/book"

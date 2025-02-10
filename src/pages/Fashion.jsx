@@ -50,7 +50,7 @@ const Fashion = () => {
             {fashion.map((fash) => (
               <SwiperSlide key={fash.id}>
                 <div className="mb-10 flex ">
-                  <img src={fash.image} alt={fash.alt} className="shadow-xl" />
+                  <img src={fash.image} alt={fash.alt} className="shadow-xl" loading="lazy"/>
                 </div>
               </SwiperSlide>
             ))}

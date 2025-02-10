@@ -7,7 +7,7 @@ const BlackLogo = () => {
     <div>
       
         <Link to="/">
-          <img  className="md:w-10 w-8" src={logo} alt="" />
+          <img  className="md:w-10 w-8" src={logo} alt="" loading="lazy"/>
         </Link>
         
     </div>

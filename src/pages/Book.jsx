@@ -146,12 +146,12 @@ const Book = () => {
               required
             >
               <option value="">Choose a Shoot</option>
-              <option value="Birthday Shoot">Birthday Shoot</option>
-              <option value="Wedding Shoot">Wedding Shoot</option>
-              <option value="Modelling Shoot">Modelling Shoot</option>
-              <option value="Casual Shoot">Casual Shoot</option>
-              <option value="Fashin Shoot">Fashion Shoot</option>
-              <option value="Music Video">Music Video</option>
+              <option value="Birthday Shoot">Weddings/Events</option>
+              <option value="Wedding Shoot">Birthdays</option>
+              <option value="Modelling Shoot">Potraits</option>
+              <option value="Casual Shoot">Fashion campaigns</option>
+              <option value="Fashin Shoot">Collaborations</option>
+              <option value="Music Video">Music Videos</option>
               <option value="">Other</option>
             </select>
           </div>
@@ -222,16 +222,10 @@ const Book = () => {
                 <FaCircleCheck className="inline ml-2 text-lg" />
               </p>
               <p>You will receieve a call or an email as soon as possible.</p>
-              {/* <button
-                onClick={closeModal}
-                className="bg-blue-500 text-white px-4 py-2 hover:bg-blue-600 font-lato"
-              >
-                Okay
-              </button> */}
             </div>
           </div>
         )}
-        <img src={image1} alt="" className="lg:w-1/2 lg:h-1/2 " />
+        <img src={image1} alt="" className="lg:w-1/2 lg:h-1/2" loading="lazy" />
       </div>
     </>
   );

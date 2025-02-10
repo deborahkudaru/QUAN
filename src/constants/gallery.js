@@ -7,9 +7,6 @@ import photo11 from "../images/photo11.jpg";
 import photo18 from "../images/photo18.jpg";
 import photo15 from "../images/photo15.jpg";
 
-
-
-
 const galleryPictures = [
   {
     id: 1,

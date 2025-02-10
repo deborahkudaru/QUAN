@@ -3,8 +3,6 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import galleryPictures from "../constants/gallery";
 import { Link } from "react-router-dom";
-// import { Link } from "react-router-dom";
-// import { GoArrowRight } from "react-icons/go";
 
 const Gallery = () => {
   useEffect(() => {
@@ -16,7 +14,7 @@ const Gallery = () => {
         GALLERY
       </h3>
 
-      <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-5">
+      <div className="grid xl:grid-cols-6 lg:grid-cols-6 md:grid-cols-2 gap-5">
         {galleryPictures.map((gal) => (
           <div key={gal.id} className="px-4 pt-10 ">
             <Link to={gal.imgLink}  data-aos="zoom-in">
@@ -25,20 +23,12 @@ const Gallery = () => {
                 src={gal.img}
                 alt=""
                 className="shadow-xl hover:bg-black hover:opacity-80"
+                loading="lazy"
               />
             </Link>
           </div>
         ))}
       </div>
-      {/* <div className="flex justify-end mt-5 px-5 gap-2">
-        <Link
-          to="/album"
-          className="text-black  font-mateSC font-semibold lg:text-xl text-sm relative hover:underline"
-        >
-          VIEW MORE
-        </Link>
-        <GoArrowRight className="text-2xl animate-pulse"/>
-      </div> */}
     </div>
   );
 };

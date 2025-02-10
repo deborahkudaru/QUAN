@@ -50,6 +50,7 @@ const Wedding = () => {
                     src={wedding.image}
                     alt={wedding.alt}
                     className="shadow-xl"
+                    loading="lazy"
                   />
                 </div>
               </SwiperSlide>
