@@ -8,7 +8,7 @@ const DarkModeToggle = () => {
   return (
     <button
       onClick={() => setDarkMode(!darkMode)}
-      className="p-2 text-white text-2xl rounded-md"
+      className="p-2 text-black dark:text-white text-2xl rounded-md"
     >
       {darkMode ? <IoSunnyOutline /> : <IoMoonSharp />}
     </button>
