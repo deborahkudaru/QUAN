@@ -5,6 +5,7 @@ import photo6 from "../images/KWP_2772.jpg";
 import photo21 from "../images/photo21.jpg";
 import photo23 from "../images/photo23.jpg";
 import BlackHeader from "../components/BlackHeader";
+import { motion } from "framer-motion";
 
 const albums = [
   {
@@ -43,7 +44,8 @@ const Album = () => {
       </h3>
         <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 ">
           {albums.map((alb) => (
-            <div key={alb.id} className="">
+            <motion.div key={alb.id} className=""   whileHover={{ scale: 1.1 }} // Increases size on hover
+            transition={{ type: "spring", stiffness: 200 }}>
               <Link to={alb.albumURL}>
                 <div
                   className="bg-cover bg-no-repeat bg-black bg-opacity-50 bg-blend-overlay text-white font-mateSC pt-72 rounded-xl"
@@ -52,7 +54,7 @@ const Album = () => {
                   <p className="text-xl font-lato font-semibold ml-5 pb-5">{alb.albumName}</p>
                 </div>
               </Link>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
