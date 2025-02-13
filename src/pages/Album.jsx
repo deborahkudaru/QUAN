@@ -37,8 +37,8 @@ const Album = () => {
   return (
     <>
       <BlackHeader />
-      <div className="px-4 pt-20">
-         <h3 className=" text-center pb-6 font-bold text-2xl lg:text-3xl font-playFair text-gray-900 ">
+      <div className="px-4 pt-20 dark:bg-[#121212]">
+         <h3 className=" text-center pb-6 font-bold text-2xl lg:text-3xl font-playFair text-gray-900  dark:text-white">
         GALLERY
       </h3>
         <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 ">

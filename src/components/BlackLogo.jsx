@@ -1,15 +1,20 @@
 import React from "react";
-import {  Link } from "react-router-dom";
-import logo from "../images/blacklogo.png";
+import { Link } from "react-router-dom";
+import lightLogo from "../images/logo1.png";
+import { useTheme } from "./ThemeContext";
+import darkLogo from "../images/blacklogo.png";
 
 const BlackLogo = () => {
+  const { darkMode } = useTheme();
   return (
     <div>
-      
-        <Link to="/">
-          <img  className="md:w-10 w-8" src={logo} alt="" loading="lazy"/>
-        </Link>
-        
+      <Link to="/">
+        <img
+          className="md:w-10 w-8"
+          src={darkMode ? lightLogo : darkLogo}
+          loading="lazy"
+        />
+      </Link>
     </div>
   );
 };

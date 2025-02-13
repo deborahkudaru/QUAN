@@ -62,7 +62,7 @@ const Book = () => {
   };
 
   return (
-    <>
+    <div className="dark:bg-[#121212] dark:text-white">
       <BlackHeader />
       <div className="flex lg:px-32 px-10 pt-28 lg:gap-10 gap-5">
         <button onClick={() => navigate(-1)}>
@@ -84,7 +84,7 @@ const Book = () => {
             </label>
             <input
               type="text"
-              className="border outline-0 border-gray-500 px-5 py-2"
+              className="border outline-0 bg-transparent border-gray-500 px-5 py-2"
               value={formData.name}
               name="name"
               onChange={handleChange}
@@ -101,7 +101,7 @@ const Book = () => {
               onChange={handleChange}
               value={formData.email}
               name="email"
-              className="border outline-0 ml-0 border-gray-500 px-5 py-2"
+              className="border outline-0 bg-transparent ml-0 border-gray-500 px-5 py-2"
               required
             />
           </div>
@@ -115,7 +115,7 @@ const Book = () => {
               onChange={handleChange}
               name="phoneNumber"
               value={formData.phoneNumber}
-              className="border outline-0  border-gray-500 px-5 py-2"
+              className="border outline-0 bg-transparent  border-gray-500 px-5 py-2"
               required
             />
           </div>
@@ -129,7 +129,7 @@ const Book = () => {
               name="address"
               value={formData.address}
               onChange={handleChange}
-              className="border outline-0 ml-0 border-gray-500 px-5 py-2"
+              className="border outline-0 bg-transparent ml-0 border-gray-500 px-5 py-2"
               required
             />
           </div>
@@ -143,17 +143,17 @@ const Book = () => {
               type="text"
               onChange={handleChange}
               value={formData.sessionType}
-              className="border outline-0  border-gray-500 px-5 py-2"
+              className="border outline-0 bg-transparent  border-gray-500 px-5 py-2"
               required
             >
-              <option value="">Choose a Shoot</option>
-              <option value="Birthday Shoot">Weddings/Events</option>
-              <option value="Wedding Shoot">Birthdays</option>
-              <option value="Modelling Shoot">Potraits</option>
-              <option value="Casual Shoot">Fashion campaigns</option>
-              <option value="Fashin Shoot">Collaborations</option>
-              <option value="Music Video">Music Videos</option>
-              <option value="">Other</option>
+              <option className="dark:bg-[#121212]" value="">Choose a Shoot</option>
+              <option className="dark:bg-[#121212]" value="Birthday Shoot">Weddings/Events</option>
+              <option className="dark:bg-[#121212]" value="Wedding Shoot">Birthdays</option>
+              <option className="dark:bg-[#121212]" value="Modelling Shoot">Potraits</option>
+              <option className="dark:bg-[#121212]" value="Casual Shoot">Fashion campaigns</option>
+              <option className="dark:bg-[#121212]" value="Fashin Shoot">Collaborations</option>
+              <option className="dark:bg-[#121212]" value="Music Video">Music Videos</option>
+              <option className="dark:bg-[#121212]" value="">Other</option>
             </select>
           </div>
 
@@ -167,7 +167,7 @@ const Book = () => {
                 value={formData.data}
                 name="date"
                 onChange={handleChange}
-                className="border outline-0  border-gray-500 px-5 py-2"
+                className="border outline-0 bg-transparent  border-gray-500 px-5 py-2"
                 required
               />
               <input
@@ -175,14 +175,14 @@ const Book = () => {
                 value={formData.time}
                 name="time"
                 onChange={handleChange}
-                className="border outline-0  border-gray-500 px-5 py-2"
+                className="border outline-0 bg-transparent  border-gray-500 px-5 py-2"
                 required
               />
             </div>
           </div>
           <div className="flex justify-center">
             <button
-              className="bg-neutral-900 text-white px-10 py-2 lg:mt-12 mt-8 relative lg:left-36 lg:ml-2  hover:bg-gray-800"
+              className="bg-neutral-900 text-white dark:text-black dark:bg-white px-10 py-2 lg:mt-12 mt-8 relative lg:left-36 lg:ml-2  hover:bg-gray-800"
               onClick={openModal}
             >
               Book
@@ -226,11 +226,11 @@ const Book = () => {
             </div>
           </div>
         )}
-        <Suspense fallback={<div>Loading...</div>}>
+        {/* <Suspense fallback={<div>Loading...</div>}>
         <img src={image1} alt="" className="lg:w-1/2 lg:h-1/2" loading="lazy" />
-        </Suspense>
+        </Suspense> */}
       </div>
-    </>
+    </div>
   );
 };
 

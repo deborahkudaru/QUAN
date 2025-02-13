@@ -2,14 +2,16 @@ import React from "react";
 import { GoArrowRight } from "react-icons/go";
 import { Link } from "react-router-dom";
 
+
+
 const About = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-[#121212]">
       <div className="w-2/3  m-auto">
-        <h3 className="text-center pt-10 pb-3 font-bold text-2xl lg:text-3xl font-playFair text-gray-900">
+        <h3 className="text-center pt-10 pb-3 font-bold text-2xl lg:text-3xl font-playFair text-gray-900 dark:text-white">
           WELCOME
         </h3>
-        <p className="text-justify justify-center text-zinc-900 font-medium font-CrimsonText pb-5 lg:text-2xl md:text-xl text-base font-lato">
+        <p className="text-justify justify-center text-zinc-900 font-medium font-CrimsonText pb-5 lg:text-2xl md:text-xl text-base font-lato dark:text-white">
           Welcome to <i className="font-bold text-red-800">Quan Imagery</i>, where moments
           become timeless treasures. In a world filled with fleeting moments, we
           believe in the enduring power of photography and videography to
@@ -26,11 +28,12 @@ const About = () => {
         <div className="flex gap-2 justify-end">
           <Link
             to="/book"
-            className="text-gray-900  font-lato font-semibold lg:text-xl text-sm relative text-end hover:underline hover:text-red-800"
+            className="text-gray-900 dark:text-white font-lato font-semibold lg:text-xl text-sm relative text-end hover:underline hover:text-red-800"
           >
             BOOK A SESSION{" "}
           </Link>
-          <GoArrowRight className="text-2xl animate-pulse" />
+          <GoArrowRight className="text-2xl animate-pulse dark:text-white" />
+          {/* <DarkModeToggle /> */}
         </div>
       </div>
     </div>

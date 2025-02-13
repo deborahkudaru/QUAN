@@ -11,7 +11,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/"
-          className="text-black hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
+          className="text-black dark:text-white hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
         >
           HOME
         </Link>
@@ -19,7 +19,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/book"
-          className="text-black hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
+          className="text-black dark:text-white hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
         >
           BOOK A SESSION
         </Link>
@@ -27,7 +27,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/portfolio"
-          className="text-black hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
+          className="text-black dark:text-white hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
         >
           PORTFOLIO
         </Link>
@@ -35,7 +35,7 @@ const NavLinks = () => {
       <li>
         <Link
           to="/no-page"
-          className="text-black hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
+          className="text-black dark:text-white hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
         >
           BLOG 
         </Link>
@@ -56,18 +56,18 @@ const BlackNavbBar = () => {
         <div className="w-full justify-between hidden lg:flex">
           <NavLinks />
         </div>
-        <div className="lg:hidden text-black">
+        <div className="lg:hidden text-black dark:text-white">
           <button onClick={toggleNavbar} className="object-right text-4xl">
             {isOpen ? <IoIosClose /> : <FiMenu className="" />}
           </button>
         </div>
       </nav>
       {isOpen && (
-        <ul className="flex gap-7 flex-col items-end  basis-full absolute right-1 top-20 bg-white w-full pb-12 pr-4 ">
+        <ul className="flex gap-7 flex-col items-end  basis-full absolute right-1 top-20 bg-white dark:bg-[#121212] w-full pb-12 pr-4 ">
           <li>
             <Link
               to="/"
-              className="text-black hover:text-red-800 transition  text-sm duration-300 font-semibold "
+              className="text-black dark:text-white hover:text-red-800 transition  text-sm duration-300 font-semibold "
             >
               HOME
             </Link>
@@ -75,7 +75,7 @@ const BlackNavbBar = () => {
           <li>
             <Link
               to="/book"
-              className="text-black hover:text-red-800 transition text-sm duration-300 font-semibold "
+              className="text-black dark:text-white hover:text-red-800 transition text-sm duration-300 font-semibold "
             >
               BOOK
             </Link>
@@ -83,7 +83,7 @@ const BlackNavbBar = () => {
           <li>
             <Link
               to="/portfolio"
-              className="text-black hover:text-red-800 transition text-sm duration-300 font-semibold "
+              className="text-black dark:text-white hover:text-red-800 transition text-sm duration-300 font-semibold "
             >
               PORTFOLIO
             </Link>
@@ -91,7 +91,7 @@ const BlackNavbBar = () => {
           <li>
             <Link
               to="/no-page"
-              className="text-black hover:text-red-800 transition text-sm duration-300 font-semibold "
+              className="text-black dark:text-white hover:text-red-800 transition text-sm duration-300 font-semibold "
             >
               BLOG
             </Link>

@@ -13,9 +13,9 @@ const Gallery = () => {
     Aos.init({ duration: 500 });
   }, []);
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-[#121212]">
       <BlackHeader />
-      <h3 className=" text-center pt-32 pb-6 font-bold text-2xl lg:text-3xl font-playFair text-gray-700 ">
+      <h3 className=" text-center pt-32 pb-6 font-bold text-2xl lg:text-3xl font-playFair text-gray-700 dark:text-white">
         <Typewriter text="SCROLL THROUGH" delay={200} infinite />{" "}
         <IoIosArrowRoundDown className="inline ml-2 animate-bounce teext-lg" />
       </h3>
@@ -34,18 +34,18 @@ const Gallery = () => {
                 </Suspense>
               </div>
               <div className="pt-4 leading-8 pb-2" data-aos="fade-up">
-                <p className="text-lg font-bold font-playFair text-red-800">
+                <p className="text-lg font-bold font-playFair text-red-800 dark:text-red-600">
                   {image.topic}
                 </p>
-                <p className="text-red-800 font-semibold font-lato">
+                <p className="text-red-800 dark:text-red-600 font-semibold font-lato">
                   Niche:{" "}
-                  <span className="text-gray-700 font-normal">
+                  <span className="text-gray-700 dark:text-white font-normal">
                     {image.niche}
                   </span>
                 </p>
-                <p className="text-red-800 font-semibold font-lato">
+                <p className="text-red-800 dark:text-red-600 font-semibold font-lato">
                   Date:{" "}
-                  <span className="text-gray-700 font-normal">
+                  <span className="text-gray-700 dark:text-white font-normal">
                     {image.date}
                   </span>
                 </p>
