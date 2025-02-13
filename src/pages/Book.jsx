@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import image1 from "../images/IMG_5886.png";
 import { BsArrowLeft } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import BlackHeader from "../components/BlackHeader";
 import { FaCircleCheck } from "react-icons/fa6";
-import { Suspense } from "react";
 
 const Book = () => {
   const navigate = useNavigate();

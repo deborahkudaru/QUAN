@@ -1,33 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
-// import Album from "./pages/Album";
 import Book from "./pages/Book";
-import { Routes, Route } from "react-router-dom";
 import Fashion from "./pages/Fashion";
 import Birthday from "./pages/Birthday";
 import Wedding from "./pages/Wedding";
 import NoPage from "./pages/NoPage";
 import Portfolio from "./pages/Portfolio";
 import { ThemeProvider } from "./components/ThemeContext";
+import LoadingScreen from "./components/LoadingScreen";
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+
   return (
     <div>
-      {/* <Header /> */}
-      <ThemeProvider>
-        <Routes>
-          <Route path="/" element={<Body />} />
-          {/* <Route path="/album" element={<Album />} /> */}
-          <Route path="/book" element={<Book />} />
-          <Route path="/fashion" element={<Fashion />} />
-          <Route path="/birthday" element={<Birthday />} />
-          <Route path="/weddings" element={<Wedding />} />
-          <Route path="/no-page" element={<NoPage />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-        </Routes>
-      </ThemeProvider>
-      <Footer />
+      {loading ? (
+        <LoadingScreen onComplete={() => setLoading(false)} />
+      ) : (
+        <ThemeProvider>
+          <Routes>
+            <Route path="/" element={<Body />} />
+            <Route path="/book" element={<Book />} />
+            <Route path="/fashion" element={<Fashion />} />
+            <Route path="/birthday" element={<Birthday />} />
+            <Route path="/weddings" element={<Wedding />} />
+            <Route path="/no-page" element={<NoPage />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+          </Routes>
+          <Footer />
+        </ThemeProvider>
+      )}
     </div>
   );
 };
