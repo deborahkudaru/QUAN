@@ -68,14 +68,14 @@ const Book = () => {
         <button onClick={() => navigate(-1)}>
           <BsArrowLeft className="lg:text-2xl text-lg" />
         </button>
-        <h2 className="font-playFair font-semibold text-red-800 lg:text-2xl text-lg">
+        <h2 className="font-playFair font-semibold text-red-800 dark:text-red-600 lg:text-2xl text-lg">
           BOOK A SESSION
         </h2>
       </div>
 
-      <div className="lg:px-32 px-5  pt-10 flex gap-10 flex-col-reverse lg:flex-row font-lato">
-        <form onSubmit={handleSubmit}>
-          <div className="flex lg:flex-row flex-col lg:gap-24 gap-2 mb-10">
+      <div className="pt-10 flex gap-10 lg:w-1/2 lg:px-0 px-5 m-auto font-lato">
+        <form onSubmit={handleSubmit} className="w-full">
+          <div className="flex flex-col gap-2 mb-10">
             <label htmlFor="name">
               Name
               <sup className="text-red-600" required>
@@ -92,7 +92,7 @@ const Book = () => {
             />
           </div>
 
-          <div className=" flex lg:flex-row flex-col lg:gap-24 gap-2 mb-10">
+          <div className=" flex flex-col gap-2 mb-10">
             <label htmlFor="">
               Email<sup className="text-red-600">*</sup>
             </label>
@@ -106,7 +106,7 @@ const Book = () => {
             />
           </div>
 
-          <div className="mb-10 flex lg:flex-row flex-col lg:gap-9 gap-2">
+          <div className="mb-10 flex flex-col gap-2">
             <label htmlFor="">
               Phone Number<sup className="text-red-600">*</sup>
             </label>
@@ -120,7 +120,7 @@ const Book = () => {
             />
           </div>
 
-          <div className="mb-10 flex lg:flex-row flex-col lg:gap-20 gap-2">
+          <div className="mb-10 flex flex-col gap-2">
             <label htmlFor="">
               Address<sup className="text-red-600">*</sup>
             </label>
@@ -134,9 +134,9 @@ const Book = () => {
             />
           </div>
 
-          <div className="mb-10 flex lg:gap-14 lg:flex-row flex-col gap-2">
+          <div className="mb-10 flex flex-col gap-2">
             <label htmlFor="">
-              Session Type<sup className="text-red-600">*</sup>
+              Category<sup className="text-red-600">*</sup>
             </label>
             <select
               name="sessionType"
@@ -157,7 +157,7 @@ const Book = () => {
             </select>
           </div>
 
-          <div className="flex lg:gap-11 flex-col lg:flex-row gap-2">
+          <div className="flex flex-col gap-2">
             <label htmlFor="">
               Date and Time<sup className="text-red-600">*</sup>
             </label>
@@ -182,7 +182,7 @@ const Book = () => {
           </div>
           <div className="flex justify-center">
             <button
-              className="bg-neutral-900 text-white dark:text-black dark:bg-white px-10 py-2 lg:mt-12 mt-8 relative lg:left-36 lg:ml-2  hover:bg-gray-800"
+              className="bg-neutral-900 text-white dark:text-black dark:bg-white px-10 py-2 lg:mt-12 mt-8  hover:bg-gray-800"
               onClick={openModal}
             >
               Book
@@ -192,7 +192,7 @@ const Book = () => {
           {/* pop up modal */}
           {isOpen && (
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-              <div className="bg-white shadow-lg w-96 p-6">
+              <div className="bg-white dark:bg-[#212121] shadow-lg w-96 p-6">
                 <h2 className="text-xl font-semibold mb-2 font-lato">
                   Confirm booking?
                 </h2>
@@ -217,7 +217,7 @@ const Book = () => {
         </form>
         {responseMessage && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-white shadow-lg w-96 p-5">
+            <div className="bg-white dark:bg-[#212121] shadow-lg w-96 p-5">
               <p className="text-green-500 text-2xl mb-2">
                 {responseMessage}
                 <FaCircleCheck className="inline ml-2 text-lg" />
