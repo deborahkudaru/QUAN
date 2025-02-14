@@ -6,7 +6,7 @@ import { IoIosClose } from "react-icons/io";
 
 const NavLinks = () => (
   <ul className="flex space-x-5 nav">
-    {["HOME", "BOOK A SESSION", "PORTFOLIO", "BLOG"].map((name, index) => (
+    {["HOME", "BOOK", "PORTFOLIO", "BLOG"].map((name, index) => (
       <li key={index}>
         <Link
           to={name === "BLOG" ? "/no-page" : `/${name.toLowerCase().replace(" ", "-")}`}

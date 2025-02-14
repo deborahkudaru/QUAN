@@ -39,7 +39,7 @@ const Body = () => {
             loading="lazy"
           />
         </Suspense>
-        <TfiAngleDoubleDown className="text-white animate-bounce text-center w-full m-auto relative xl:top-12 top-12 text-3xl lg:text-4xl lg:pb-0 pb-2" />
+        <TfiAngleDoubleDown className="text-white animate-bounce text-center w-full m-auto relative xl:top-52 lg:top-12 top-12 text-3xl lg:text-4xl lg:pb-0 pb-2" />
       </div>
       <About />
       <Album />
