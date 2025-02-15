@@ -33,13 +33,13 @@ const Body = () => {
         <Header />
         <Suspense fallback={<div>Loading...</div>}>
           <img
-            className="md:w-96 m-auto xl:pt-32 lg:pt-32 pt-40 w-1/2"
+            className="md:w-96 m-auto xl:pt-40 lg:pt-32 pt-40 w-1/2"
             src={logo}
             alt="Quan Imagery"
             loading="lazy"
           />
         </Suspense>
-        <TfiAngleDoubleDown className="text-white animate-bounce text-center w-full m-auto relative xl:top-52 lg:top-12 top-12 text-3xl lg:text-4xl lg:pb-0 pb-2" />
+        <TfiAngleDoubleDown className="text-white animate-bounce text-center w-full m-auto relative xl:top-12 lg:top-12 top-12 text-3xl lg:text-4xl lg:pb-0 pb-2" />
       </div>
       <About />
       <Album />

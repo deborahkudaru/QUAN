@@ -9,7 +9,13 @@ const NavLinks = () => (
     {["HOME", "BOOK", "PORTFOLIO", "BLOG"].map((name, index) => (
       <li key={index}>
         <Link
-          to={name === "BLOG" ? "/no-page" : `/${name.toLowerCase().replace(" ", "-")}`}
+          to={
+            name === "BLOG"
+              ? "/no-page"
+              : name === "HOME"
+              ? "/"
+              : `/${name.toLowerCase().replace(" ", "-")}`
+          }
           className="text-black dark:text-white hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
         >
           {name}
@@ -29,7 +35,10 @@ const BlackNavBar = () => {
           <NavLinks />
         </div>
         <div className="lg:hidden text-black dark:text-white">
-          <button onClick={() => setIsOpen(!isOpen)} className="object-right text-4xl">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="object-right text-4xl"
+          >
             {isOpen ? <IoIosClose /> : <FiMenu />}
           </button>
         </div>
@@ -45,7 +54,13 @@ const BlackNavBar = () => {
         {["HOME", "BOOK", "PORTFOLIO", "BLOG"].map((name, index) => (
           <motion.li key={index} whileTap={{ scale: 0.9 }}>
             <Link
-              to={name === "BLOG" ? "/no-page" : `/${name.toLowerCase()}`}
+              to={
+                name === "BLOG"
+                  ? "/no-page"
+                  : name === "HOME"
+                  ? "/"
+                  : `/${name.toLowerCase()}`
+              }
               className="text-black dark:text-white hover:text-red-800 transition text-sm duration-300 font-semibold"
               onClick={() => setIsOpen(false)}
             >

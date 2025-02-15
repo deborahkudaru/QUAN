@@ -215,7 +215,7 @@ const Book = () => {
         </form>
         {responseMessage && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-white dark:bg-[#212121] shadow-lg w-96 p-5">
+            <div className="bg-white dark:bg-[#212121] dark:text-white shadow-lg w-96 p-5">
               <p className="text-green-500 text-2xl mb-2">
                 {responseMessage}
                 <FaCircleCheck className="inline ml-2 text-lg" />
@@ -224,9 +224,6 @@ const Book = () => {
             </div>
           </div>
         )}
-        {/* <Suspense fallback={<div>Loading...</div>}>
-        <img src={image1} alt="" className="lg:w-1/2 lg:h-1/2" loading="lazy" />
-        </Suspense> */}
       </div>
     </div>
   );
