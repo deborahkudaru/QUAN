@@ -1,70 +1,70 @@
-import photo1 from "../images/KWP_0300.jpg";
-// import photo2 from "../images/KWP_0308.jpg";
-import photo3 from "../images/KWP_2661.jpg";
-import photo4 from "../images/KWP_4402.jpg";
-import photo5 from "../images/KWP_4421.jpg";
-import photo6 from "../images/KWP_4431.jpg";
-import photo7 from "../images/KWP_4518.jpg";
-import photo8 from "../images/KWP_9750w.jpg";
-import photo10 from "../images/KWP_9773.jpg";
-import photo11 from "../images/KWP_9785.jpg";
-
 const fashion = [
   {
     id: 1,
-    image: photo1,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652054/photo17_k5pcc2.jpg",
     alt: 'photo-one'
   },
-  // {
-  //   id: 2,
-  //   image: photo2,
-  //   alt: 'photo-two'
-  // },
+  {
+    id: 2,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652054/photo20_mptsgh.jpg",
+    alt: 'photo-two'
+  },
   {
     id: 3,
-    image: photo3,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652047/photo12_dclhis.jpg",
     alt: 'photo-two'
   },
   {
     id: 4,
-    image: photo4,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652032/KWP_9750w_ike5kv.jpg",
     alt: 'photo-one'
   },
   {
     id: 5,
-    image: photo5,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651968/KWP_7078_adss6x.jpg",
     alt: 'photo-one'
   },
   {
     id: 6,
-    image: photo6,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651956/KWP_5980_qok64u.jpg",
     alt: 'photo-one'
   },
   {
     id: 7,
-    image: photo7,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651942/KWP_6639_ahfmtc.jpg",
     alt: 'photo-one'
   },
   {
     id: 8,
-    image: photo8,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651927/KWP_4431_qsdf7b.jpg",
     alt: 'photo-one'
   },
-  // {
-  //   id: 9,
-  //   image: photo9,
-  //   alt: 'photo-one'
-  // },
+  {
+    id: 9,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651918/KWP_4563_t6bhni.jpg",
+    alt: 'photo-one'
+  },
   {
     id: 10,
-    image: photo10,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651907/KWP_4109_rgskmg.jpg",
     alt: 'photo-one'
   },
   {
     id: 11,
-    image: photo11,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651903/KWP_2556_mle1nr.jpg",
     alt: 'photo-one'
   },
+  {
+    id: 12,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651876/KWP_0300_yjjesc.jpg",
+    alt: 'photo-one'
+  },
+  {
+    id: 12,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651864/KWP_0308_tiiloo.jpg",
+    alt: 'photo-one'
+  },
+  
 ]
 
 

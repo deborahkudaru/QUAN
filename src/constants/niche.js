@@ -1,21 +1,7 @@
-import photo1 from "../images/KWP_0308.jpg";
-import photo2 from "../images/photo12.jpg";
-import photo3 from "../images/KWP_0435.jpg";
-// import photo4 from "../images/KWP_0563.jpg"
-import photo5 from "../images/KWP_4109.jpg"
-import photo6 from "../images/KWP_9707.jpg"
-import photo7 from "../images/Siza alpha .jpg"
-import photo8 from "../images/KWP_4563.jpg"
-import photo9 from "../images/KWP_4584.jpg"
-import photo10 from "../images/KWP_5980.jpg"
-import photo11 from "../images/KWP_6639.jpg"
-import photo12 from "../images/KWP_7078.jpg"
-import photo4 from "../images/KWP_4421.jpg"
-
 const niche = [
   {
     id: 1,
-    img: photo1,
+    img: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651864/KWP_0308_tiiloo.jpg",
     topic: "HILDA FOR JOS PHOTO MAGAZINE 2024",
     niche: "Fashion | Styling | Color",
     date: "July, 2024",
@@ -23,7 +9,7 @@ const niche = [
   },
   {
     id: 2,
-    img: photo11,
+    img: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651942/KWP_6639_ahfmtc.jpg",
     topic: "BYENCHIT FASHION AND RUNWAY MODEL FOR ONAZI CLOTHINGS",
     niche: "Fashion | Styling | Color",
     date: "September 2024",
@@ -31,7 +17,7 @@ const niche = [
   },
   {
     id: 3,
-    img: photo3,
+    img: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739656133/KWP_0435_icwvdl.jpg",
     topic: "NATE FOR ZZ LUXURY 2024",
     niche: "Fashion | Styling | Color",
     date: "September 2024",
@@ -39,7 +25,7 @@ const niche = [
   },
   {
     id: 4,
-    img: photo4,
+    img: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652065/photo24_fo9voj.jpg",
     topic: "MIKE WILLS FOR QUAN IMAGERY",
     niche: "Fashion | Styling | Color",
     date: "February 2024",
@@ -47,7 +33,7 @@ const niche = [
   },
   {
     id: 5,
-    img: photo5,
+    img: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652054/photo20_mptsgh.jpg",
     topic: "SIZA ALPHA FASHION INFLUENCER IN DENIM",
     niche: "Fashion | Styling | Color",
     date: "April 2024",
@@ -55,7 +41,7 @@ const niche = [
   },
   {
     id: 6,
-    img: photo8,
+    img: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651918/KWP_4563_t6bhni.jpg",
     topic: "NATE FASHION INFLUENCER",
     niche: "Fashion | Styling | Color",
     date: "February 2024",
@@ -63,7 +49,7 @@ const niche = [
   },
   {
     id: 7,
-    img: photo9,
+    img: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651921/KWP_4584_eb5d86.jpg",
     topic: "SIZA ALPHA FASHION INFLUENCER",
     niche: "Fashion | Styling | Color",
     date: "March 2024",
@@ -71,7 +57,7 @@ const niche = [
   },
   {
     id: 8,
-    img: photo10,
+    img: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651956/KWP_5980_qok64u.jpg",
     topic: "HOPE FASHION AND RUNWAY MODEL FOR RJ'S COLLECTION",
     niche: "Fashion | Styling | Color",
     date: "October 2024",
@@ -79,7 +65,7 @@ const niche = [
   },
   {
     id: 9,
-    img: photo2,
+    img: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652047/photo12_dclhis.jpg",
     topic: "RITMWA FOR JOS PHOTO MAGAZINE 2024",
     niche: "Fashion | Styling | Color",
     date: "July, 2024",
@@ -87,7 +73,7 @@ const niche = [
   },
   {
     id: 10,
-    img: photo12,
+    img: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739656506/KWP_7078_kosdpq.jpg",
     topic: "EBUKA FOR ONAZI CLOTHING",
     niche: "Fashion | Styling | Color",
     date: "September 2024",
@@ -95,7 +81,7 @@ const niche = [
   },
   {
     id: 11,
-    img: photo6,
+    img: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739656506/KWP_7078_kosdpq.jpg",
     topic: "RITMWA FASHION MODEL",
     niche: "Fashion | Styling | Color",
     date: "July 2024",
@@ -103,7 +89,7 @@ const niche = [
   },
   {
     id: 12,
-    img: photo7,
+    img: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652021/photo2_u79oe4.jpg",
     topic: "SIZA ALPHA FASHION INFLUENCER IN DENIM",
     niche: "Fashion | Styling | Color",
     date: "April 2024",

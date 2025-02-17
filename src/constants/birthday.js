@@ -1,42 +1,29 @@
-import photo1 from "../images/photo6.jpg";
-import photo2 from "../images/KWP_2837.jpg";
-import photo3 from "../images/KWP_5995.jpg";
-import photo4 from "../images/KWP_5971.jpg";
-import photo5 from "../images/KWP_5163.jpg";
-
-
-
 const birthdays = [
   {
     id: 1,
-    image: photo1,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652060/photo19_bfbnsk.jpg",
     alt: "photo-one"
   },
   {
     id: 2,
-    image: photo2,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652039/photo8_umpg6z.jpg",
     alt: "photo-two"
   },
   {
     id: 3,
-    image: photo3,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652036/photo6_eknq0a.jpg",
     alt: "photo-three"
   },
   {
     id: 4,
-    image: photo4,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651893/KWP_2837_ajc8xl.jpg",
     alt: "photo-four"
   },
   {
     id: 5,
-    image: photo5,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652054/photo18_r2glgk.jpg",
     alt: "photo-five"
   },
-  // {
-  //   id: 6,
-  //   image: photo6,
-  //   alt: "photo-six"
-  // },
 ]
 
 export default birthdays;

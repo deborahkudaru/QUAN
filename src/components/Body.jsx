@@ -4,15 +4,17 @@ import Header from "./Header";
 import "../styles/styles.css";
 import About from "./About";
 import { TfiAngleDoubleDown } from "react-icons/tfi";
-import photo20 from "../images/photo20.jpg";
-import photo18 from "../images/photo18.jpg";
-import photo24 from "../images/photo24.jpg";
-import photo4 from "../images/photo17.jpg";
-import photo26 from "../images/KWP_0568.jpg";
 import Album from "../pages/Album";
 import { Suspense } from "react";
 
 const Body = () => {
+  
+  const photo20 = "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652065/photo24_fo9voj.jpg"
+  const photo18 = "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652054/photo20_mptsgh.jpg"
+  const photo24 = "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651867/KWP_0435_luqksw.jpg"
+  const photo4 = "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652054/photo18_r2glgk.jpg"
+  const photo26 = "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651870/KWP_0568_ozre5p.jpg"
+
   const images = [photo20, photo18, photo24, photo4, photo26];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

@@ -1,16 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import photo17 from "../images/photo17.jpg";
 import photo6 from "../images/KWP_2772.jpg";
-import photo21 from "../images/photo21.jpg";
-import photo23 from "../images/photo23.jpg";
 import BlackHeader from "../components/BlackHeader";
 import { motion } from "framer-motion";
 
 const albums = [
   {
     id: 1,
-    bgImage: photo17,
+    bgImage: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652054/photo17_k5pcc2.jpg",
     albumName: "Fashion",
     albumURL: "/fashion",
   },
@@ -22,13 +19,13 @@ const albums = [
   },
   {
     id: 3,
-    bgImage: photo21,
+    bgImage: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652057/photo21_a1sztv.jpg",
     albumName: "Weddings",
     albumURL: "/weddings",
   },
   {
     id: 4,
-    bgImage: photo23,
+    bgImage: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651911/KWP_3917_zlocpz.jpg",
     albumName: "Shorts",
     albumURL: "/no-page",
   },
