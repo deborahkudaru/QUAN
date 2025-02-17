@@ -81,7 +81,7 @@ const niche = [
   },
   {
     id: 11,
-    img: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739656506/KWP_7078_kosdpq.jpg",
+    img: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652044/KWP_9773_nsa6ae.jpg+++",
     topic: "RITMWA FASHION MODEL",
     niche: "Fashion | Styling | Color",
     date: "July 2024",
@@ -89,7 +89,7 @@ const niche = [
   },
   {
     id: 12,
-    img: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652021/photo2_u79oe4.jpg",
+    img: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652059/photo14_jqns6j.jpg",
     topic: "SIZA ALPHA FASHION INFLUENCER IN DENIM",
     niche: "Fashion | Styling | Color",
     date: "April 2024",

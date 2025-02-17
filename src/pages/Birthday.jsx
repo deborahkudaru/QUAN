@@ -1,15 +1,25 @@
-import React from "react";
-import birthdays from "../constants/birthday";
-import { BsArrowLeft } from "react-icons/bs";
+import React, { useState } from "react";
+import { BsArrowLeft, BsArrowRight, BsX } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import BlackHeader from "../components/BlackHeader";
-import { Suspense } from "react";
+import birthdays from "../constants/birthday";
 
 const Birthday = () => {
   const navigate = useNavigate();
+  const [selectedIndex, setSelectedIndex] = useState(null);
+
+  const openModal = (index) => setSelectedIndex(index);
+  const closeModal = () => setSelectedIndex(null);
+  const showPrev = () =>
+    setSelectedIndex((prev) => (prev > 0 ? prev - 1 : prev));
+  const showNext = () =>
+    setSelectedIndex((prev) => (prev < birthdays.length - 1 ? prev + 1 : prev));
+
   return (
     <>
-      <BlackHeader />
+      {/* Only show header when modal is closed */}
+      {selectedIndex === null && <BlackHeader />}
+
       <div className="px-4 pt-20 dark:bg-[#121212]">
         <div className="flex py-5 lg:gap-10 gap-5">
           <button onClick={() => navigate(-1)}>
@@ -20,21 +30,66 @@ const Birthday = () => {
           </h2>
         </div>
 
+        {/* Image Grid */}
         <div className="lg:grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7">
-          {birthdays.map((birthday) => (
+          {birthdays.map((birthday, index) => (
             <div className="lg:pb-0 md:pb-0 pb-5" key={birthday.id}>
-              <Suspense fallback={<div>Loading...</div>}>
-                <img
-                  src={birthday.image}
-                  alt={birthday.alt}
-                  className="shadow-xl"
-                  loading="lazy"
-                />
-              </Suspense>
+              <img
+                src={birthday.image}
+                alt={birthday.alt}
+                className="shadow-xl cursor-pointer"
+                loading="lazy"
+                onClick={() => openModal(index)}
+              />
             </div>
           ))}
         </div>
       </div>
+
+      {/* Modal covering the whole page */}
+      {selectedIndex !== null && (
+        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black bg-opacity-80 backdrop-blur-sm p-5">
+          {/* Close Button */}
+          <div className="flex justify-center w-full mb-4">
+            <button
+              className="text-white text-4xl bg-black bg-opacity-50 rounded-lg p-3 shadow-lg hover:bg-opacity-70 transition"
+              onClick={closeModal}
+            >
+              <BsX />
+            </button>
+          </div>
+
+          {/* Image Navigation */}
+          <div className="flex items-center gap-5">
+            {/* Previous Button */}
+            {selectedIndex > 0 && (
+              <button
+                className="text-white text-4xl bg-black bg-opacity-50 rounded-lg p-3 shadow-lg hover:bg-opacity-70 transition"
+                onClick={showPrev}
+              >
+                <BsArrowLeft />
+              </button>
+            )}
+
+            {/* Image Display */}
+            <img
+              src={birthdays[selectedIndex].image}
+              alt={birthdays[selectedIndex].alt}
+              className="max-h-[80vh] w-auto rounded-lg shadow-xl"
+            />
+
+            {/* Next Button */}
+            {selectedIndex < birthdays.length - 1 && (
+              <button
+                className="text-white text-4xl bg-black bg-opacity-50 rounded-lg p-3 shadow-lg hover:bg-opacity-70 transition"
+                onClick={showNext}
+              >
+                <BsArrowRight />
+              </button>
+            )}
+          </div>
+        </div>
+      )}
     </>
   );
 };
