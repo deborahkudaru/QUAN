@@ -49,12 +49,13 @@ const Wedding = () => {
       </div>
 
       {/* Modal: covers the whole page */}
-      {selectedIndex !== null && (
-        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black bg-opacity-80 backdrop-blur-sm p-5">
+         {/* Modal covering the whole page */}
+         {selectedIndex !== null && (
+        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black bg-opacity-80 backdrop-blur-sm xl:p-5 lg:p-3 p-1">
           {/* Close Button */}
           <div className="flex justify-center w-full mb-4">
             <button
-              className="text-white text-4xl bg-black bg-opacity-50 rounded-lg p-3 shadow-lg hover:bg-opacity-70 transition"
+              className="text-white lg:text-4xl text-3xl font-semibold bg-black bg-opacity-50 rounded-lg lg:p-3 p-1 shadow-lg hover:bg-opacity-70 transition"
               onClick={closeModal}
             >
               <BsX />
@@ -62,10 +63,11 @@ const Wedding = () => {
           </div>
 
           {/* Image Navigation */}
-          <div className="flex items-center gap-5">
+          <div className="flex items-center xl:gap-5 lg:gap-2">
+            {/* Previous Button */}
             {selectedIndex > 0 && (
               <button
-                className="text-white text-4xl bg-black bg-opacity-50 rounded-lg p-3 shadow-lg hover:bg-opacity-70 transition"
+                className="text-white lg:text-4xl text-3xl font-semibold bg-black bg-opacity-50 rounded-lg lg:p-3 p-1 shadow-lg hover:bg-opacity-70 lg:relative md:relative transition absolute"
                 onClick={showPrev}
               >
                 <BsArrowLeft />
@@ -76,12 +78,13 @@ const Wedding = () => {
             <img
               src={weddings[selectedIndex].image}
               alt={weddings[selectedIndex].alt}
-              className="max-h-[80vh] w-auto rounded-lg shadow-xl"
+              className="lg:max-h-[80vh] max-h-[80vh] w-auto rounded-lg shadow-xl"
             />
 
+            {/* Next Button */}
             {selectedIndex < weddings.length - 1 && (
               <button
-                className="text-white text-4xl bg-black bg-opacity-50 rounded-lg p-3 shadow-lg hover:bg-opacity-70 transition"
+                className="text-white lg:text-4xl text-3xl font-semibold bg-black bg-opacity-50 rounded-lg lg:p-3 p-1 shadow-lg hover:bg-opacity-70 transition lg:right-0 lg:relative md:relative absolute md:right-0  lg;right-0  right-1"
                 onClick={showNext}
               >
                 <BsArrowRight />

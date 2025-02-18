@@ -81,7 +81,7 @@ const niche = [
   },
   {
     id: 11,
-    img: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652044/KWP_9773_nsa6ae.jpg+++",
+    img: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652044/KWP_9773_nsa6ae.jpg",
     topic: "RITMWA FASHION MODEL",
     niche: "Fashion | Styling | Color",
     date: "July 2024",

@@ -39,7 +39,7 @@ const Album = () => {
          <h3 className=" text-center pb-6 font-bold text-2xl lg:text-3xl font-playFair text-gray-900  dark:text-white">
         GALLERY
       </h3>
-        <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 ">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 ">
           {albums.map((alb) => (
             <motion.div key={alb.id} className=""   whileHover={{ scale: 1.1 }} // Increases size on hover
             transition={{ type: "spring", stiffness: 200 }}>
