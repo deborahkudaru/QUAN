@@ -6,14 +6,11 @@ import DarkModeToggle from "./DarkModeToggle";
 
 const BlackHeader = () => {
   return (
-    <nav>
-      <div className="bg-white dark:bg-[#121212] shadow-lg mx-auto flex w-full justify-between flex-wrap lg:px-20 px-5 py-5 fixed z-10">
+    <nav className="fixed w-full z-10 bg-white dark:bg-[#121212] shadow-lg">
+      <div className="mx-auto flex w-full justify-between items-center flex-wrap lg:px-20 px-5 py-3">
         <BlackLogo />
-        <div className="flex gap-2">
-          <div className="self-center">
-            <BlackNavbBar />
-          </div>
-
+        <div className="flex gap-2 items-center">
+          <BlackNavbBar />
           <DarkModeToggle />
         </div>
       </div>

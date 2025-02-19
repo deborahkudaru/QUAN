@@ -148,22 +148,22 @@ const Book = () => {
                 Category
               </option>
               <option className="dark:bg-[#121212]" value="Birthday Shoot">
-                Weddings/Events
+                Fashion
               </option>
               <option className="dark:bg-[#121212]" value="Wedding Shoot">
-                Birthdays
+                Beauty/Potraits
               </option>
               <option className="dark:bg-[#121212]" value="Modelling Shoot">
-                Potraits
+                Corporates
               </option>
               <option className="dark:bg-[#121212]" value="Casual Shoot">
-                Fashion campaigns
+                Weddings/Events
               </option>
               <option className="dark:bg-[#121212]" value="Fashin Shoot">
-                Collaborations
+                Commercials
               </option>
               <option className="dark:bg-[#121212]" value="Music Video">
-                Music Videos
+                Music Videos/Shorts
               </option>
               <option className="dark:bg-[#121212]" value="">
                 Other

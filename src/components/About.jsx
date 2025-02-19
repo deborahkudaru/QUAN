@@ -11,17 +11,22 @@ const About = () => {
           WELCOME
         </h3>
         <p className="text-justify justify-center text-zinc-900 font-medium font-CrimsonText pb-5 lg:text-2xl md:text-xl text-base font-lato dark:text-white">
-          Welcome to <i className="font-bold text-red-800">Quan Imagery</i>,
-          where moments become timeless treasures. In a world filled with
-          fleeting moments, we believe in the enduring power of photography and
-          videography to capture the essence of life's most precious occasions.
-          Founded with a passion for storytelling through imagery, Quan Imagery
-          is the culmination of a lifelong love affair with the art of
-          photography and videography. Led by{" "}
-          <i className="font-bold text-red-800">Kwoopnan Anpe, </i> our team is
-          driven by a shared commitment to craftsmanship, creativity, and
-          connection. With each click of the shutter, we strive to encapsulate
-          the beauty, emotion, and authenticity of the human experience.
+          At Quan Imagery, we believe that powerful imagery is the cornerstone
+          of personal and business branding. In today’s world, how you present
+          yourself visually defines how others perceive you. Whether you’re an
+          individual looking to establish a personal brand or a business aiming
+          to connect with the right audience, your image is your first
+          impression—and we make sure it speaks volumes. That's why at Quan
+          imagery we go beyond photography—we create stories, art, and timeless
+          moments with an Africans touch. Our work is a fusion of tradition and
+          modern expression, designed to elevate personal and business brands
+          through compelling visuals. We specialize in crafting authentic
+          visually striking photographs that brings out the essence of
+          individuals, creatives, and businesses, transforming every shoot into
+          a work of art. Whether you're an artist, entrepreneur, model, or
+          brand, our photography is tailored to showcase your uniqueness while
+          maintaining a high-end, polished aesthetic. Your brand deserves to be
+          seen, felt, and remembered. Let’s create images that make that happen.
         </p>
 
         <div className="flex gap-2 justify-end items-center">
