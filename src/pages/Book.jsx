@@ -144,14 +144,30 @@ const Book = () => {
               className="border outline-0 bg-transparent  border-gray-500 px-5 py-2"
               required
             >
-              <option className="dark:bg-[#121212]" value="">Choose a Shoot</option>
-              <option className="dark:bg-[#121212]" value="Birthday Shoot">Weddings/Events</option>
-              <option className="dark:bg-[#121212]" value="Wedding Shoot">Birthdays</option>
-              <option className="dark:bg-[#121212]" value="Modelling Shoot">Potraits</option>
-              <option className="dark:bg-[#121212]" value="Casual Shoot">Fashion campaigns</option>
-              <option className="dark:bg-[#121212]" value="Fashin Shoot">Collaborations</option>
-              <option className="dark:bg-[#121212]" value="Music Video">Music Videos</option>
-              <option className="dark:bg-[#121212]" value="">Other</option>
+              <option className="dark:bg-[#121212]" value="">
+                Category
+              </option>
+              <option className="dark:bg-[#121212]" value="Birthday Shoot">
+                Weddings/Events
+              </option>
+              <option className="dark:bg-[#121212]" value="Wedding Shoot">
+                Birthdays
+              </option>
+              <option className="dark:bg-[#121212]" value="Modelling Shoot">
+                Potraits
+              </option>
+              <option className="dark:bg-[#121212]" value="Casual Shoot">
+                Fashion campaigns
+              </option>
+              <option className="dark:bg-[#121212]" value="Fashin Shoot">
+                Collaborations
+              </option>
+              <option className="dark:bg-[#121212]" value="Music Video">
+                Music Videos
+              </option>
+              <option className="dark:bg-[#121212]" value="">
+                Other
+              </option>
             </select>
           </div>
 
@@ -194,7 +210,9 @@ const Book = () => {
                 <h2 className="text-xl font-semibold mb-2 font-lato">
                   Confirm booking?
                 </h2>
-                <p className="font-lato mb-4">After booking, you will be re-directed back to the home page.</p>
+                <p className="font-lato mb-4">
+                  After booking, you will be re-directed back to the home page.
+                </p>
                 <div className="flex justify-end space-x-3">
                   <button
                     type="submit"

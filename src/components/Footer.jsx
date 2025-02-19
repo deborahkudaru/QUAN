@@ -3,6 +3,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -25,6 +26,12 @@ const Footer = () => {
         </a>
         <a className=" hover:text-red-800" href="mailto:quanimagery@gmail.com">
           <FaEnvelope />
+        </a>
+        <a
+          className=" hover:text-red-800"
+          href="https://www.linkedin.com/in/kwoopnan-anpe-118421274?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+        >
+          <FaLinkedinIn />
         </a>
       </div>
       <footer className="text-center py-10 text-xs dark:bg-[#121212] text-neutral-500">

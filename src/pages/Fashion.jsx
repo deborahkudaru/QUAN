@@ -20,7 +20,7 @@ const Fashion = () => {
     <>
       {/* Render header only when modal is not active */}
       {selectedIndex === null && <BlackHeader />}
-      <div className="px-4 pt-20 dark:bg-[#121212]">
+      <div className="px-5 lg:px-20 pt-20 dark:bg-[#121212]">
         <div className="flex py-5 lg:gap-10 gap-5">
           <button onClick={() => navigate(-1)}>
             <BsArrowLeft className="lg:text-2xl text-lg dark:text-white" />
@@ -48,8 +48,8 @@ const Fashion = () => {
         </div>
       </div>
 
-         {/* Modal covering the whole page */}
-         {selectedIndex !== null && (
+      {/* Modal covering the whole page */}
+      {selectedIndex !== null && (
         <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black bg-opacity-80 backdrop-blur-sm xl:p-5 lg:p-3 p-1">
           {/* Close Button */}
           <div className="flex justify-center w-full mb-4">

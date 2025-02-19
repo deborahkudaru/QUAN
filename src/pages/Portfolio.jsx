@@ -19,9 +19,7 @@ const Gallery = () => {
   const showPrev = () =>
     setSelectedIndex((prev) => (prev > 0 ? prev - 1 : prev));
   const showNext = () =>
-    setSelectedIndex((prev) =>
-      prev < niche.length - 1 ? prev + 1 : prev
-    );
+    setSelectedIndex((prev) => (prev < niche.length - 1 ? prev + 1 : prev));
 
   return (
     <div className="bg-white dark:bg-[#121212]">
@@ -30,13 +28,10 @@ const Gallery = () => {
         <Typewriter text="SCROLL THROUGH" delay={200} infinite />{" "}
         <IoIosArrowRoundDown className="inline ml-2 animate-bounce text-lg" />
       </h3>
-      <div className="px-4 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-10">
+      <div className="px-5 lg:px-20 grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-10">
         {niche.map((image, index) => (
           <div key={image.id} data-aos="fade-up">
-            <div
-              className="cursor-pointer"
-              onClick={() => openModal(index)}
-            >
+            <div className="cursor-pointer" onClick={() => openModal(index)}>
               <Suspense fallback={<div>Loading...</div>}>
                 <img
                   src={image.img}
@@ -96,7 +91,7 @@ const Gallery = () => {
             />
             {selectedIndex < niche.length - 1 && (
               <button
-                className="text-white lg:text-4xl text-3xl font-semibold bg-black bg-opacity-50 rounded-lg lg:p-3 p-1 shadow-lg hover:bg-opacity-70 transition lg:right-0 lg:relative md:relative absolute md:right-0  lg;right-0  right-1" 
+                className="text-white lg:text-4xl text-3xl font-semibold bg-black bg-opacity-50 rounded-lg lg:p-3 p-1 shadow-lg hover:bg-opacity-70 transition lg:right-0 lg:relative md:relative absolute md:right-0  lg;right-0  right-1"
                 onClick={showNext}
               >
                 <BsArrowRight />

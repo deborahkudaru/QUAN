@@ -20,7 +20,7 @@ const Birthday = () => {
       {/* Only show header when modal is closed */}
       {selectedIndex === null && <BlackHeader />}
 
-      <div className="px-4 pt-20 dark:bg-[#121212]">
+      <div className="lg:px-20 px-5 pt-20 dark:bg-[#121212]">
         <div className="flex py-5 lg:gap-10 gap-5">
           <button onClick={() => navigate(-1)}>
             <BsArrowLeft className="lg:text-2xl text-lg dark:text-white" />
