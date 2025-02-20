@@ -17,7 +17,6 @@ const Birthday = () => {
 
   return (
     <>
-      {/* Only show header when modal is closed */}
       {selectedIndex === null && <BlackHeader />}
 
       <div className="lg:px-20 px-5 pt-20 dark:bg-[#121212]">

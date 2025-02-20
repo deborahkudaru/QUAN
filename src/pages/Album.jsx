@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import photo6 from "../images/KWP_2772.jpg";
+import photo7 from "../images/KWP_5163.jpg"
 import BlackHeader from "../components/BlackHeader";
 import { motion } from "framer-motion";
 
@@ -8,29 +8,34 @@ const albums = [
   {
     id: 1,
     bgImage:
-      "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652054/photo17_k5pcc2.jpg",
+      "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651942/KWP_6639_ahfmtc.jpg",
     albumName: "Fashion",
     albumURL: "/fashion",
   },
   {
     id: 2,
-    bgImage: photo6,
-    albumName: "Birthdays",
+    bgImage: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652054/photo18_r2glgk.jpg",
+    albumName: "Beauty/Portraits",
     albumURL: "/birthday",
   },
   {
     id: 3,
-    bgImage:
+    bgImage: 
       "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652057/photo21_a1sztv.jpg",
-    albumName: "Weddings",
+    albumName: "Weddings/Events",
     albumURL: "/weddings",
   },
   {
     id: 4,
-    bgImage:
-      "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651911/KWP_3917_zlocpz.jpg",
-    albumName: "Shorts",
-    albumURL: "/no-page",
+    bgImage:photo7,
+    albumName: "Corporates",
+    albumURL: "/corporates",
+  },
+  {
+    id: 4,
+    bgImage:"https://res.cloudinary.com/dqflr6fmv/image/upload/v1740072673/Screenshot_158_yfjt1h.png",
+    albumName: "Music Video/Shorts",
+    albumURL: "/music",
   },
 ];
 
@@ -42,7 +47,7 @@ const Album = () => {
         <h3 className=" text-center pb-6 font-bold text-2xl lg:text-3xl font-playFair text-gray-900  dark:text-white">
           GALLERY
         </h3>
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 ">
+        <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-1 gap-3">
           {albums.map((alb) => (
             <motion.div
               key={alb.id}

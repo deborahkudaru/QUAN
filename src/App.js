@@ -10,6 +10,8 @@ import NoPage from "./pages/NoPage";
 import Portfolio from "./pages/Portfolio";
 import { ThemeProvider } from "./components/ThemeContext";
 import LoadingScreen from "./components/LoadingScreen";
+import Corporates from "./pages/Corporates";
+import Music from "./pages/Music";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -28,6 +30,8 @@ const App = () => {
             <Route path="/weddings" element={<Wedding />} />
             <Route path="/no-page" element={<NoPage />} />
             <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/corporate" element={<Corporates />} />
+            <Route path="/music" element={<Music />} />
           </Routes>
           <Footer />
         </ThemeProvider>

@@ -18,7 +18,6 @@ const Fashion = () => {
 
   return (
     <>
-      {/* Render header only when modal is not active */}
       {selectedIndex === null && <BlackHeader />}
       <div className="px-5 lg:px-20 pt-20 dark:bg-[#121212]">
         <div className="flex py-5 lg:gap-10 gap-5">
