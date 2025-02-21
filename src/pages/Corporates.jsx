@@ -25,7 +25,7 @@ const Corporates = () => {
             <BsArrowLeft className="lg:text-2xl text-lg dark:text-white" />
           </button>
           <h2 className="font-playFair text-red-800 dark:text-red-600 font-semibold lg:text-3xl text-lg">
-            corporates
+            CORPORATES
           </h2>
         </div>
 

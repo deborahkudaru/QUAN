@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <div className="bg-white dark:bg-[#121212]">
-      <div className="w-2/3  m-auto">
+      <div className="px-10 lg:px-20  m-auto">
         <h3 className="text-center pt-10 pb-3 font-bold text-2xl lg:text-3xl font-playFair text-gray-900 dark:text-white">
           WELCOME
         </h3>

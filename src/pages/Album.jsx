@@ -29,13 +29,19 @@ const albums = [
     id: 4,
     bgImage:photo7,
     albumName: "Corporates",
-    albumURL: "/corporates",
+    albumURL: "/corporate",
   },
   {
-    id: 4,
+    id: 5,
     bgImage:"https://res.cloudinary.com/dqflr6fmv/image/upload/v1740072673/Screenshot_158_yfjt1h.png",
     albumName: "Music Video/Shorts",
     albumURL: "/music",
+  },
+  {
+    id: 6,
+    bgImage:"https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652065/photo24_fo9voj.jpg",
+    albumName: "Commercials",
+    albumURL: "/no-page",
   },
 ];
 
@@ -47,12 +53,12 @@ const Album = () => {
         <h3 className=" text-center pb-6 font-bold text-2xl lg:text-3xl font-playFair text-gray-900  dark:text-white">
           GALLERY
         </h3>
-        <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-1 gap-3">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3">
           {albums.map((alb) => (
             <motion.div
               key={alb.id}
               className=""
-              whileHover={{ scale: 1.1 }} // Increases size on hover
+              whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
               <Link to={alb.albumURL}>
