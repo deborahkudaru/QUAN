@@ -58,7 +58,7 @@ const Album = () => {
             <motion.div
               key={alb.id}
               className=""
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.1  }}
               transition={{ type: "spring", stiffness: 200 }}
             >
               <Link to={alb.albumURL}>
