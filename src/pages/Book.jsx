@@ -62,7 +62,7 @@ const Book = () => {
   return (
     <div className="dark:bg-[#121212] dark:text-white">
       <BlackHeader />
-      <div className="flex lg:px-32 px-10 pt-28 lg:gap-10 gap-5">
+      <div className="flex lg:px-32 px-10 pt-28 lg:gap-10 gap-5 ">
         <button onClick={() => navigate(-1)}>
           <BsArrowLeft className="lg:text-2xl text-lg" />
         </button>

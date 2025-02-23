@@ -1,36 +1,42 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { GoArrowRight } from "react-icons/go";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
+  useEffect(() => {
+    Aos.init({ duration: 500 });
+  }, []);
+
   return (
     <div className="bg-white dark:bg-[#121212]">
       <div className="px-10 lg:px-20  m-auto">
-        <h3 className="text-center pt-10 pb-3 font-bold text-2xl lg:text-3xl font-playFair text-gray-900 dark:text-white">
+        <h3
+          className="text-center pt-10 pb-3 font-bold text-2xl lg:text-3xl font-playFair text-gray-900 dark:text-white"
+          data-aos="zoom-in"
+        >
           WELCOME
         </h3>
-        <p className="text-justify justify-center text-zinc-900 font-medium font-CrimsonText pb-5 lg:text-2xl md:text-xl text-base font-lato dark:text-white">
-          At <span className="text-red-800">Quan Imagery</span>, we believe that
-          powerful imagery is the cornerstone of personal and business branding.
-          In today’s world, how you present yourself visually defines how others
-          perceive you. Whether you’re an individual looking to establish a
-          personal brand or a business aiming to connect with the right
-          audience, your image is your first impression—and we make sure it
-          speaks volumes. <br /> <br />
-          That's why at <span className="text-red-800">Quan imagery</span> we go
+        <p
+          className="text-justify justify-center text-zinc-900 font-medium font-CrimsonText pb-5 lg:text-2xl md:text-xl text-base font-lato dark:text-white"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        >
+          How you present yourself visually defines how others perceive you.
+          Whether you’re an individual looking to establish a personal brand or
+          a business aiming to connect with the right audience, your image is
+          your first impression—and we make sure it speaks volumes. <br />{" "}
+          <br /> At{" "}
+          <span className="text-red-800 font-semibold">Quan imagery</span> we go
           beyond photography—we create stories, art, and timeless moments with
-          an Africans touch. Our work is a fusion of tradition and modern
-          expression, designed to elevate personal and business brands through
-          compelling visuals. <br />
-          <br /> We specialize in crafting authentic visually striking
-          photographs that brings out the essence of individuals, creatives, and
-          businesses, transforming every shoot into a work of art. Whether
-          you're an artist, entrepreneur, model, or brand, our photography is
-          tailored to showcase your uniqueness while maintaining a high-end,
-          polished aesthetic. <br />
-          <br /> Your brand deserves to be seen, felt, and remembered. Let’s
-          create images that make that happen.
+          an Africans touch. Whether you're an individual, artist, entrepreneur,
+          model, or brand, our expertise in fashion, beauty, corporate,
+          commercial photography ensures your uniqueness shines. Our photography
+          is tailored to showcase your uniqueness while maintaining a high-end,
+          polished aesthetic. Let’s create images that captivate, inspire, and
+          leave a lasting impact.
         </p>
 
         <div className="flex gap-2 justify-end items-center">

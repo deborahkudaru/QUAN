@@ -19,7 +19,7 @@ const Wedding = () => {
   return (
     <>
       {selectedIndex === null && <BlackHeader />}
-      <div className="px-5 lg:px-20 pt-20 dark:bg-[#121212]">
+      <div className="px-5 lg:px-20 pt-20 dark:bg-[#121212] min-h-screen">
         <div className="flex py-5 lg:gap-10 gap-5">
           <button onClick={() => navigate(-1)}>
             <BsArrowLeft className="lg:text-3xl text-2xl relative top-1 lg:top-0 dark:text-white" />
