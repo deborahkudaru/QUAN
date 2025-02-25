@@ -13,7 +13,6 @@ const Typewriter = ({ text, delay, infinite }) => {
         setCurrentIndex((prevIndex) => prevIndex + 1);
       }, delay);
     } else if (infinite) {
-      // ADD THIS CHECK
       setCurrentIndex(0);
       setCurrentText("");
     }

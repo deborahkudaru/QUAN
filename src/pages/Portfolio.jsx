@@ -32,12 +32,12 @@ const Gallery = () => {
         {niche.map((image, index) => (
           <div key={image.id} data-aos="fade-up">
             <div className="cursor-pointer" onClick={() => openModal(index)}>
-                <img
-                  src={image.img}
-                  alt={image.topic}
-                  className="shadow-xl rounded-xl"
-                  loading="lazy"
-                />
+              <img
+                src={image.img}
+                alt={image.topic}
+                className="shadow-xl rounded-xl"
+                loading="lazy"
+              />
             </div>
             <div className="pt-4 leading-8 pb-2" data-aos="fade-up">
               <p className="text-lg font-bold font-playFair text-red-800 dark:text-red-600">

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import photo7 from "../images/KWP_5163.jpg"
+import photo7 from "../images/KWP_5163.jpg";
 import BlackHeader from "../components/BlackHeader";
 import { motion } from "framer-motion";
 
@@ -14,32 +14,35 @@ const albums = [
   },
   {
     id: 2,
-    bgImage: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652054/photo18_r2glgk.jpg",
+    bgImage:
+      "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652054/photo18_r2glgk.jpg",
     albumName: "Beauty/Portraits",
     albumURL: "/birthday",
   },
   {
     id: 3,
-    bgImage: 
+    bgImage:
       "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652057/photo21_a1sztv.jpg",
     albumName: "Weddings/Events",
     albumURL: "/weddings",
   },
   {
     id: 4,
-    bgImage:photo7,
+    bgImage: photo7,
     albumName: "Corporates",
     albumURL: "/corporate",
   },
   {
     id: 5,
-    bgImage:"https://res.cloudinary.com/dqflr6fmv/image/upload/v1740072673/Screenshot_158_yfjt1h.png",
+    bgImage:
+      "https://res.cloudinary.com/dqflr6fmv/image/upload/v1740072673/Screenshot_158_yfjt1h.png",
     albumName: "Music Video/Shorts",
     albumURL: "/music",
   },
   {
     id: 6,
-    bgImage:"https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652065/photo24_fo9voj.jpg",
+    bgImage:
+      "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652065/photo24_fo9voj.jpg",
     albumName: "Commercials",
     albumURL: "/no-page",
   },
@@ -58,7 +61,7 @@ const Album = () => {
             <motion.div
               key={alb.id}
               className=""
-              whileHover={{ scale: 1.1  }}
+              whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
               <Link to={alb.albumURL}>

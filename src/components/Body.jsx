@@ -36,12 +36,12 @@ const Body = () => {
         style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
       >
         <Header />
-          <img
-            className="md:w-96 m-auto xl:pt-48 lg:pt-32 pt-40 w-1/2"
-            src={logo}
-            alt="Quan Imagery"
-            loading="lazy"
-          />
+        <img
+          className="md:w-96 m-auto xl:pt-48 lg:pt-32 pt-40 w-1/2"
+          src={logo}
+          alt="Quan Imagery"
+          loading="lazy"
+        />
         <TfiAngleDoubleDown className="text-white animate-bounce text-center w-full m-auto relative xl:top-12 lg:top-12 top-12 text-3xl lg:text-4xl lg:pb-0 pb-2" />
       </div>
       <About />

@@ -14,7 +14,9 @@ const Corporates = () => {
   const showPrev = () =>
     setSelectedIndex((prev) => (prev > 0 ? prev - 1 : prev));
   const showNext = () =>
-    setSelectedIndex((prev) => (prev < corporates.length - 1 ? prev + 1 : prev));
+    setSelectedIndex((prev) =>
+      prev < corporates.length - 1 ? prev + 1 : prev
+    );
 
   return (
     <>

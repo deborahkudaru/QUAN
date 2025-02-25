@@ -26,9 +26,7 @@ const Music = () => {
         </div>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3">
           {music.map((m) => (
-            <div
-              key={m.id}
-            >
+            <div key={m.id}>
               <img src={m.image} alt={m.alt} />
               <div className="pt-4 leading-8 pb-2" data-aos="fade-up">
                 <p className="text-lg font-bold font-playFair text-red-800 dark:text-red-600">

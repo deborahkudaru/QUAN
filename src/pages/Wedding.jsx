@@ -47,7 +47,6 @@ const Wedding = () => {
         </div>
       </div>
 
-      {/* Modal: covers the whole page */}
       {/* Modal covering the whole page */}
       {selectedIndex !== null && (
         <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black bg-opacity-80 backdrop-blur-sm xl:p-5 lg:p-3 p-1">
