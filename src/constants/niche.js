@@ -82,9 +82,9 @@ const niche = [
   {
     id: 11,
     img: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1740514540/WhatsApp_Image_2025-02-24_at_19.08.12_cb761f.jpg",
-    topic: "PEECHES",
+    topic: "THE WEAL",
     niche: "Fashion | Styling | Color",
-    date: "December 2024",
+    date: "January 2025",
     link: "",
   },
   {
