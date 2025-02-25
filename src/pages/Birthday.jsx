@@ -25,7 +25,7 @@ const Birthday = () => {
             <BsArrowLeft className="lg:text-2xl text-lg dark:text-white" />
           </button>
           <h2 className="font-playFair font-semibold text-red-800 dark:text-red-600 lg:text-3xl text-lg">
-            BIRTHDAY
+            BEAUTY AND PORTRAITS
           </h2>
         </div>
 
