@@ -6,7 +6,7 @@ import { IoIosClose } from "react-icons/io";
 
 const NavLinks = () => (
   <ul className="flex space-x-5 nav">
-    {["HOME", "BOOK", "PORTFOLIO", "BLOG"].map((name, index) => (
+    {["HOME", "BOOK A SESSION", "PORTFOLIO", "BLOG"].map((name, index) => (
       <li key={index}>
         <Link
           to={
@@ -14,6 +14,8 @@ const NavLinks = () => (
               ? "/no-page"
               : name === "HOME"
               ? "/"
+              : name === "BOOK A SESSION"
+              ? "/book"
               : `/${name.toLowerCase().replace(" ", "-")}`
           }
           className="text-white hover:underline-offset-4 transition duration-300 font-bold font-playFair hover:underline"
@@ -51,7 +53,7 @@ const Navbar = () => {
         animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : -10 }}
         transition={{ duration: 0.3 }}
       >
-        {["HOME", "BOOK", "PORTFOLIO", "BLOG"].map((name, index) => (
+        {["HOME", "BOOK A SESSION", "PORTFOLIO", "BLOG"].map((name, index) => (
           <motion.li key={index} whileTap={{ scale: 0.9 }}>
             <Link
               to={
@@ -59,6 +61,8 @@ const Navbar = () => {
                   ? "/no-page"
                   : name === "HOME"
                   ? "/"
+                  : name === "BOOK A SESSION"
+                  ? "/book"
                   : `/${name.toLowerCase()}`
               }
               className="text-white transition text-sm duration-300 font-semibold font-playFair"

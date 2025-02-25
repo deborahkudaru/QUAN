@@ -8,15 +8,15 @@ import Album from "../pages/Album";
 
 const Body = () => {
   const photo20 =
-    "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652065/photo24_fo9voj.jpg";
+    "https://res.cloudinary.com/dqflr6fmv/image/upload/v1740514541/WhatsApp_Image_2025-02-24_at_19.07.51_qthzo8.jpg";
   const photo18 =
-    "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652054/photo20_mptsgh.jpg";
+    "https://res.cloudinary.com/dqflr6fmv/image/upload/v1740514541/WhatsApp_Image_2025-02-24_at_19.08.11_bsvflw.jpg";
   const photo24 =
-    "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651867/KWP_0435_luqksw.jpg";
+    "https://res.cloudinary.com/dqflr6fmv/image/upload/v1740514540/WhatsApp_Image_2025-02-24_at_19.08.04_pg0cm7.jpg";
   const photo4 =
-    "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652054/photo18_r2glgk.jpg";
+    "https://res.cloudinary.com/dqflr6fmv/image/upload/v1740514540/WhatsApp_Image_2025-02-24_at_19.08.05_dktemd.jpg";
   const photo26 =
-    "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651870/KWP_0568_ozre5p.jpg";
+    "https://res.cloudinary.com/dqflr6fmv/image/upload/v1740514539/WhatsApp_Image_2025-02-24_at_19.07.15_xdjiv9.jpg";
 
   const images = [photo20, photo18, photo24, photo4, photo26];
 
