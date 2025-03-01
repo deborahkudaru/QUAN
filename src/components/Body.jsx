@@ -15,10 +15,14 @@ const Body = () => {
     "https://res.cloudinary.com/dqflr6fmv/image/upload/v1740514540/WhatsApp_Image_2025-02-24_at_19.08.04_pg0cm7.jpg";
   const photo4 =
     "https://res.cloudinary.com/dqflr6fmv/image/upload/v1740514540/WhatsApp_Image_2025-02-24_at_19.08.05_dktemd.jpg";
-  const photo26 =
-    "https://res.cloudinary.com/dqflr6fmv/image/upload/v1740514539/WhatsApp_Image_2025-02-24_at_19.07.15_xdjiv9.jpg";
+  const photo27 =
+    "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652073/Siza_alpha_lmsqv2.jpg";
+  const photo28 =
+    "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652054/photo18_r2glgk.jpg";
+  const photo29 =
+    "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652035/photo9_ecopxv.jpg";
 
-  const images = [photo20, photo18, photo24, photo4, photo26];
+  const images = [photo20, photo18, photo24, photo4, photo27, photo28, photo29];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 

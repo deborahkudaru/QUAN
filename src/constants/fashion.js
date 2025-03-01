@@ -60,11 +60,50 @@ const fashion = [
     alt: 'photo-one'
   },
   {
-    id: 12,
-    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739651864/KWP_0308_tiiloo.jpg",
+    id: 13,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1740677285/KWP_9603_udcknr.jpg",
     alt: 'photo-one'
   },
-  
+  {
+    id: 14,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1740677279/KWP_9596_ljzi6d.jpg",
+    alt: 'photo-one'
+  },
+  {
+    id: 15,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1740677279/KWP_9622_nylhdm.jpg",
+    alt: 'photo-one'
+  },
+  {
+    id: 16,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1740677276/KWP_9591_f3opnl.jpg",
+    alt: 'photo-one'
+  },
+  {
+    id: 17,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1740677252/KWP_9550_b0ybcm.jpg",
+    alt: 'photo-one'
+  },
+  {
+    id: 18,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1740677247/KWP_9482_sr9ewn.jpg",
+    alt: 'photo-one'
+  },
+  {
+    id: 19,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1740677240/KWP_9431_dmlicy.jpg",
+    alt: 'photo-one'
+  },
+  {
+    id: 20,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1740677240/KWP_9539_vs2owh.jpg",
+    alt: 'photo-one'
+  },
+  {
+    id: 21,
+    image: "https://res.cloudinary.com/dqflr6fmv/image/upload/v1740677235/KWP_9442_fmfcjt.jpg",
+    alt: 'photo-one'
+  },
 ]
 
 
