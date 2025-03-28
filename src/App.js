@@ -12,6 +12,7 @@ import { ThemeProvider } from "./components/ThemeContext";
 import LoadingScreen from "./components/LoadingScreen";
 import Corporates from "./pages/Corporates";
 import Music from "./pages/Music";
+import { HelmetProvider } from "react-helmet-async";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -21,20 +22,22 @@ const App = () => {
       {loading ? (
         <LoadingScreen onComplete={() => setLoading(false)} />
       ) : (
-        <ThemeProvider>
-          <Routes>
-            <Route path="/" element={<Body />} />
-            <Route path="/book" element={<Book />} />
-            <Route path="/fashion" element={<Fashion />} />
-            <Route path="/birthday" element={<Birthday />} />
-            <Route path="/weddings" element={<Wedding />} />
-            <Route path="/no-page" element={<NoPage />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/corporate" element={<Corporates />} />
-            <Route path="/music" element={<Music />} />
-          </Routes>
-          <Footer />
-        </ThemeProvider>
+        <HelmetProvider>
+          <ThemeProvider>
+            <Routes>
+              <Route path="/" element={<Body />} />
+              <Route path="/book" element={<Book />} />
+              <Route path="/fashion" element={<Fashion />} />
+              <Route path="/birthday" element={<Birthday />} />
+              <Route path="/weddings" element={<Wedding />} />
+              <Route path="/no-page" element={<NoPage />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/corporate" element={<Corporates />} />
+              <Route path="/music" element={<Music />} />
+            </Routes>
+            <Footer />
+          </ThemeProvider>
+        </HelmetProvider>
       )}
     </div>
   );
