@@ -13,6 +13,7 @@ const BlackLogo = () => {
           className="md:w-10 w-8"
           src={darkMode ? lightLogo : darkLogo}
           loading="lazy"
+          alt="black logo"
         />
       </Link>
     </div>
