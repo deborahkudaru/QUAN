@@ -12,7 +12,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="bg-white dark:bg-[#121212] min-h-screen flex flex-col items-center px-5 lg:px-20 py-10">
+    <div className="bg-white dark:bg-[#121212] min-h-screen flex flex-col items-center px-5 lg:px-20 py-10 font-playFair">
       <motion.h3
         className="text-center font-bold text-2xl lg:text-4xl font-playFair text-gray-900 dark:text-white"
         data-aos="zoom-in"
