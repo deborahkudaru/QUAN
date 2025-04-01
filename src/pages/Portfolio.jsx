@@ -6,6 +6,7 @@ import BlackHeader from "../components/BlackHeader";
 import Typewriter from "../components/Typewriter";
 import { IoIosArrowRoundDown } from "react-icons/io";
 import { BsArrowLeft, BsArrowRight, BsX } from "react-icons/bs";
+import { FaArrowUp } from "react-icons/fa";
 
 const Gallery = () => {
   useEffect(() => {
@@ -13,6 +14,19 @@ const Gallery = () => {
   }, []);
 
   const [selectedIndex, setSelectedIndex] = useState(null);
+  const [showScroll, setShowScroll] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScroll(window.scrollY > 300);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const openModal = (index) => setSelectedIndex(index);
   const closeModal = () => setSelectedIndex(null);
@@ -22,7 +36,7 @@ const Gallery = () => {
     setSelectedIndex((prev) => (prev < niche.length - 1 ? prev + 1 : prev));
 
   return (
-    <div className="bg-white dark:bg-[#121212]">
+    <div className="bg-white dark:bg-[#121212] relative">
       <BlackHeader />
       <h3 className="text-center pt-32 pb-6 font-bold text-2xl lg:text-3xl font-playFair text-gray-700 dark:text-white">
         <Typewriter text="SCROLL THROUGH" delay={200} infinite />{" "}
@@ -89,7 +103,7 @@ const Gallery = () => {
             />
             {selectedIndex < niche.length - 1 && (
               <button
-                className="text-white lg:text-4xl text-3xl font-semibold bg-black bg-opacity-50 rounded-lg lg:p-3 p-1 shadow-lg hover:bg-opacity-70 transition lg:right-0 lg:relative md:relative absolute md:right-0  lg;right-0  right-1"
+                className="text-white lg:text-4xl text-3xl font-semibold bg-black bg-opacity-50 rounded-lg lg:p-3 p-1 shadow-lg hover:bg-opacity-70 transition lg:right-0 lg:relative md:relative absolute md:right-0 right-1"
                 onClick={showNext}
               >
                 <BsArrowRight />
@@ -97,6 +111,16 @@ const Gallery = () => {
             )}
           </div>
         </div>
+      )}
+
+      {/* Back to Top Button */}
+      {showScroll && (
+        <button
+          className="fixed bottom-5 right-5 bg-red-800 text-white p-3 rounded-full shadow-lg hover:bg-red-700 transition animate-bounce"
+          onClick={scrollToTop}
+        >
+          <FaArrowUp />
+        </button>
       )}
     </div>
   );
