@@ -75,7 +75,7 @@ const Body = () => {
           <Header />
 
           {/* Bottom Positioned Content */}
-          <div className="flex flex-col justify-end items-center min-h-screen pb-24">
+          <div className="flex flex-col justify-end items-center min-h-screen pb-30">
             <motion.div 
               className="w-full flex justify-center px-4 sm:px-6 md:px-8"
               variants={fadeIn}
