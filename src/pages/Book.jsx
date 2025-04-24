@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BsArrowLeft } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import BlackHeader from "../components/BlackHeader";
@@ -17,10 +17,29 @@ const Book = () => {
     time: "",
   });
 
+  // Form validation state
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  // Session types available for selection
+  const sessionTypes = [
+    "Portrait/Beauty",
+    "Fashion Shoot",
+    "Wedding/Events",
+    "Casual shoot",
+    "Collaboration",
+    "Music/Shorts"
+  ];
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+
+  // Check if all fields are filled
+  useEffect(() => {
+    const allFieldsFilled = Object.values(formData).every(value => value.trim() !== "");
+    setIsFormValid(allFieldsFilled);
+  }, [formData]);
 
   const [isOpen, setIsOpen] = useState(false);
   const [responseMessage, setResponseMessage] = useState("");
@@ -75,27 +94,59 @@ const Book = () => {
         className="pt-10 flex gap-10 lg:w-1/2 px-5 m-auto font-lato"
       >
         <form onSubmit={handleSubmit} className="w-full bg-white dark:bg-[#121212] p-6 rounded-xl shadow-lg">
-          {Object.keys(formData).map((key, index) => (
-            <div className="flex flex-col gap-2 mb-6" key={index}>
-              <label htmlFor={key} className="font-semibold capitalize">
-                {key.replace(/([A-Z])/g, " $1").trim()}<sup className="text-red-600">*</sup>
-              </label>
-              <input
-                type={key === "email" ? "email" : key === "phoneNumber" ? "number" : key === "date" ? "date" : key === "time" ? "time" : "text"}
-                name={key}
-                value={formData[key]}
-                onChange={handleChange}
-                className="border outline-none bg-transparent border-gray-500 px-5 py-2 rounded-md focus:border-blue-500"
-                required
-              />
-            </div>
-          ))}
+          {Object.keys(formData).map((key, index) => {
+            // Render a select dropdown for sessionType, input fields for others
+            if (key === "sessionType") {
+              return (
+                <div className="flex flex-col gap-2 mb-6" key={index}>
+                  <label htmlFor={key} className="font-semibold capitalize">
+                    Session Type<sup className="text-red-600">*</sup>
+                  </label>
+                  <select
+                    name={key}
+                    value={formData[key]}
+                    onChange={handleChange}
+                    className="border outline-none bg-transparent border-gray-500 px-5 py-2 rounded-md focus:border-blue-500"
+                    required
+                  >
+                    <option value="" disabled>Select a session type</option>
+                    {sessionTypes.map((type, idx) => (
+                      <option key={idx} value={type}>
+                        {type}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              );
+            } else {
+              return (
+                <div className="flex flex-col gap-2 mb-6" key={index}>
+                  <label htmlFor={key} className="font-semibold capitalize">
+                    {key.replace(/([A-Z])/g, " $1").trim()}<sup className="text-red-600">*</sup>
+                  </label>
+                  <input
+                    type={key === "email" ? "email" : key === "phoneNumber" ? "tel" : key === "date" ? "date" : key === "time" ? "time" : "text"}
+                    name={key}
+                    value={formData[key]}
+                    onChange={handleChange}
+                    className="border outline-none bg-transparent border-gray-500 px-5 py-2 rounded-md focus:border-blue-500"
+                    required
+                  />
+                </div>
+              );
+            }
+          })}
           <div className="flex justify-center">
             <motion.button 
-              whileHover={{ scale: 1.05 }}
-              className="bg-neutral-900 text-white dark:text-black dark:bg-white px-10 py-2 mt-8 rounded-lg hover:bg-gray-800"
+              whileHover={isFormValid ? { scale: 1.05 } : {}}
+              className={`px-10 py-2 mt-8 rounded-lg ${
+                isFormValid 
+                  ? "bg-neutral-900 text-white dark:text-black dark:bg-white hover:bg-gray-800 cursor-pointer" 
+                  : "bg-gray-400 text-gray-200 dark:bg-gray-700 dark:text-gray-500 cursor-not-allowed"
+              }`}
               type="button"
-              onClick={openModal}
+              onClick={isFormValid ? openModal : undefined}
+              disabled={!isFormValid}
             >
               Book
             </motion.button>
