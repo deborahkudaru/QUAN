@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu } from "react-icons/fi";
 import { IoIosClose } from "react-icons/io";
 
@@ -29,11 +29,10 @@ const linkVariant = {
   }
 };
 
-// Mobile menu variants - keeping animations contained
+// Mobile menu variants for fullscreen effect
 const mobileMenuVariants = {
-  closed: { 
+  closed: {
     opacity: 0,
-    height: 0,
     transition: {
       staggerChildren: 0.05,
       staggerDirection: -1,
@@ -42,7 +41,6 @@ const mobileMenuVariants = {
   },
   open: { 
     opacity: 1,
-    height: "auto",
     transition: {
       staggerChildren: 0.1,
       delayChildren: 0.1,
@@ -52,7 +50,7 @@ const mobileMenuVariants = {
 };
 
 const mobileItemVariants = {
-  closed: { opacity: 0, y: -5 },
+  closed: { opacity: 0, y: 20 },
   open: { 
     opacity: 1, 
     y: 0,
@@ -69,11 +67,12 @@ const Navbar = () => {
   const navItems = ["HOME", "BOOK A SESSION", "PORTFOLIO", "BLOG"];
 
   return (
-    <div className="relative">
+    <div className="relative z-50">
       <motion.nav
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: "easeOut" }}
+        className="relative z-50"
       >
         <div className="w-full justify-between hidden lg:flex">
           <motion.ul 
@@ -105,51 +104,61 @@ const Navbar = () => {
         <div className="lg:hidden text-white">
           <motion.button
             onClick={() => setIsOpen(!isOpen)}
-            className="object-right text-4xl"
+            className="object-right text-4xl z-50 relative"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
           >
-            {isOpen ? <IoIosClose /> : <FiMenu />}
+            {isOpen ? <IoIosClose className="text-white" /> : <FiMenu />}
           </motion.button>
         </div>
       </motion.nav>
 
-      {/* Mobile Menu with contained animations */}
-      <motion.div
-        className="overflow-hidden lg:hidden absolute right-0 top-14 z-50 w-auto"
-        variants={mobileMenuVariants}
-        initial="closed"
-        animate={isOpen ? "open" : "closed"}
-      >
-        <motion.ul
-          className="flex gap-3 flex-col items-end pt-2 pb-2 px-1"
-        >
-          {navItems.map((name, index) => (
-            <motion.li 
-              key={index}
-              variants={mobileItemVariants}
-              className="w-full"
+      {/* Fullscreen Mobile Menu with blur background */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="fixed inset-0 lg:hidden z-40 backdrop-blur-md bg-black bg-opacity-70"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <motion.div
+              className="h-full flex items-center justify-center"
+              variants={mobileMenuVariants}
+              initial="closed"
+              animate="open"
             >
-              <Link
-                to={
-                  name === "BLOG"
-                    ? "/no-page"
-                    : name === "HOME"
-                    ? "/"
-                    : name === "BOOK A SESSION"
-                    ? "/book"
-                    : `/${name.toLowerCase().replace(" ", "-")}`
-                }
-                className="text-white text-sm block text-right font-semibold font-playFair py-2 px-4 bg-black bg-opacity-70 rounded"
-                onClick={() => setIsOpen(false)}
-              >
-                {name}
-              </Link>
-            </motion.li>
-          ))}
-        </motion.ul>
-      </motion.div>
+              <motion.ul className="flex flex-col items-center justify-center gap-8 w-full">
+                {navItems.map((name, index) => (
+                  <motion.li 
+                    key={index}
+                    variants={mobileItemVariants}
+                    className="w-full text-center"
+                  >
+                    <Link
+                      to={
+                        name === "BLOG"
+                          ? "/no-page"
+                          : name === "HOME"
+                          ? "/"
+                          : name === "BOOK A SESSION"
+                          ? "/book"
+                          : `/${name.toLowerCase().replace(" ", "-")}`
+                      }
+                      className="text-white text-2xl font-bold font-playFair py-3 block tracking-wider"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {name}
+                    </Link>
+                  </motion.li>
+                ))}
+              </motion.ul>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
