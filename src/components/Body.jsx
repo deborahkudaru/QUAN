@@ -61,7 +61,6 @@ const Body = () => {
         className="relative bg-black transition-all duration-1000"
         style={{ minHeight: "100vh" }}
       >
-        {/* Background Image */}
         <div
           className="absolute inset-0 bg-no-repeat bg-cover bg-center bg-black bg-opacity-50 bg-blend-overlay transition-all duration-1000"
           style={{ 
@@ -70,7 +69,6 @@ const Body = () => {
           }}
         />
 
-        {/* Foreground Content */}
         <div className="relative z-10">
           <Header />
 

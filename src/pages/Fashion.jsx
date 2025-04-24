@@ -15,7 +15,7 @@ const Fashion = () => {
     setSelectedIndex((prev) => (prev > 0 ? prev - 1 : prev));
   const showNext = () =>
     setSelectedIndex((prev) => (prev < fashion.length - 1 ? prev + 1 : prev));
-
+  
   return (
     <>
       {selectedIndex === null && <BlackHeader />}
