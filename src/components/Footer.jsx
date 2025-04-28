@@ -35,7 +35,7 @@ const Footer = () => {
         </a>
       </div>
       <footer className="text-center py-10 text-xs dark:bg-[#121212] text-neutral-500">
-        © 2024 Quan Imagery.co
+        © 2025 Quan Imagery.co
       </footer>
     </div>
   );
