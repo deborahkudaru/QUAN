@@ -6,6 +6,7 @@ import "../styles/styles.css";
 import About from "./About";
 import { TfiAngleDoubleDown } from "react-icons/tfi";
 import Album from "../pages/Album";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const images = [
@@ -97,6 +98,11 @@ const Body = () => {
             >
               <TfiAngleDoubleDown className="text-white animate-bounce text-2xl sm:text-3xl lg:text-4xl" />
             </motion.div>
+            <div>
+              <Link to='/book' className="text-white font-lato font-semibold lg:text-xl text-sm relative text-end hover:underline hover:text-red-800">
+              BOOK A SESSION
+              </Link>
+            </div>
           </div>
         </div>
       </div>

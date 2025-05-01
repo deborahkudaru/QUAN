@@ -41,19 +41,11 @@ const About = () => {
           data-aos="fade-up"
           data-aos-duration="3000"
         >
-          How you present yourself visually defines how others perceive you.
-          Whether you’re an individual looking to establish a personal brand or
-          a business aiming to connect with the right audience, your image is
-          your first impression—and we make sure it speaks volumes. <br />{" "}
-          <br />
-          At <span className="text-red-800 font-semibold">Quan Imagery</span>,
-          we go beyond photography—we create stories, art, and timeless moments
-          with an African touch. Whether you're an individual, artist,
-          entrepreneur, model, or brand, our expertise in fashion, beauty,
-          corporate, and commercial photography ensures your uniqueness shines.
-          Our photography is tailored to showcase your uniqueness while
-          maintaining a high-end, polished aesthetic. Let’s create images that
-          captivate, inspire, and leave a lasting impact.
+          At <span className="text-red-800">Quan Imagery</span>, we specialize in high-fashion photography, striking
+          portraits, and breathtaking beauty imagery that celebrates your
+          unique style. Whether you're looking for editorial fashion shoots,
+          elegant wedding photography, parties and events, professional
+          headshots, or dynamic commercial visuals and images.
         </motion.p>
       </motion.div>
 
