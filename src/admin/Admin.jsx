@@ -1,18 +1,13 @@
-import React from 'react'
-import SideBar from '../components/dashboard/SideBar'
-import Filters from '../components/dashboard/Filters'
+import React from 'react';
+import Filters from '../components/dashboard/Filters';
+import DashboardLayout from '../components/dashboard/DashboardLayout';
 
 const Admin = () => {
   return (
-    <div className='flex '>
-      <div className=''>
-       <SideBar />
-      </div>
-      <div>
-        <Filters />
-      </div>
-    </div>
-  )
-}
+    <DashboardLayout>
+      <Filters />
+    </DashboardLayout>
+  );
+};
 
-export default Admin
+export default Admin;
