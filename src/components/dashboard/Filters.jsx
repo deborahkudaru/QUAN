@@ -9,9 +9,9 @@ const filterButtons = [
 
 const Filters = () => {
   return (
-    <div className="flex font-playFair w-full">
+    <div className="grid grid-cols-3 font-playFair">
       {filterButtons.map((button) => (
-        <div key={button.id} className="bg-white flex justify-between px-4 py-2 mr-2">
+        <div key={button.id} className="bg-white flex justify-between px-4 py-2 mr-2 rounded-2xl">
           <button className="text-gray-600 hover:text-gray-900">
             {button.label}: <span className="font-semibold text-black">{button.value}</span>
           </button>
