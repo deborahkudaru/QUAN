@@ -4,22 +4,12 @@ import { TbReportAnalytics } from "react-icons/tb";
 import { AiTwotonePicture } from "react-icons/ai";
 import { PiArrowsMergeThin } from "react-icons/pi";
 import { IoSettingsOutline, IoLogOutOutline } from "react-icons/io5";
-import  logo from "../images/blacklogo.png"
 
 const SideBar = () => {
   return (
-    <div className="font-playFair">
+    <div className="font-playFair p-7 bg-white">
       <div>
-        <div className="p-7">
-        <Link>
-        <img src={logo} alt="logo"  className="md:w-8 w-6" />
-        </Link>
-        </div>
-
-      
-      </div>
-      <div>
-        <ul className="flex flex-col gap-4 px-7">
+        <ul className="flex flex-col gap-7 mt-10 font-medium text-gray-700">
           <li className="flex gap-2">
             <TbReportAnalytics className="self-center" />
             <Link>Reports</Link>

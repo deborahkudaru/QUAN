@@ -37,7 +37,7 @@ const App = () => {
               <Route path="/music" element={<Music />} />
               <Route path="/admin" element={<Admin />} />
             </Routes>
-            <Footer />
+            {/* <Footer /> */}
           </ThemeProvider>
         </HelmetProvider>
       )}
