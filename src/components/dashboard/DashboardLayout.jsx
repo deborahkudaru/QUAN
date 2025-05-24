@@ -5,7 +5,7 @@ import Header from './Header';
 const DashboardLayout = ({ children }) => {
   return (
     <div className="flex min-h-screen bg-slate-100">
-      <div className="w-[227px] fixed left-0 top-0 bottom-0 bg-white shadow-lg z-50">
+      <div className="w-[227px] fixed left-0 top-0 bottom-0 bg-white">
         <SideBar />
       </div>
 

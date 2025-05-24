@@ -12,11 +12,11 @@ import { Bar } from "react-chartjs-2";
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
 const data = {
-  labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+  labels: ["Jan", "Feb", "Mar", "Apr", "May", "July", "Aug", "Sep"],
   datasets: [
     {
       label: "Visitors",
-      data: [120, 190, 300, 250, 400],
+      data: [120, 190, 300, 250, 400, 350, 500, 600, 700],
       backgroundColor: "#6366F1", 
     },
   ],
