@@ -6,7 +6,6 @@ import "../styles/styles.css";
 import About from "./About";
 import { TfiAngleDoubleDown } from "react-icons/tfi";
 import Album from "../pages/Album";
-import { Link } from "react-router-dom";
 
 const Body = () => {
   const images = [
@@ -59,11 +58,11 @@ const Body = () => {
       transition={{ duration: 0.8 }}
     >
       <div 
-        className="relative bg-black transition-all duration-1000"
+        className="relative transition-all duration-1000 bg-black"
         style={{ minHeight: "100vh" }}
       >
         <div
-          className="absolute inset-0 bg-no-repeat bg-cover bg-center bg-black bg-opacity-50 bg-blend-overlay transition-all duration-1000"
+          className="absolute inset-0 transition-all duration-1000 bg-black bg-opacity-50 bg-center bg-no-repeat bg-cover bg-blend-overlay"
           style={{ 
             backgroundImage: `url(${images[currentImageIndex]})`,
             opacity: isLoaded ? 1 : 0
@@ -74,15 +73,15 @@ const Body = () => {
           <Header />
 
           {/* Bottom Positioned Content */}
-          <div className="flex flex-col justify-end items-center min-h-screen pb-32">
+          <div className="flex flex-col items-center justify-end min-h-screen pb-32">
             <motion.div 
-              className="w-full flex justify-center px-4 sm:px-6 md:px-8"
+              className="flex justify-center w-full px-4 sm:px-6 md:px-8"
               variants={fadeIn}
               initial="initial"
               animate="animate"
             >
               <img
-                className="w-1/2 sm:w-2/5 md:w-1/3 lg:w-1/4 xl:w-1/5 max-w-md mb-4"
+                className="w-1/2 max-w-md mb-4 sm:w-2/5 md:w-1/3 lg:w-1/4 xl:w-1/5"
                 src={logo}
                 alt="Quan Imagery"
                 loading="lazy"
@@ -90,13 +89,13 @@ const Body = () => {
             </motion.div>
 
             <motion.div 
-              className="mb-10 w-full flex justify-center cursor-pointer"
+              className="flex justify-center w-full mb-10 cursor-pointer"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
               onClick={scrollToAbout}
             >
-              <TfiAngleDoubleDown className="text-white animate-bounce text-2xl sm:text-3xl lg:text-4xl" />
+              <TfiAngleDoubleDown className="text-2xl text-white animate-bounce sm:text-3xl lg:text-4xl" />
             </motion.div>
           </div>
         </div>
