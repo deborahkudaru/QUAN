@@ -1,6 +1,7 @@
 import React from 'react';
 import SideBar from './SideBar';
 import Header from './Header';
+import { Outlet } from 'react-router-dom';
 
 const DashboardLayout = ({ children }) => {
   return (
@@ -13,7 +14,7 @@ const DashboardLayout = ({ children }) => {
         <Header />
 
         <div className="p-4">
-          {children}
+             <Outlet />
         </div>
       </div>
     </div>

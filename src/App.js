@@ -13,7 +13,10 @@ import LoadingScreen from "./components/LoadingScreen";
 import Corporates from "./pages/Corporates";
 import Music from "./pages/Music";
 import { HelmetProvider } from "react-helmet-async";
-import Admin from "./admin/Admin";
+import Library from "./admin/pages/Library";
+import Dashboard from "./admin/pages/Dashboard";
+import DashboardLayout from "./components/dashboard/DashboardLayout";
+import Settings from "./admin/pages/Settings";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -35,7 +38,11 @@ const App = () => {
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/corporate" element={<Corporates />} />
               <Route path="/music" element={<Music />} />
-              <Route path="/admin" element={<Admin />} />
+              <Route path="/dashboard" element={<DashboardLayout />}>
+                <Route index element={<Dashboard />} />
+                <Route path="library" element={<Library />} />
+                <Route path="settings" element={<Settings />} />
+              </Route>
             </Routes>
             {/* <Footer /> */}
           </ThemeProvider>
