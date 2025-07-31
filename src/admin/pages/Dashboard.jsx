@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import Filters from '../../components/dashboard/Filters';
-import DashboardLayout from '../../components/dashboard/DashboardLayout';
-import BarChart from '../../components/dashboard/Barchart';
-import StatsCard from '../../components/dashboard/StatsCard';
+import React, { useState } from "react";
+import Filters from "../../components/dashboard/Filters";
+import BarChart from "../../components/dashboard/Barchart";
+import StatsCard from "../../components/dashboard/StatsCard";
 
 const Dashboard = () => {
   const [selectedFilters, setSelectedFilters] = useState({
@@ -19,15 +18,13 @@ const Dashboard = () => {
   };
 
   return (
-    // <DashboardLayout>
     <>
-          <Filters onFilterChange={handleFilterChange} />
-      <div className='grid grid-cols-2 pl-4 pr-7'>
-      <StatsCard filters={selectedFilters} />
-      <BarChart />
-      </div></>
-
-    //* </DashboardLayout> *
+      <Filters onFilterChange={handleFilterChange} />
+      <div className="grid grid-cols-2 pl-4 pr-7">
+        <StatsCard filters={selectedFilters} />
+        <BarChart />
+      </div>
+    </>
   );
 };
 

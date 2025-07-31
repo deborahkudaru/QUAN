@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Body from "./components/Body";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import Book from "./pages/Book";
 import Fashion from "./pages/Fashion";
 import Birthday from "./pages/Birthday";
