@@ -23,7 +23,7 @@ const Corporates = () => {
     const fetchImages = async () => {
       try {
         const res = await fetch(
-          "http://localhost:5000/images?category=corporates"
+          "https://quan-backend-d2we.onrender.com/images?category=corporates"
         );
         if (!res.ok) throw new Error("Failed to fetch images");
         const data = await res.json();
