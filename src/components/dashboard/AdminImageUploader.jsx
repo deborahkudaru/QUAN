@@ -1,72 +1,164 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-const AdminImageUploader = () => {
+function AdminImageUploader() {
   const [image, setImage] = useState(null);
-  const [uploading, setUploading] = useState(false);
   const [preview, setPreview] = useState(null);
+  const [uploading, setUploading] = useState(false);
   const [message, setMessage] = useState("");
+  const [uploadedUrl, setUploadedUrl] = useState(null);
+  const [category, setCategory] = useState("");
+  const [images, setImages] = useState([]);
 
-  const handleFileChange = (e) => {
+  // Load all images on mount
+  useEffect(() => {
+    fetchImages();
+  }, []);
+
+  const fetchImages = async () => {
+    try {
+      const res = await fetch("http://localhost:5000/images");
+      const data = await res.json();
+      setImages(data);
+    } catch (err) {
+      console.error("Failed to fetch images:", err);
+    }
+  };
+
+  const handleImageChange = (e) => {
     const file = e.target.files[0];
     setImage(file);
     setPreview(URL.createObjectURL(file));
   };
 
   const handleUpload = async () => {
-    if (!image) return;
+    if (!image || !category) {
+      setMessage("❌ Please select a category and an image");
+      return;
+    }
 
     setUploading(true);
     setMessage("");
 
     const formData = new FormData();
     formData.append("file", image);
-    formData.append("upload_preset", "admin_upload_preset"); // 👈 use your preset name
+    formData.append("upload_preset", "admin_upload_preset");
 
     try {
-      const res = await fetch("https://api.cloudinary.com/v1_1/dqflr6fmv/image/upload", {
-        method: "POST",
-        body: formData,
-      });
+      const cloudRes = await fetch(
+        "https://api.cloudinary.com/v1_1/dqflr6fmv/image/upload",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
-      const data = await res.json();
+      const cloudData = await cloudRes.json();
 
-      // STEP 3: Save this URL to your backend (we'll do this in the next step)
+      if (!cloudData.secure_url) {
+        throw new Error("Cloudinary upload failed");
+      }
+
+      // Save to backend
       const saveRes = await fetch("http://localhost:5000/images", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ url: data.secure_url }),
+        body: JSON.stringify({
+          url: cloudData.secure_url,
+          fileName: image.name,
+          category,
+        }),
       });
 
-      if (saveRes.ok) {
-        setMessage("Image uploaded and saved successfully!");
-      } else {
-        setMessage("Upload worked but failed to save in DB.");
-      }
-    } catch (error) {
-      console.error(error);
-      setMessage("Something went wrong.");
-    } finally {
-      setUploading(false);
+      if (!saveRes.ok) throw new Error("Failed to save to backend");
+
+      setMessage("✅ Image uploaded and saved!");
+      setUploadedUrl(cloudData.secure_url);
       setImage(null);
       setPreview(null);
+      setCategory("");
+      fetchImages(); // refresh list
+    } catch (err) {
+      console.error(err);
+      setMessage("❌ Upload or save failed");
+    } finally {
+      setUploading(false);
+    }
+  };
+
+  const handleDelete = async (id) => {
+    const confirm = window.confirm("Are you sure you want to delete this image?");
+    if (!confirm) return;
+
+    try {
+      const res = await fetch(`http://localhost:5000/images/${id}`, {
+        method: "DELETE",
+      });
+
+      if (!res.ok) throw new Error("Failed to delete image");
+
+      setMessage("🗑️ Image deleted successfully");
+      fetchImages(); // refresh list
+    } catch (err) {
+      console.error(err);
+      setMessage("❌ Delete failed");
     }
   };
 
   return (
-    <div className="max-w-sm p-4 border rounded">
-      <h2 className="mb-2 text-lg font-bold">Upload Image</h2>
-      <input type="file" accept="image/*" onChange={handleFileChange} />
-      {preview && <img src={preview} alt="preview" className="w-full h-auto mt-4 rounded" />}
-      <button
-        className="px-4 py-2 mt-4 text-white bg-blue-500 rounded"
-        onClick={handleUpload}
-        disabled={uploading}
-      >
+    <div>
+      <h2>Upload Image</h2>
+
+      <label>
+        Select Category:
+        <select value={category} onChange={(e) => setCategory(e.target.value)}>
+          <option value="">-- Select Category --</option>
+          <option value="birthday">Birthday</option>
+          <option value="wedding">Wedding</option>
+          <option value="graduation">Graduation</option>
+          <option value="fashion">Fashion</option>
+          <option value="others">Others</option>
+        </select>
+      </label>
+
+      <br />
+
+      <input type="file" accept="image/*" onChange={handleImageChange} />
+      {preview && <img src={preview} alt="Preview" width={200} />}
+      <button onClick={handleUpload} disabled={uploading}>
         {uploading ? "Uploading..." : "Upload"}
       </button>
-      {message && <p className="mt-2 text-sm">{message}</p>}
+
+      {message && <p>{message}</p>}
+
+      {uploadedUrl && (
+        <div>
+          <p>Uploaded Image URL:</p>
+          <a href={uploadedUrl} target="_blank" rel="noreferrer">
+            {uploadedUrl}
+          </a>
+          <img src={uploadedUrl} alt="Uploaded" width={200} />
+        </div>
+      )}
+
+      <hr />
+
+      <h3>Uploaded Images</h3>
+      {images.length === 0 ? (
+        <p>No images found.</p>
+      ) : (
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+          {images.map((img) => (
+            <div key={img._id} style={{ border: "1px solid #ccc", padding: "10px" }}>
+              <img src={img.url} alt={img.fileName} width={150} />
+              <p><strong>Category:</strong> {img.category}</p>
+              <p><strong>Name:</strong> {img.fileName}</p>
+              <button onClick={() => handleDelete(img._id)}>🗑️ Delete</button>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
-};
+}
 
 export default AdminImageUploader;

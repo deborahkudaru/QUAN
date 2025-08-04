@@ -4,7 +4,7 @@ import Body from "./components/Body";
 // import Footer from "./components/Footer";
 import Book from "./pages/Book";
 import Fashion from "./pages/Fashion";
-import Birthday from "./pages/Birthday";
+import Birthday from "./pages/BeautyPotraits";
 import Wedding from "./pages/Wedding";
 import NoPage from "./pages/NoPage";
 import Portfolio from "./pages/Portfolio";
