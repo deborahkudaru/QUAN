@@ -8,9 +8,9 @@ import BlackHeader from "../components/BlackHeader";
 const Fashion = () => {
   const navigate = useNavigate();
   const [selectedIndex, setSelectedIndex] = useState(null);
-    const [images, setImages] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState("");
+  const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   const openModal = (index) => setSelectedIndex(index);
   const closeModal = () => setSelectedIndex(null);
@@ -18,11 +18,13 @@ const Fashion = () => {
     setSelectedIndex((prev) => (prev > 0 ? prev - 1 : prev));
   const showNext = () =>
     setSelectedIndex((prev) => (prev < images.length - 1 ? prev + 1 : prev));
-  
-useEffect(() => {
+
+  useEffect(() => {
     const fetchImages = async () => {
       try {
-        const res = await fetch("http://localhost:5000/images?category=fashion");
+        const res = await fetch(
+          "http://localhost:5000/images?category=fashion"
+        );
         if (!res.ok) throw new Error("Failed to fetch images");
         const data = await res.json();
         setImages(data);
@@ -36,7 +38,7 @@ useEffect(() => {
 
     fetchImages();
   }, []);
-  
+
   return (
     <>
       {selectedIndex === null && <BlackHeader />}
@@ -58,13 +60,13 @@ useEffect(() => {
         <div className="grid-cols-1 lg:grid lg:grid-cols-3 md:grid-cols-2 gap-7">
           {images.map((img, index) => (
             <div className="pb-5 lg:pb-0 md:pb-0" key={img._id}>
-                <img
-                  src={img.url}
-                  alt={img.alt}
-                  className="shadow-xl cursor-pointer"
-                  loading="lazy"
-                  onClick={() => openModal(index)}
-                />
+              <img
+                src={img.url}
+                alt={img.alt}
+                className="shadow-xl cursor-pointer"
+                loading="lazy"
+                onClick={() => openModal(index)}
+              />
             </div>
           ))}
         </div>

@@ -35,15 +35,15 @@ const albums = [
   {
     id: 5,
     bgImage:
-      "https://res.cloudinary.com/dqflr6fmv/image/upload/v1740072673/Screenshot_158_yfjt1h.png",
-    albumName: "Music Video/Shorts",
-    albumURL: "/music",
+      "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652065/photo24_fo9voj.jpg",
+    albumName: "Commercials",
+    albumURL: "/no-page",
   },
   {
     id: 6,
     bgImage:
-      "https://res.cloudinary.com/dqflr6fmv/image/upload/v1739652065/photo24_fo9voj.jpg",
-    albumName: "Commercials",
+      "https://res.cloudinary.com/dqflr6fmv/image/upload/v1740072673/Screenshot_158_yfjt1h.png",
+    albumName: "Music Video/Shorts",
     albumURL: "/no-page",
   },
 ];
@@ -53,10 +53,10 @@ const Album = () => {
     <>
       <BlackHeader />
       <div className="px-5 lg:px-20 pt-20 dark:bg-[#121212]">
-        <h3 className=" text-center pb-6 font-bold text-2xl lg:text-3xl font-playFair text-gray-900  dark:text-white">
+        <h3 className="pb-6 text-2xl font-bold text-center text-gray-900 lg:text-3xl font-playFair dark:text-white">
           GALLERY
         </h3>
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3">
+        <div className="grid grid-cols-1 gap-3 lg:grid-cols-3 md:grid-cols-2">
           {albums.map((alb) => (
             <motion.div
               key={alb.id}
@@ -66,10 +66,10 @@ const Album = () => {
             >
               <Link to={alb.albumURL}>
                 <div
-                  className="bg-cover bg-no-repeat bg-black bg-opacity-50 bg-blend-overlay text-white font-mateSC pt-72 rounded-xl"
+                  className="text-white bg-black bg-opacity-50 bg-no-repeat bg-cover bg-blend-overlay font-mateSC pt-72 rounded-xl"
                   style={{ backgroundImage: `url(${alb.bgImage})` }}
                 >
-                  <p className="text-xl font-lato font-semibold ml-5 pb-5">
+                  <p className="pb-5 ml-5 text-xl font-semibold font-lato">
                     {alb.albumName}
                   </p>
                 </div>
