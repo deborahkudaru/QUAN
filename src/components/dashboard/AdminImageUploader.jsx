@@ -40,7 +40,7 @@ function AdminImageUploader() {
 
   const fetchImages = async () => {
     try {
-      const res = await fetch("http://localhost:5000/images");
+      const res = await fetch("https://quan-backend-d2we.onrender.com/images");
       const data = await res.json();
       setImages(data);
     } catch (err) {
