@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { TbReportAnalytics } from "react-icons/tb";
+// import { TbReportAnalytics } from "react-icons/tb";
 import { AiTwotonePicture } from "react-icons/ai";
 import { IoSettingsOutline, IoLogOutOutline } from "react-icons/io5";
 import logo from "../../images/blacklogo.png";
@@ -9,11 +9,11 @@ const SideBar = () => {
   const location = useLocation();
 
   const menuItems = [
-    {
-      icon: TbReportAnalytics,
-      label: "Dashboard",
-      path: "/dashboard",
-    },
+    // {
+    //   icon: TbReportAnalytics,
+    //   label: "Dashboard",
+    //   path: "/dashboard",
+    // },
     {
       icon: AiTwotonePicture,
       label: "Library",
