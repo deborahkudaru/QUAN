@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import axios from "axios";
 import {
   Upload,
   FileImage,
@@ -15,15 +15,21 @@ import {
   Shirt,
   MoreHorizontal,
   AlertTriangle,
+  Tag,
+  Hash,
+  Clock,
 } from "lucide-react";
 import toast, { Toaster } from "react-hot-toast";
 
-function AdminImageUploader() {
+function AdminPortfolioUploader() {
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState(null);
   const [uploading, setUploading] = useState(false);
   const [uploadedUrl, setUploadedUrl] = useState(null);
   const [category, setCategory] = useState("");
+  const [topic, setTopic] = useState("");
+  const [niche, setNiche] = useState("");
+  const [date, setDate] = useState("");
   const [images, setImages] = useState([]);
   const [selectedImageModal, setSelectedImageModal] = useState(null);
   const [filter, setFilter] = useState("all");
@@ -40,9 +46,8 @@ function AdminImageUploader() {
 
   const fetchImages = async () => {
     try {
-      const res = await fetch("https://quan-backend-d2we.onrender.com/images");
-      const data = await res.json();
-      setImages(data);
+      const res = await axios.get("https://quan-backend-d2we.onrender.com/images");
+      setImages(res.data);
     } catch (err) {
       console.error("Failed to fetch images:", err);
       toast.error("Failed to load images");
@@ -83,40 +88,33 @@ function AdminImageUploader() {
         formData.append("file", image);
         formData.append("upload_preset", "admin_upload_preset");
 
-        const cloudRes = await fetch(
+        // Upload to Cloudinary
+        const cloudRes = await axios.post(
           "https://api.cloudinary.com/v1_1/dqflr6fmv/image/upload",
-          {
-            method: "POST",
-            body: formData,
-          }
+          formData
         );
 
-        const cloudData = await cloudRes.json();
-
-        if (!cloudData.secure_url) {
+        if (!cloudRes.data.secure_url) {
           throw new Error("Cloudinary upload failed");
         }
 
-        // Save to backend
-        const saveRes = await fetch(
-          "https://quan-backend-d2we.onrender.com/images",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              url: cloudData.secure_url,
-              fileName: image.name,
-              category,
-            }),
-          }
-        );
+        // Save to backend with additional fields
+        const saveRes = await axios.post("https://quan-backend-d2we.onrender.com/images", {
+          url: cloudRes.data.secure_url,
+          fileName: image.name,
+          category,
+          topic,
+          niche,
+          date,
+        });
 
-        if (!saveRes.ok) throw new Error("Failed to save to backend");
-
-        setUploadedUrl(cloudData.secure_url);
+        setUploadedUrl(cloudRes.data.secure_url);
         setImage(null);
         setPreview(null);
         setCategory("");
+        setTopic("");
+        setNiche("");
+        setDate("");
         fetchImages();
         resolve("Image uploaded successfully!");
       } catch (err) {
@@ -145,15 +143,7 @@ function AdminImageUploader() {
 
     const deletePromise = new Promise(async (resolve, reject) => {
       try {
-        const res = await fetch(
-          `https://quan-backend-d2we.onrender.com/images/${id}`,
-          {
-            method: "DELETE",
-          }
-        );
-
-        if (!res.ok) throw new Error("Failed to delete image");
-
+        await axios.delete(`https://quan-backend-d2we.onrender.com/images/${id}`);
         fetchImages();
         resolve(`${fileName} deleted successfully`);
       } catch (err) {
@@ -216,9 +206,9 @@ function AdminImageUploader() {
       {/* Header */}
       <div className="p-6 bg-white border border-gray-100 shadow-md rounded-xl">
         <h1 className="mb-2 text-2xl font-bold text-gray-800">
-          Image Management
+          Portfolio Management
         </h1>
-        <p className="text-gray-600">Upload and manage your image gallery</p>
+        <p className="text-gray-600">Upload and manage your portfolio images</p>
       </div>
 
       {/* Stats Cards */}
@@ -248,7 +238,7 @@ function AdminImageUploader() {
             <div>
               <p className="text-sm text-gray-500">Weddings</p>
               <h3 className="text-xl font-bold text-black">
-                {categoryStats.wedding || 0}
+                {categoryStats["weddings-events"] || 0}
               </h3>
             </div>
             <Heart className="w-8 h-8 text-red-500" />
@@ -257,12 +247,12 @@ function AdminImageUploader() {
         <div className={cardClass}>
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-500">Birthdays</p>
+              <p className="text-sm text-gray-500">Fashion</p>
               <h3 className="text-xl font-bold text-black">
-                {categoryStats.birthday || 0}
+                {categoryStats.fashion || 0}
               </h3>
             </div>
-            <Calendar className="w-8 h-8 text-purple-500" />
+            <Shirt className="w-8 h-8 text-blue-500" />
           </div>
         </div>
       </div>
@@ -284,15 +274,55 @@ function AdminImageUploader() {
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                required
               >
                 <option value="">-- Select Category --</option>
                 <option value="fashion">Fashion</option>
                 <option value="beauty-portraits">Beauty/Portraits</option>
                 <option value="weddings-events">Weddings/Events</option>
+                {/* <option value="graduation">Graduation</option> */}
                 <option value="corporates">Corporates</option>
-                <option value="videos">Music Videos/Shorts</option>
                 <option value="commercials">Commercials</option>
               </select>
+            </div>
+
+            <div>
+              <label className="block mb-2 text-sm font-medium text-gray-700">
+                Topic
+              </label>
+              <input
+                type="text"
+                value={topic}
+                onChange={(e) => setTopic(e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="e.g., Summer Collection"
+              />
+            </div>
+
+            <div>
+              <label className="block mb-2 text-sm font-medium text-gray-700">
+                Niche
+              </label>
+              <input
+                type="text"
+                value={niche}
+                onChange={(e) => setNiche(e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="e.g., Streetwear"
+              />
+            </div>
+
+            <div>
+              <label className="block mb-2 text-sm font-medium text-gray-700">
+                Date
+              </label>
+              <input
+                type="text"
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="e.g., July 2024"
+              />
             </div>
 
             <div>
@@ -306,6 +336,7 @@ function AdminImageUploader() {
                   onChange={handleImageChange}
                   className="hidden"
                   id="image-upload"
+                  required
                 />
                 <label
                   htmlFor="image-upload"
@@ -476,6 +507,18 @@ function AdminImageUploader() {
                   <p className="text-sm font-medium text-gray-800 truncate">
                     {img.fileName}
                   </p>
+                  {img.topic && (
+                    <p className="text-xs text-gray-600 truncate">
+                      <Tag className="inline w-3 h-3 mr-1" />
+                      {img.topic}
+                    </p>
+                  )}
+                  {img.date && (
+                    <p className="text-xs text-gray-600 truncate">
+                      <Calendar className="inline w-3 h-3 mr-1" />
+                      {img.date}
+                    </p>
+                  )}
                 </div>
               </div>
             ))}
@@ -580,6 +623,48 @@ function AdminImageUploader() {
                     </div>
                   </div>
 
+                  {selectedImageModal.topic && (
+                    <div>
+                      <label className="text-sm font-medium text-gray-700">
+                        Topic
+                      </label>
+                      <div className="flex items-center gap-2 mt-1">
+                        <Tag className="w-4 h-4 text-gray-500" />
+                        <span className="text-sm text-gray-600">
+                          {selectedImageModal.topic}
+                        </span>
+                      </div>
+                    </div>
+                  )}
+
+                  {selectedImageModal.niche && (
+                    <div>
+                      <label className="text-sm font-medium text-gray-700">
+                        Niche
+                      </label>
+                      <div className="flex items-center gap-2 mt-1">
+                        <Hash className="w-4 h-4 text-gray-500" />
+                        <span className="text-sm text-gray-600">
+                          {selectedImageModal.niche}
+                        </span>
+                      </div>
+                    </div>
+                  )}
+
+                  {selectedImageModal.date && (
+                    <div>
+                      <label className="text-sm font-medium text-gray-700">
+                        Date
+                      </label>
+                      <div className="flex items-center gap-2 mt-1">
+                        <Calendar className="w-4 h-4 text-gray-500" />
+                        <span className="text-sm text-gray-600">
+                          {selectedImageModal.date}
+                        </span>
+                      </div>
+                    </div>
+                  )}
+
                   <div>
                     <label className="text-sm font-medium text-gray-700">
                       File Name
@@ -645,4 +730,4 @@ function AdminImageUploader() {
   );
 }
 
-export default AdminImageUploader;
+export default AdminPortfolioUploader;
