@@ -98,7 +98,7 @@ function AdminImageUploader() {
         }
 
         // Save to backend
-        const saveRes = await fetch("http://localhost:5000/images", {
+        const saveRes = await fetch("https://quan-backend-d2we.onrender.com/images", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -142,7 +142,7 @@ function AdminImageUploader() {
 
     const deletePromise = new Promise(async (resolve, reject) => {
       try {
-        const res = await fetch(`http://localhost:5000/images/${id}`, {
+        const res = await fetch(`https://quan-backend-d2we.onrender.com/images/${id}`, {
           method: "DELETE",
         });
 
