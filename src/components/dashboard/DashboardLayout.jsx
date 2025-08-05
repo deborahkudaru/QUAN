@@ -3,18 +3,19 @@ import SideBar from './SideBar';
 import Header from './Header';
 import { Outlet } from 'react-router-dom';
 
-const DashboardLayout = ({ children }) => {
+const DashboardLayout = () => {
   return (
-    <div className="flex min-h-screen bg-slate-100">
-      <div className="w-[227px] fixed left-0 top-0 bottom-0 bg-white">
+    <div className="flex flex-col min-h-screen bg-slate-100 sm:flex-row">
+      {/* Sidebar */}
+      <div className="w-full sm:w-[227px] sm:fixed sm:left-0 sm:top-0 sm:bottom-0 bg-white z-20">
         <SideBar />
       </div>
 
-      <div className="ml-[227px] w-full flex flex-col">
+      {/* Main Content */}
+      <div className="flex-1 sm:ml-[227px] flex flex-col">
         <Header />
-
-        <div className="p-4">
-             <Outlet />
+        <div className="p-2 sm:p-4">
+          <Outlet />
         </div>
       </div>
     </div>
