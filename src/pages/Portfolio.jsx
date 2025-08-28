@@ -31,7 +31,7 @@ const Gallery = () => {
       const fetchImages = async () => {
         try {
           const res = await fetch(
-            "https://quan-backend-d2we.onrender.com/images"
+            "https://quan-backend-d2we.onrender.com/images?category=portfolio"
           );
           if (!res.ok) throw new Error("Failed to fetch images");
           const data = await res.json();

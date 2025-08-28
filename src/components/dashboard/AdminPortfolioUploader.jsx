@@ -145,7 +145,7 @@ function AdminPortfolioUploader() {
       try {
         await axios.delete(`https://quan-backend-d2we.onrender.com/images/${id}`);
         fetchImages();
-        resolve(`${fileName} deleted successfully`);
+        resolve(`Deleted successfully`);
       } catch (err) {
         console.error(err);
         reject("Delete failed. Please try again.");
@@ -277,12 +277,7 @@ function AdminPortfolioUploader() {
                 required
               >
                 <option value="">-- Select Category --</option>
-                <option value="fashion">Fashion</option>
-                <option value="beauty-portraits">Beauty/Portraits</option>
-                <option value="weddings-events">Weddings/Events</option>
-                {/* <option value="graduation">Graduation</option> */}
-                <option value="corporates">Corporates</option>
-                <option value="commercials">Commercials</option>
+                <option value="portfolio">Portfolio</option>
               </select>
             </div>
 
