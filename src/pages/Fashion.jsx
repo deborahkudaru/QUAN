@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { BsArrowLeft, BsArrowRight, BsX } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import BlackHeader from "../components/BlackHeader";
+import Loader from "../components/Loader";
 // import { Suspense } from "react";
 
 const Fashion = () => {
@@ -53,7 +54,7 @@ const Fashion = () => {
         </div>
 
         {/* Loading / Error */}
-        {loading && <p className="text-white">Loading...</p>}
+        {loading && <Loader />}
         {error && <p className="text-red-500">{error}</p>}
 
         {/* Image Grid */}
