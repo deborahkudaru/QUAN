@@ -7,6 +7,7 @@ import Typewriter from "../components/Typewriter";
 import { IoIosArrowRoundDown } from "react-icons/io";
 import { BsArrowLeft, BsArrowRight, BsX } from "react-icons/bs";
 import { FaArrowUp } from "react-icons/fa";
+import Loader from "../components/Loader";
 
 const Gallery = () => {
   useEffect(() => {
@@ -67,7 +68,7 @@ const Gallery = () => {
       </h3>
 
              {/* Loading / Error */}
-        {loading && <p className="text-white">Loading...</p>}
+        {loading && <Loader />}
         {error && <p className="text-red-500">{error}</p>}
         
       <div className="grid gap-10 px-5 lg:px-20 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
