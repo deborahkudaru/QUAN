@@ -126,7 +126,7 @@ const Gallery = () => {
               </button>
             )}
             <img
-              src={images[selectedIndex].img}
+              src={images[selectedIndex].url}
               alt={images[selectedIndex].topic}
               className="lg:max-h-[80vh] max-h-[80vh] w-auto rounded-lg shadow-xl"
             />
